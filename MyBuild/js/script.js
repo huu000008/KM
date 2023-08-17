@@ -128,4 +128,20 @@ $(document).ready(function () {
 
     observer.observe(counterElement);
   });
+
+  const scrollIndicator = document.getElementById("scrollIndicator");
+
+  function toggleScrollIndicatorClass() {
+    if (window.scrollY > 0) {
+      scrollIndicator.classList.add("on");
+    } else {
+      scrollIndicator.classList.remove("on");
+    }
+  }
+
+  window.addEventListener("scroll", toggleScrollIndicatorClass);
+
+  $(".button-menu").click(function () {
+    $(".header").toggleClass("on");
+  });
 });

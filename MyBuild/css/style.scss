@@ -207,6 +207,25 @@ input {
     }
   }
 }
+.bottom-fix-button {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 11;
+  width: 100%;
+  height: 60px;
+  background: rgb(27, 47, 77);
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+  &.on {
+    width: 90%;
+    bottom: 20px;
+    border-radius: 15px;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -219,6 +238,25 @@ input {
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgb(234, 237, 239);
   transition: background-color 0.3s ease 0s;
+  &.on {
+    .button-menu {
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(50%, 50%);
+        &:nth-child(1) {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: translate(-50%, -50%) rotate(135deg);
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
   .inner {
     display: flex;
     gap: 20px;
@@ -235,7 +273,7 @@ input {
       &:hover {
         background: rgb(229, 244, 255);
         color: rgb(0, 106, 255);
-        border-radius: 10px;
+        border-radius: 2px;
       }
     }
   }
@@ -244,6 +282,21 @@ input {
     margin-right: 120px;
     svg {
       fill: rgb(0, 106, 255);
+    }
+  }
+  .button-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    span {
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: rgb(0, 106, 255);
+      transition: all 0.3s;
     }
   }
 }
@@ -1392,16 +1445,52 @@ input {
   }
 }
 @include lg {
+  .bottom-fix-button {
+    display: block;
+  }
+  .header {
+    height: 60px;
+  }
   .header .inner,
   .footer .inner {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .header .inner {
+    align-items: center;
+    justify-content: space-between;
+  }
   .header .logo {
+    width: 80px;
     margin-right: 0;
   }
   .header .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+    position: fixed;
+    inset: 0;
+    transform: translateY(-50px);
+    height: 100vh;
+    opacity: 0;
+    background-color: #fff;
+    transition: all 0.3s;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .header.on .menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+  .header .menu button {
+    font-size: 15px;
+  }
+  .header .button-menu {
+    display: flex;
   }
   .footer > .top .inner {
     flex-direction: column;
@@ -1461,6 +1550,9 @@ input {
   }
   .container .con-2 .info {
     flex-direction: column;
+  }
+  .container .con-2 .info .item:not(:last-child) {
+    border-right: none;
   }
   .container .con-2 .info .item .text-2 {
     font-size: 25px;
@@ -1541,6 +1633,11 @@ input {
   .container .con-4 .inner > .right .text-4 {
     font-size: 16px;
   }
+  .container .con-4 .inner > .right .bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
   .container .con-5 > .inner {
     flex-direction: column;
     align-items: center;
@@ -1604,6 +1701,9 @@ input {
   .container .con-8 .indi .item .text-2 {
     display: flex;
   }
+  .container .con-8 .img {
+    display: none;
+  }
   .container .con-9 {
     padding: 100px 0;
   }
@@ -1651,6 +1751,9 @@ input {
   .container .con-13 .button-wrap .con-button {
     margin-top: 30px;
   }
+  .container .con-14 {
+    padding: 100px 0;
+  }
   .container .con-14 .inner {
     flex-direction: column;
   }
@@ -1659,15 +1762,25 @@ input {
     align-items: center;
     margin-top: 50px;
   }
+  .container .con-14 .text ._l9n1t {
+    display: flex;
+    margin: 0 auto;
+  }
   .container .con-14 .text-1 {
     font-size: 16px;
+    text-align: center;
   }
   .container .con-14 .text-2 {
     margin-top: 25px;
     font-size: 15px;
+    text-align: center;
   }
   .container .con-14 .text {
     padding-left: 0;
+  }
+  .container .con-14 .star {
+    display: flex;
+    justify-content: center;
   }
   .accordion-header {
     font-size: 18px;
