@@ -252,16 +252,66 @@ input {
   align-items: center;
   gap: 60px;
 }
+.header .menu .dropdown {
+  position: relative;
+}
+.header .menu .dropdown button:hover + .item {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+.header .menu .dropdown .item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 175px;
+  height: 109px;
+  padding: 20px;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.header .menu .dropdown .item:hover {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+.header .menu .dropdown .item ._16suths {
+  position: absolute;
+  inset: 0;
+}
+.header .menu .dropdown .item a {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+.header .menu .dropdown .item a svg {
+  margin-right: 8px;
+}
 .header .menu button {
+  display: flex;
+  align-items: center;
   padding: 10px 15px;
   font-size: 17px;
   font-weight: 700;
   transition: all 0.3s;
+  border-radius: 8px;
+}
+.header .menu button img {
+  width: 14px;
+  margin-left: 10px;
 }
 .header .menu button:hover {
   background: rgb(229, 244, 255);
   color: rgb(0, 106, 255);
-  border-radius: 2px;
 }
 .header .logo {
   width: 123px;
@@ -1445,6 +1495,35 @@ input {
   }
   .header .button-menu {
     display: flex;
+  }
+  .header .menu .dropdown button {
+    display: none;
+  }
+  .header .menu .dropdown .item {
+    align-items: center;
+    position: relative;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+  .header .menu .dropdown .item a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.3s;
+    border-radius: 8px;
+  }
+  .header .menu .dropdown .item:hover {
+    top: 0;
+  }
+  .header .menu .dropdown .item ._16suths {
+    display: none;
   }
   .footer > .top .inner {
     flex-direction: column;
