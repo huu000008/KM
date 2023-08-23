@@ -47,23 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Intersection Observer 생성
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+      once: true,
+    }
+  );
   const targetElements = document.querySelectorAll(".fade-in");
-  const options = {
-    threshold: 0.5,
-  };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      // 타겟 요소가 화면에 보이면 클래스를 추가하고, 그렇지 않으면 제거합니다.
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      } else {
-        entry.target.classList.remove("active");
-      }
-    });
-  }, options);
 
-  // Intersection Observer로 감시할 대상 요소를 등록합니다.
   targetElements.forEach((element) => {
     observer.observe(element);
   });

@@ -310,6 +310,10 @@ input {
       .box {
         top: -80px;
         white-space: nowrap;
+        transform: translateX(-70%);
+        &::before {
+          left: 70%;
+        }
       }
     }
     &-3 {

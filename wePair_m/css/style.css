@@ -311,6 +311,10 @@ input {
 .con-2 .img-2 .box {
   top: -80px;
   white-space: nowrap;
+  transform: translateX(-70%);
+}
+.con-2 .img-2 .box::before {
+  left: 70%;
 }
 .con-2 .img-3 {
   position: absolute;
