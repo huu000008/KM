@@ -69,6 +69,12 @@ input {
 .fade-in.delay-3 {
   transition-delay: 1.5s;
 }
+.fade-in.delay-4 {
+  transition-delay: 2s;
+}
+.fade-in.delay-5 {
+  transition-delay: 2.5s;
+}
 .fade-in.left {
   transform: translateX(50px);
 }
@@ -252,6 +258,17 @@ input {
   color: #fff;
   padding: 14px 18px;
   background: var(--primary-5, #ff0f00);
+}
+.con-2 .img .box::before {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translate(-50%, 0) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: var(--primary-5, #ff0f00);
+  content: "";
 }
 .con-2 .img-1 {
   position: relative;
