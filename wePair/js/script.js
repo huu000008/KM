@@ -1,147 +1,70 @@
-$(document).ready(function () {
-  $(".con-2 .slick-1").slick({
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-  });
-  $(".con-2 .slick-2").slick({
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-  });
-  $(".con-2 .slick-3").slick({
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
   });
 
-  const setActiveTab = (headerItem) => {
-    const tabHeader = headerItem.parentElement;
-    const tabContainer = tabHeader.nextElementSibling;
-    const index = [...tabHeader.children].indexOf(headerItem);
+  var scrollElements = document.querySelectorAll(".scroll");
 
-    [...tabHeader.children].forEach((item) => item.classList.remove("active"));
-    headerItem.classList.add("active");
-    [...tabContainer.children].forEach((child, idx) => {
-      child.classList.toggle("active", idx === index);
-    });
-  };
+  var headerElement = document.querySelector(".header");
 
-  const initializeActiveTabs = () => {
-    document.querySelectorAll(".tab-header").forEach((tabHeader) => {
-      setActiveTab(
-        tabHeader.querySelector(".item.active") ||
-          tabHeader.querySelector(".item")
-      );
-    });
-  };
+  window.addEventListener("scroll", function () {
+    var scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
 
-  document.querySelectorAll(".tab-wrap").forEach((tabWrap) => {
-    tabWrap.addEventListener("click", (e) => {
-      if (e.target.classList.contains("item")) {
-        setActiveTab(e.target);
+    var isScrollWithinAnyElement = Array.from(scrollElements).some(
+      (element) => {
+        var elementStart = element.offsetTop;
+        var elementEnd = elementStart + element.offsetHeight;
+
+        return elementStart <= scrollPosition && elementEnd > scrollPosition;
       }
-    });
+    );
+
+    if (isScrollWithinAnyElement) {
+      headerElement.classList.add("on");
+    } else {
+      headerElement.classList.remove("on");
+    }
+
+    var con1Element = document.querySelector(".con-1");
+    var con6Element = document.querySelector(".con-6");
+    var con1Start = con1Element.offsetTop;
+    var con1End = con1Start + con1Element.offsetHeight;
+    var con6Start = con6Element.offsetTop;
+    var con6End = con6Start + con6Element.offsetHeight;
+
+    if (con1Start <= scrollPosition && con1End > scrollPosition) {
+      headerElement.classList.add("simple");
+    } else {
+      headerElement.classList.remove("simple");
+    }
+
+    if (con6Start <= scrollPosition && con6End > scrollPosition) {
+      headerElement.classList.add("color");
+    } else {
+      headerElement.classList.remove("color");
+    }
   });
 
-  initializeActiveTabs();
-
-  const accordionWraps = document.querySelectorAll(".accordion-wrap");
-
-  accordionWraps.forEach(function (accordionWrap) {
-    accordionWrap.addEventListener("click", function () {
-      this.classList.toggle("active");
-
-      accordionWraps.forEach(function (otherWrap) {
-        if (otherWrap !== accordionWrap) {
-          otherWrap.classList.remove("active");
-        }
-      });
-    });
-  });
-
-  const fadeInSection = document.querySelectorAll(".fade-in");
-
+  // Intersection Observer 생성
+  const targetElements = document.querySelectorAll(".fade-in");
   const options = {
-    threshold: 0.1,
+    threshold: 0.5,
   };
-
-  const observer = new IntersectionObserver(function (entries, observer) {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+      // 타겟 요소가 화면에 보이면 클래스를 추가하고, 그렇지 않으면 제거합니다.
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-        observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("active");
       }
     });
   }, options);
 
-  fadeInSection.forEach((section) => {
-    observer.observe(section);
-  });
-
-  const counterElements = document.querySelectorAll(".counter");
-  const duration = 2000;
-  const interval = 10;
-
-  counterElements.forEach((counterElement) => {
-    const originalText = counterElement.textContent;
-    const targetNumber = parseFloat(originalText.replace(/,/g, ""));
-    const hasDot = originalText.includes(".");
-    const step = (targetNumber * interval) / duration;
-    let currentNumber = 0;
-
-    const options = {
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          function updateCounter() {
-            if (currentNumber < targetNumber) {
-              currentNumber += step;
-              if (currentNumber > targetNumber) {
-                currentNumber = targetNumber;
-              }
-
-              let formattedNumber = currentNumber.toFixed(hasDot ? 1 : 0);
-              if (originalText.includes(",")) {
-                formattedNumber = formattedNumber.replace(
-                  /\B(?=(\d{3})+(?!\d))/g,
-                  ","
-                );
-              }
-
-              counterElement.textContent = formattedNumber;
-              requestAnimationFrame(updateCounter);
-            }
-          }
-
-          updateCounter();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    observer.observe(counterElement);
-  });
-
-  const scrollIndicator = document.getElementById("scrollIndicator");
-
-  function toggleScrollIndicatorClass() {
-    if (window.scrollY > 0) {
-      scrollIndicator.classList.add("on");
-    } else {
-      scrollIndicator.classList.remove("on");
-    }
-  }
-
-  window.addEventListener("scroll", toggleScrollIndicatorClass);
-
-  $(".button-menu").click(function () {
-    $(".header").toggleClass("on");
+  // Intersection Observer로 감시할 대상 요소를 등록합니다.
+  targetElements.forEach((element) => {
+    observer.observe(element);
   });
 });
