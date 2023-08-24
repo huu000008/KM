@@ -177,9 +177,6 @@ input {
     flex-direction: column;
     gap: 6px;
     &-1 {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
       color: #666;
       font-size: 16px;
       line-height: 150%; /* 24px */
@@ -194,7 +191,11 @@ input {
         text-decoration-line: underline;
       }
       span {
-        display: block;
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        margin: 0 10px;
+        background: rgba(102, 102, 102, 0.5);
       }
     }
   }
@@ -216,7 +217,7 @@ input {
 }
 .con-1 {
   position: relative;
-  height: 100vh;
+  height: 620px;
   padding-top: 290px;
   background-image: url(../img/img01.jpg);
   background-repeat: no-repeat;
@@ -282,7 +283,6 @@ input {
       color: var(--white, #fff);
       text-align: center;
       font-size: 12px;
-      font-weight: 600;
       line-height: 15px; /* 125% */
       letter-spacing: -0.24px;
       background: var(--primary-5, #ff0f00);
@@ -322,14 +322,6 @@ input {
       right: 35px;
       img.active {
         animation: slideRight 2s linear forwards 1s;
-        @keyframes slideRight {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-180px);
-          }
-        }
       }
     }
   }
@@ -449,7 +441,8 @@ input {
       line-height: 130%; /* 44.2px */
       letter-spacing: -1.02px;
       span {
-        margin-left: 8px;
+        margin-top: 10px;
+        margin-left: 4px;
         color: var(--gray-g-9, #333);
         font-size: 18px;
         font-weight: 600;
@@ -561,16 +554,15 @@ input {
       margin-top: 16px;
       color: #000;
       font-size: 14px;
-      font-weight: 700;
       line-height: 150%;
       letter-spacing: -0.28px;
-      overflow: hidden;
-      white-space: normal;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      word-break: keep-all;
+      // overflow: hidden;
+      // white-space: normal;
+      // text-overflow: ellipsis;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 3;
+      // -webkit-box-orient: vertical;
+      // word-break: keep-all;
     }
     &-7 {
       margin-top: 8px;
@@ -580,7 +572,7 @@ input {
       letter-spacing: -0.28px;
     }
     &-8 {
-      margin-top: 80px;
+      margin-top: 85px;
       padding-bottom: 30px;
       color: var(--white, #fff);
       font-size: 28px;
@@ -596,19 +588,22 @@ input {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      padding: 17px 20px;
       padding-bottom: 0;
-      border: 1px solid #fff;
-      border-bottom: none;
+      .left {
+        padding: 17px 20px 0;
+        border: 1px solid #fff;
+        border-bottom: none;
+      }
       .right {
         margin-top: 18px;
+        padding: 0 20px;
       }
     }
   }
   .mySwiper {
     overflow: visible;
     .swiper-slide {
-      width: 224px;
+      width: 248px;
       padding: 20px 14px;
       background-color: #fff;
       color: #000;

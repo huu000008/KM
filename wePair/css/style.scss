@@ -258,6 +258,7 @@ input {
       color: #fff;
       padding: 14px 18px;
       background: var(--primary-5, #ff0f00);
+      font-weight: 500;
       &::before {
         display: flex;
         position: absolute;
@@ -400,7 +401,8 @@ input {
       line-height: 100%; /* 58px */
       letter-spacing: -1.16px;
       span {
-        margin-left: 8px;
+        margin-top: 10px;
+        margin-left: 4px;
         color: #000;
         font-size: 26px;
         font-weight: 500;
@@ -502,6 +504,7 @@ input {
     &-3 {
       font-size: 42px;
       font-weight: 300;
+      color: #808080;
     }
     &-4 {
       margin-top: 5px;
@@ -528,6 +531,9 @@ input {
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       word-break: keep-all;
+      strong {
+        font-weight: 600;
+      }
     }
     &-7 {
       margin-top: 20px;
@@ -611,5 +617,6 @@ input {
   }
   .btn {
     margin-top: 80px;
+    padding-top: 15px;
   }
 }
