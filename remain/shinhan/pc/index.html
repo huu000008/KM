@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="stylesheet" href="../../common/css/style.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="../../common/js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
         <div class="con-1">
-          <div class="h1">
+          <div class="h1 wow fadeInUp">
             <h1>Shinhan S² Bridge</h1>
             <div class="tag-wrap">
               <span>ui concept & identity desgin</span>
@@ -26,7 +34,7 @@
             <div class="logo">
               <img src="assets/logo1.png" alt="" />
             </div>
-            <div class="text-wrap">
+            <div class="text-wrap wow fadeInUp">
               <div class="text-1">
                 전문적인 이미지를 통해 스타트업과 투자자를 연결해주는<br />
                 Shinhan S² Bridge UI 디자인 제작
@@ -45,8 +53,8 @@
               </div>
             </div>
           </div>
-          <div class="img img-1"></div>
-          <div class="img img-2"></div>
+          <div class="img img-1 wow fadeInUp"></div>
+          <div class="img img-2 wow fadeInUp" data-wow-delay="1s"></div>
         </div>
         <div class="con-2">
           <div class="text-1">
@@ -54,7 +62,8 @@
             Web,Mobile<br />
             UI Design
           </div>
-          <div class="text-2">
+          <div class="text-2 wow fadeInUp">
+            <div class="title">project goal</div>
             이미 과열되어 있는 현재 시장에서 신한이<br />
             국내 시장에서의 뚜렷한 얼굴을 드러내기 위해<br />
             스타트업과 투자자 사이에 아름다운 상생이 실현되기 위한<br />
@@ -65,15 +74,15 @@
             대표성이 두드러지는 브랜드 경험을 제안합니다.
           </div>
           <div class="img-wrap-1">
-            <div class="img img-1">
+            <div class="img-1 wow fadeInUp">
               <img src="assets/img_con2_2.png" alt="" />
             </div>
-            <div class="img img-2">
+            <div class="img-2">
               <img src="assets/img_con2_3.png" alt="" />
             </div>
           </div>
           <div class="img-wrap-2">
-            <div class="img img-1">
+            <div class="img img-1 wow fadeInUp">
               <img src="assets/img_con2_4.png" alt="" />
             </div>
             <div class="img img-2">
@@ -83,7 +92,7 @@
         </div>
         <div class="con-3">
           <div class="title">design criteria</div>
-          <div class="swiper">
+          <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="text-1">
@@ -98,14 +107,72 @@
                   이미지를 전달할 수 있는 디자인
                 </div>
               </div>
+              <div class="swiper-slide">
+                <div class="text-1">
+                  <img src="assets/img_con3_3.png" alt="" />
+                </div>
+                <div class="text-2">
+                  integrate<br />
+                  & optimized
+                </div>
+                <div class="text-3">
+                  하나의 사이트 아래 다양한 성격과 가능성을 가진<br />
+                  콘텐츠를 일관성있게 전달할 수 있는 디자인
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text-1">
+                  <img src="assets/img_con3_4.png" alt="" />
+                </div>
+                <div class="text-2">
+                  adventurous<br />
+                  & challenging
+                </div>
+                <div class="text-3">
+                  끊임없는 도전을 통해 가능성의 경계를 허물고,<br />
+                  새로운 시장을 개적할 수 있는 디자인
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="con-4">
           <div class="title">visual language</div>
-          <img src="assets/img_con4_2.png" alt="" class="img-1" />
+          <img src="assets/img_con4_2.png" alt="" class="img-1 wow fadeInUp" />
+          <div class="box-text wow fadeInUp">
+            스타트업 성장<br />
+            네트워킹 플랫폼
+          </div>
+          <img src="assets/img_con4_4.png" alt="" class="img-2" />
+        </div>
+        <div class="con-5">
+          <div class="img-1 wow fadeInUp">
+            <img src="assets/img_con5_1.png" alt="" />
+          </div>
+          <img src="assets/img_con5_2.png" alt="" class="img-2" />
+        </div>
+        <div class="con-6">
+          <div class="top">
+            <img src="assets/img_con6_1.png" alt="" />
+          </div>
+          <div class="bottom">
+            <img src="assets/img_con6_2.png" alt="" />
+            <img src="assets/img_con6_3.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
+    <script>
+      new WOW().init();
+      var swiper = new Swiper(".mySwiper", {
+        // slidesPerView: "auto",
+        direction: "vertical",
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        speed: 1000,
+      });
+    </script>
   </body>
 </html>
