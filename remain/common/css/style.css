@@ -41,10 +41,14 @@ img {
   display: block;
   text-align: center;
 }
+@media (max-width: 1179px) {
+  .h1 {
+    padding-top: 120px;
+  }
+}
 .h1 h1 {
   margin-bottom: 32px;
   color: #fff;
-  font-family: Poppins;
   font-size: 80px;
   font-style: normal;
   font-weight: 700;
@@ -52,20 +56,49 @@ img {
   letter-spacing: -0.8px;
   text-transform: uppercase;
 }
+@media (max-width: 1179px) {
+  .h1 h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%; /* 39.6px */
+    letter-spacing: 0.44px;
+    text-transform: uppercase;
+  }
+}
 .h1 .tag-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1179px) {
+  .h1 .tag-wrap {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+}
 .h1 .tag-wrap span {
   color: #fff;
   text-align: center;
-  font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 90%; /* 14.4px */
   text-transform: lowercase;
+}
+@media (max-width: 1179px) {
+  .h1 .tag-wrap span {
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 10px */
+    text-transform: lowercase;
+  }
 }
 .h1 .tag-wrap span + span {
   display: flex;
@@ -79,4 +112,9 @@ img {
   background-color: #fff;
   opacity: 0.5;
   content: "";
+}
+@media (max-width: 1179px) {
+  .h1 .tag-wrap span + span::before {
+    height: 8px;
+  }
 }/*# sourceMappingURL=style.css.map */

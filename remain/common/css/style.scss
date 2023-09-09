@@ -27,6 +27,22 @@
   font-weight: 700;
 }
 
+@mixin md {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: 1180px) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (max-width: 1179px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -41,30 +57,55 @@ img {
   padding-top: 164px;
   display: block;
   text-align: center;
+  @include xs {
+    padding-top: 120px;
+  }
   h1 {
     margin-bottom: 32px;
     color: #fff;
-    font-family: Poppins;
     font-size: 80px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%; /* 80px */
     letter-spacing: -0.8px;
     text-transform: uppercase;
+    @include xs {
+      margin-bottom: 20px;
+      color: #fff;
+      text-align: center;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 90%; /* 39.6px */
+      letter-spacing: 0.44px;
+      text-transform: uppercase;
+    }
   }
   .tag-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include xs {
+      flex-wrap: wrap;
+      row-gap: 10px;
+    }
     span {
       color: #fff;
       text-align: center;
-      font-family: Poppins;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 90%; /* 14.4px */
       text-transform: lowercase;
+      @include xs {
+        color: #fff;
+        text-align: center;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 10px */
+        text-transform: lowercase;
+      }
       & + span {
         display: flex;
         align-items: center;
@@ -76,6 +117,9 @@ img {
           background-color: #fff;
           opacity: 0.5;
           content: "";
+          @include xs {
+            height: 8px;
+          }
         }
       }
     }
