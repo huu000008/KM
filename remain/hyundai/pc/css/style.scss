@@ -15,6 +15,10 @@ img {
 }
 body {
   background: var(--neutral-gray-black, #000);
+  transition: all 1s;
+  &.on {
+    background: rgba(0, 44, 95, 1);
+  }
 }
 .wrapper {
   max-width: 1920px;
@@ -312,7 +316,7 @@ body {
 }
 .con-7 {
   text-align: center;
-  background: linear-gradient(180deg, #002c5f00 0%, #002c5f 100%);
+  background: linear-gradient(180deg, #002c5f00 50%, #002c5f 100%);
   @include md {
     img {
       width: 425px;
@@ -321,6 +325,7 @@ body {
 }
 .con-8 {
   padding-top: 400px;
+  background: var(--neutral-gray-black, #000);
   .img {
     display: flex;
     justify-content: space-between;

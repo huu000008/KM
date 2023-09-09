@@ -6,6 +6,10 @@ img {
 body {
   background: var(--neutral-gray-black, #000);
   word-break: keep-all;
+  transition: all 1s;
+}
+body.on {
+  background: rgb(0, 44, 95);
 }
 
 .wrapper {
@@ -272,6 +276,7 @@ body {
 
 .con-8 {
   padding-top: 140px;
+  background: var(--neutral-gray-black, #000);
 }
 .con-8 .img {
   display: flex;

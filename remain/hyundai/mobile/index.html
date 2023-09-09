@@ -203,6 +203,25 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+      const con5 = document.querySelector(".con-5");
+      const body = document.body;
+
+      const option = {
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === con5 && entry.isIntersecting) {
+            body.classList.add("on");
+          } else {
+            body.classList.remove("on");
+          }
+        });
+      }, option);
+
+      observer.observe(con5);
     </script>
   </body>
 </html>

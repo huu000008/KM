@@ -16,6 +16,10 @@ img {
 body {
   background: var(--neutral-gray-black, #000);
   word-break: keep-all;
+  transition: all 1s;
+  &.on {
+    background: rgba(0, 44, 95, 1);
+  }
 }
 .wrapper {
   max-width: 1920px;
@@ -283,6 +287,7 @@ body {
 }
 .con-8 {
   padding-top: 140px;
+  background: var(--neutral-gray-black, #000);
   .img {
     display: flex;
     flex-direction: column;
