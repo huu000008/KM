@@ -299,20 +299,86 @@
           <div class="left">
             <div class="text-1 wow fadeInUp page-title">
               <img src="assets/icon_num_4.svg" alt="" />
-              사용자 인지 과정
+              디자인 전략
             </div>
             <div class="text-2 wow fadeInUp page-desc">
-              사용자의 인지 프로세스를 중심으로 기존 플랫폼에서<br / > 개선이
-              필요한 지점을 도출합니다.
+              UXUI 비주얼 패턴을 전반적으로 개선하여 시인성과<br />
+              사용성을 높였습니다. 또한, 브랜드 가이드를 일관적으로<br />
+              적용하여 사용자에게 질적 만족감을 제공합니다.
             </div>
           </div>
+          <div class="right">
+            <div class="swiper mySwiper-1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="text-3 wow fadeInUp">
+                    주문상품 및 배송 정보,<br />
+                    결제 정보 입력 ui 사용성 개선
+                  </div>
+                  <div class="text-4 wow fadeInUp">
+                    주문 및 결제 UI 사용성 개선
+                  </div>
+                  <div class="text-5 wow fadeInUp">
+                    전 연령대의 고객이 주문 시 필요한 정보를 한눈에 보고<br />
+                    쉽게 입력할 수 있도록 UI 화면 플로우를 개선합니다.
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-3 wow fadeInUp">
+                    주문상품 및 배송 정보,<br />
+                    결제 정보 입력 ui 사용성 개선
+                  </div>
+                  <div class="text-4 wow fadeInUp">
+                    주문 및 결제 UI 사용성 개선
+                  </div>
+                  <div class="text-5 wow fadeInUp">
+                    전 연령대의 고객이 주문 시 필요한 정보를 한눈에 보고<br />
+                    쉽게 입력할 수 있도록 UI 화면 플로우를 개선합니다.
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-wrap">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="con-10">
+          <div class="left">
+            <img src="assets/img_con10_1.png" alt="" />
+          </div>
           <div class="right"></div>
+        </div>
+        <div class="con-11">
+          <div class="text-1 wow fadeInUp page-title">
+            <img src="assets/icon_num_1.svg" alt="" />
+            서비스 플로우
+          </div>
+          <div class="box-wrap">
+            <div class="box">
+              <span> 주문서 작성 UI 사용성 개선 </span>
+            </div>
+            <div class="box">
+              <span>
+                명료한 정보 위계를 통한<br />
+                상품 및 브랜드 정보 시인성 개선
+              </span>
+            </div>
+            <div class="box">
+              <span>
+                온라인 서비스에 맞는<br />
+                브랜드 가이드라인 구축
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <script>
       new WOW().init();
-      var swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper(".mySwiper-1", {
         // slidesPerView: "auto",
         autoplay: {
           delay: 2500,
@@ -322,6 +388,10 @@
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
         },
       });
     </script>
