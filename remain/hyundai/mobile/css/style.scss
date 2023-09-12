@@ -15,6 +15,8 @@ img {
 }
 body {
   background: var(--neutral-gray-black, #000);
+  font-family: "Poppins", "SUITE", sans-serif;
+  font-weight: 400;
   word-break: keep-all;
   transition: all 1s;
   &.on {

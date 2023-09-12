@@ -29,6 +29,16 @@
   unicode-range: U+AC00-D7A3, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
   font-weight: 700;
 }
+@font-face {
+  font-family: "Noto Serif KR";
+  src: url(../../common/fonts/Noto_Serif_KR/NotoSerifKR-Regular.otf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Serif KR";
+  src: url(../../common/fonts/Noto_Serif_KR/NotoSerifKR-Bold.otf) format("truetype");
+  font-weight: 700;
+}
 * {
   box-sizing: border-box;
 }
