@@ -36,6 +36,16 @@
 }
 @font-face {
   font-family: "Noto Serif KR";
+  src: url(../../common/fonts/Noto_Serif_KR/NotoSerifKR-Medium.otf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Serif KR";
+  src: url(../../common/fonts/Noto_Serif_KR/NotoSerifKR-SemiBold.otf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Noto Serif KR";
   src: url(../../common/fonts/Noto_Serif_KR/NotoSerifKR-Bold.otf) format("truetype");
   font-weight: 700;
 }
