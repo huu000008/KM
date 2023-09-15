@@ -84,14 +84,14 @@ img {
   vertical-align: top;
 }
 .h1 {
-  padding-top: 164px;
+  padding-top: 130px;
   display: block;
   text-align: center;
   @include xs {
-    padding-top: 120px;
+    padding-top: 80px;
   }
   h1 {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     color: #fff;
     font-size: 80px;
     font-style: normal;
@@ -100,15 +100,14 @@ img {
     letter-spacing: -0.8px;
     text-transform: uppercase;
     @include xs {
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       color: #fff;
       text-align: center;
-      font-size: 44px;
+      font-size: 36px;
       font-style: normal;
-      font-weight: 800;
-      line-height: 90%; /* 39.6px */
-      letter-spacing: 0.44px;
-      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 100%; /* 36px */
+      letter-spacing: -0.36px;
     }
   }
   .tag-wrap {
@@ -153,5 +152,14 @@ img {
         }
       }
     }
+  }
+}
+
+.img_big {
+  visibility: visible !important;
+  transform: scale(1.05);
+  transition: all ease-in-out 1s;
+  &.animated {
+    transform: scale(1);
   }
 }

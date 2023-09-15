@@ -10,10 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
-    />
+    <link rel="stylesheet" href="../../common/css/animate.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   </head>
   <body>
@@ -32,7 +29,7 @@
         </div>
         <div class="con-2">
           <div class="logo">
-            <img src="assets/logo1.png" alt="" />
+            <img src="assets/logo1.png" alt="" class="wow fadeInUp" />
           </div>
           <div class="text-1 wow fadeInUp">
             EV Web,Mobile<br />
@@ -58,7 +55,9 @@
           <div class="img-3">
             <img src="assets/img_con2_3.png" alt="" class="wow fadeInUp" />
           </div>
-          <img src="assets/img_con2_4.png" alt="" />
+          <div class="img-4">
+            <img src="assets/img_con2_4.png" alt="" />
+          </div>
         </div>
         <div class="con-3">
           <div class="inner">
@@ -76,23 +75,14 @@
                     rapid charging, and a crusing range of over 500km
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="text-1">project goal</div>
-                  <div class="text-2">
-                    Eleifend netus sit at neque vitae massa eu fringilla sed.
-                    Lobortis nunc tortor ac scelerisque tristique.
-                  </div>
-                  <div class="text-3">
-                    This exclusive platform for next-generation EVs offers
-                    innovative design, abundant cabin space, high performance,
-                    rapid charging, and a crusing range of over 500km
-                  </div>
-                </div>
               </div>
-              <div class="swiper-button-wrap">
+              <!-- <div class="swiper-button-wrap">
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-              </div>
+              </div> -->
+            </div>
+            <div class="inner-title">
+              This exclusive platform for next-generation.
             </div>
           </div>
         </div>
@@ -111,7 +101,7 @@
             class="img img-3 wow fadeInUp"
           />
         </div>
-        <div class="img-4-inner wow fadeInUp">
+        <div class="img-4-inner wow img_big">
           <img src="assets/img_con4_4.png" alt="" class="img img-4" />
         </div>
         <div class="text-wrap">
@@ -168,12 +158,7 @@
           <img src="assets/img_con6_1.png" alt="" class="wow fadeInUp" />
         </div>
         <div class="img img-2">
-          <img
-            src="assets/img_con6_2.png"
-            alt=""
-            class="wow fadeInUp"
-            data-wow-delay="1s"
-          />
+          <img src="assets/img_con6_2.png" alt="" class="wow fadeInUp" />
         </div>
       </div>
       <div class="con-7">
@@ -182,35 +167,35 @@
       <div class="con-8">
         <img src="assets/img_con8_1.png" alt="" />
         <div class="img">
-          <div class="left wow fadeInUp">
-            <img src="assets/img_con8_2.png" alt="" />
+          <div class="left">
+            <img src="assets/img_con8_2.png" alt="" class="wow fadeInUp" />
           </div>
-          <div class="right wow fadeInUp" data-wow-delay="1s">
-            <img src="assets/img_con8_3.png" alt="" />
+          <div class="right">
+            <img src="assets/img_con8_3.png" alt="" class="wow fadeInUp" />
           </div>
         </div>
       </div>
     </div>
     <script>
       new WOW().init();
-      var swiper = new Swiper(".mySwiper", {
-        // slidesPerView: "auto",
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        speed: 1000,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+      // var swiper = new Swiper(".mySwiper", {
+      //   // slidesPerView: "auto",
+      //   autoplay: {
+      //     delay: 2500,
+      //     disableOnInteraction: false,
+      //   },
+      //   speed: 1000,
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      // });
 
       const con5 = document.querySelector(".con-5");
       const body = document.body;
 
       const option = {
-        threshold: 0.5,
+        threshold: 0.1,
       };
 
       const observer = new IntersectionObserver((entries) => {

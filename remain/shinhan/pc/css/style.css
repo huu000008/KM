@@ -203,6 +203,7 @@ body {
   background-image: url(../assets/img_con3_1.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   text-align: center;
 }
 .con-3::after {
@@ -224,6 +225,10 @@ body {
 }
 .con-3 .swiper {
   flex: 1;
+  width: 100%;
+}
+.con-3 .swiper.on {
+  pointer-events: none;
 }
 .con-3 .swiper-slide {
   display: flex;
