@@ -29,6 +29,7 @@ body {
   background-image: url(../assets/img_con1_1.png);
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
 }
 .con-2 {
   padding-top: 50px;
@@ -69,19 +70,19 @@ body {
     position: relative;
     text-align: left;
     overflow: hidden;
-    &::after {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 500px;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 50%
-      );
-      content: "";
-    }
+    // &::after {
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   height: 500px;
+    //   background: linear-gradient(
+    //     180deg,
+    //     rgba(0, 0, 0, 0) 0%,
+    //     rgba(0, 0, 0, 1) 50%
+    //   );
+    //   content: "";
+    // }
   }
   .img-4 {
     width: 326px;
@@ -192,6 +193,7 @@ body {
     border-radius: 10px;
   }
   .img-2 {
+    width: 950px;
     margin-left: 200px;
     margin-top: -290px;
     @include md {
@@ -199,6 +201,7 @@ body {
     }
   }
   .img-3 {
+    width: 540px;
     margin-left: 65px;
     margin-top: 75px;
     @include md {
