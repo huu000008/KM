@@ -13,19 +13,25 @@
 }
 @font-face {
   font-family: "Poppins";
+  src: url(../../common/fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+  unicode-range: U+0041-005A, U+0061-007A;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Poppins";
   src: url(../../common/fonts/Poppins/Poppins-Bold.ttf) format("truetype");
   unicode-range: U+0041-005A, U+0061-007A;
   font-weight: 700;
 }
 @font-face {
-  font-family: "SUITE";
-  src: url(../../common/fonts/SUITE-ttf/SUITE-Regular.ttf) format("truetype");
+  font-family: "SUIT";
+  src: url(../../common/fonts/suit/SUIT-Regular.otf) format("opentype");
   unicode-range: U+AC00-D7A3, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
   font-weight: 400;
 }
 @font-face {
-  font-family: "SUITE";
-  src: url(../../common/fonts/SUITE-ttf/SUITE-Bold.ttf) format("truetype");
+  font-family: "SUIT";
+  src: url(../../common/fonts/suit/SUIT-Bold.otf) format("opentype");
   unicode-range: U+AC00-D7A3, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
   font-weight: 700;
 }
@@ -54,7 +60,7 @@
 }
 
 body {
-  font-family: "Poppins", "SUITE", sans-serif;
+  font-family: "Poppins", "SUIT", sans-serif;
   font-weight: 400;
 }
 

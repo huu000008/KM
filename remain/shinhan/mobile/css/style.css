@@ -66,12 +66,12 @@ body {
 .con-1 .logo-text .text-wrap .text-2 {
   margin-top: 20px;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
-  text-transform: uppercase;
-  opacity: 0.5;
+  line-height: 150%; /* 19.5px */
+  text-transform: lowercase;
+  opacity: 0.6;
 }
 
 .con-2 {
@@ -203,7 +203,7 @@ body {
 .con-3 .swiper-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 80px;
 }
 .con-3 .swiper-slide {
   display: flex;
@@ -217,6 +217,7 @@ body {
 }
 .con-3 .swiper-slide .text-1 img {
   width: 100%;
+  max-width: 14px;
 }
 .con-3 .swiper-slide .text-2 {
   margin-top: 16px;
@@ -261,6 +262,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  width: 100%;
+}
+.con-4 .img-2 img {
   max-width: 100%;
 }
 .con-4 .title {
@@ -293,7 +297,6 @@ body {
 }
 
 .con-5 {
-  padding-top: 100px;
   padding-bottom: 70px;
   text-align: center;
 }
@@ -302,7 +305,6 @@ body {
 }
 .con-5 .img-1 {
   margin-bottom: 70px;
-  padding: 0 20px;
   text-align: right;
 }
 .con-5 .img-2 {
