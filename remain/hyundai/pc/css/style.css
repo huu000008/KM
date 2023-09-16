@@ -65,7 +65,7 @@ body {
 }
 .con-2 .img-4 {
   width: 326px;
-  margin: 300px auto 0;
+  margin: 0 auto;
 }
 
 .con-3 {
@@ -294,7 +294,7 @@ body.on .con-5 {
     margin-left: 145px;
   }
   .con-5 .img img {
-    max-width: initial;
+    max-width: 1920px;
   }
 }
 .con-5 .img::after {
@@ -329,6 +329,9 @@ body.on .con-5 {
 .con-7 {
   text-align: center;
   background: linear-gradient(180deg, rgba(0, 44, 95, 0) 50%, #002c5f 100%);
+}
+.con-7 img {
+  width: 530px;
 }
 @media (max-width: 1440px) {
   .con-7 img {
