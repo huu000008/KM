@@ -432,7 +432,10 @@ body {
 }
 .con-7 {
   padding-top: 140px;
-  background: #27423e;
+  transition: all 2s;
+  &.on {
+    background: #27423e;
+  }
   @include md {
     padding-left: 48px;
     padding-right: 48px;
@@ -524,7 +527,11 @@ body {
   margin-top: -340px;
   padding-top: 650px;
   padding-bottom: 220px;
-  background: #1b1b1b;
+  background: #27423e;
+  transition: all 2s;
+  &.on {
+    background: #1b1b1b;
+  }
   .img-wrap {
     display: flex;
     column-gap: 120px;
@@ -594,7 +601,11 @@ body {
 .con-11 {
   margin-top: -500px;
   padding-top: 700px;
-  background-color: rgba(39, 66, 62, 1);
+  background-color: rgb(229, 225, 222);
+  transition: all 2s;
+  &.on {
+    background-color: rgba(39, 66, 62, 1);
+  }
   .box {
     width: 50%;
     padding: 40px;
@@ -794,7 +805,10 @@ body {
 }
 .con-14 {
   padding: 140px 0;
-  background: #f0efea;
+  transition: all 2s;
+  &.on {
+    background: #f0efea;
+  }
   @include md {
     padding-bottom: 0;
   }

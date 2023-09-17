@@ -351,24 +351,24 @@
             </div>
             <div class="text-wrap">
               <div class="text-4 wow fadeInUp">
-                <span>HEALTH</span>
-                <span>warm</span>
+                <span>Premium</span>
+                <span>Sincere</span>
               </div>
               <div class="text-5 wow fadeInUp">
-                좋은 재료로<br />
-                건강한 삶을 만들어주는<br />
-                건강한 백년화편
+                정성으로 만들어져<br />
+                소중한 사람들에게<br />
+                선물하기 좋은 백년화편
               </div>
             </div>
             <div class="text-wrap">
               <div class="text-4 wow fadeInUp">
-                <span>HEALTH</span>
-                <span>warm</span>
+                <span>Truthful</span>
+                <span>Trust</span>
               </div>
               <div class="text-5 wow fadeInUp">
-                좋은 재료로<br />
-                건강한 삶을 만들어주는<br />
-                건강한 백년화편
+                믿을 수 있는 재료로<br />
+                만들어 모든 사람들이 좋아하는<br />
+                믿을 수 있는 백년화편
               </div>
             </div>
           </div>
@@ -389,6 +389,76 @@
     </div>
     <script>
       new WOW().init();
+
+      const con14 = document.querySelector(".con-14");
+      const con7 = document.querySelector(".con-7");
+      const con8 = document.querySelector(".con-8");
+      const con11 = document.querySelector(".con-11");
+
+      const option = {
+        threshold: 0.1,
+      };
+
+      let isCon14Intersecting = false;
+      let isCon7Intersecting = false;
+      let isCon8Intersecting = false;
+      let isCon11Intersecting = false;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === con14) {
+            if (entry.isIntersecting) {
+              if (!isCon14Intersecting) {
+                con14.classList.add("on");
+                isCon14Intersecting = true;
+              }
+            } else {
+              con14.classList.remove("on");
+              isCon14Intersecting = false;
+            }
+          }
+
+          if (entry.target === con7) {
+            if (entry.isIntersecting) {
+              if (!isCon7Intersecting) {
+                con7.classList.add("on");
+                isCon7Intersecting = true;
+              }
+            } else {
+              con7.classList.remove("on");
+              isCon7Intersecting = false;
+            }
+          }
+
+          if (entry.target === con8) {
+            if (entry.isIntersecting) {
+              if (!isCon8Intersecting) {
+                con8.classList.add("on");
+                isCon8Intersecting = true;
+              }
+            } else {
+              con8.classList.remove("on");
+              isCon8Intersecting = false;
+            }
+          }
+          if (entry.target === con11) {
+            if (entry.isIntersecting) {
+              if (!isCon11Intersecting) {
+                con11.classList.add("on");
+                isCon11Intersecting = true;
+              }
+            } else {
+              con11.classList.remove("on");
+              isCon11Intersecting = false;
+            }
+          }
+        });
+      }, option);
+
+      observer.observe(con14);
+      observer.observe(con7);
+      observer.observe(con8);
+      observer.observe(con11);
     </script>
   </body>
 </html>

@@ -433,6 +433,9 @@ body {
 
 .con-7 {
   padding-top: 140px;
+  transition: all 2s;
+}
+.con-7.on {
   background: #27423e;
 }
 @media (max-width: 1440px) {
@@ -534,6 +537,10 @@ body {
   margin-top: -340px;
   padding-top: 650px;
   padding-bottom: 220px;
+  background: #27423e;
+  transition: all 2s;
+}
+.con-8.on {
   background: #1b1b1b;
 }
 .con-8 .img-wrap {
@@ -609,6 +616,10 @@ body {
 .con-11 {
   margin-top: -500px;
   padding-top: 700px;
+  background-color: rgb(229, 225, 222);
+  transition: all 2s;
+}
+.con-11.on {
   background-color: rgb(39, 66, 62);
 }
 .con-11 .box {
@@ -826,6 +837,9 @@ body {
 
 .con-14 {
   padding: 140px 0;
+  transition: all 2s;
+}
+.con-14.on {
   background: #f0efea;
 }
 @media (max-width: 1440px) {
