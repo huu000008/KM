@@ -35,6 +35,10 @@ body {
 }
 .con-2 {
   padding: 60px 60px 180px;
+  @include md {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .img {
     width: 62px;
   }
@@ -70,6 +74,7 @@ body {
 }
 .con-4 {
   position: relative;
+  z-index: 1;
   padding-top: 180px;
   background: #ffc33a;
   text-align: center;
@@ -79,26 +84,42 @@ body {
       top: 0;
       right: 0;
       width: calc(930px / 2);
+      @include md {
+        right: -190px;
+      }
     }
     &-2 {
       top: 50px;
       left: 360px;
       width: calc(269px / 2);
+      @include md {
+        left: 160px;
+      }
     }
     &-3 {
       top: 660px;
       right: 190px;
       width: calc(268px / 2);
+      @include md {
+        right: -30px;
+      }
     }
     &-4 {
       bottom: -85px;
       left: 0;
       width: calc(795px / 2);
+      @include md {
+        left: -80px;
+      }
     }
     &-5 {
       bottom: 800px;
       left: 0;
       width: calc(539px / 2);
+      @include md {
+        bottom: 700px;
+        left: -70px;
+      }
     }
   }
   .text-wrap {
@@ -125,6 +146,17 @@ body {
       line-height: 110%; /* 79.2px */
       letter-spacing: -0.72px;
       text-transform: lowercase;
+      @include md {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; /* 70.4px */
+        letter-spacing: -0.64px;
+        text-transform: lowercase;
+      }
     }
     .text-3 {
       color: #fff;
@@ -143,19 +175,43 @@ body {
     z-index: 1;
     width: calc(2224px / 2);
     margin: 110px auto 0;
+    @include md {
+      width: 868px;
+      padding-bottom: 120px;
+    }
+    .only-tablet {
+      display: none;
+    }
+    @include md {
+      .only-tablet {
+        display: block;
+      }
+      .only-pc {
+        display: none;
+      }
+    }
   }
 }
 .con-5 {
   position: relative;
   padding-top: 180px;
   padding-bottom: 300px;
-  background: #005d00;
   text-align: center;
+  transition: all 2s;
+  &.on {
+    background: #005d00;
+  }
+  @include md {
+    padding-bottom: 200px;
+  }
   .bg-1 {
     position: absolute;
     top: -60px;
     right: 320px;
     width: calc(360px / 2);
+    @include md {
+      right: 100px;
+    }
   }
   .h2 {
     .tx-1 {
@@ -204,6 +260,10 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 1056px;
+    @include md {
+      gap: 10px;
+      background-size: 800px;
+    }
     .box {
       display: flex;
       justify-content: space-between;
@@ -215,6 +275,11 @@ body {
       border: 2px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s;
       cursor: pointer;
+      @include md {
+        width: 360px;
+        height: 360px;
+        padding: 28px 0;
+      }
       &:hover {
         border: 2px solid rgba(255, 255, 255, 0.5);
       }
@@ -240,6 +305,15 @@ body {
         font-weight: 600;
         line-height: 100%; /* 20px */
         text-transform: lowercase;
+        @include md {
+          text-align: center;
+          font-family: Pretendard;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%; /* 16px */
+          text-transform: lowercase;
+        }
       }
       .tx-2 {
         color: #fff;
@@ -250,6 +324,15 @@ body {
         font-weight: 600;
         line-height: 130%; /* 41.6px */
         text-transform: lowercase;
+        @include md {
+          text-align: center;
+          font-family: Pretendard;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 128%; /* 33.28px */
+          text-transform: lowercase;
+        }
       }
       .tx-3 {
         display: none;
@@ -261,6 +344,14 @@ body {
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 24px */
+        @include md {
+          text-align: center;
+          font-family: Pretendard;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 148%; /* 23.68px */
+        }
       }
       .btn {
         width: 60px;
@@ -271,6 +362,10 @@ body {
         background-position: center;
         background-size: cover;
         transition: all 0.3s;
+        @include md {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }
@@ -278,6 +373,9 @@ body {
 .con-7 {
   padding-top: 265px;
   padding-bottom: 140px;
+  @include md {
+    padding-top: 240px;
+  }
   .img {
     width: 915px;
     margin: 0 auto;
@@ -287,6 +385,10 @@ body {
     justify-content: center;
     gap: 44px;
     margin-top: 220px;
+    @include md {
+      margin-top: 130px;
+      gap: 16px;
+    }
     .box {
       display: flex;
       flex-direction: column;
@@ -295,6 +397,10 @@ body {
       padding: 34px 0 36px;
       border-radius: 16px;
       background: #ffdb52;
+      @include md {
+        width: 542px;
+        padding-bottom: 80px;
+      }
       &:nth-child(2) {
         background: #005d00;
         .tx-1 {
@@ -327,6 +433,11 @@ body {
         display: flex;
         gap: 28px;
         margin-top: 1px;
+        @include md {
+          flex-direction: column;
+          text-align: center;
+          margin-top: 40px;
+        }
         span {
           color: #2d1c11;
           font-family: Poppins;
@@ -342,11 +453,22 @@ body {
 }
 .con-8 {
   padding: 70px 60px 200px;
-  background: #ffdb52;
+  transition: all 2s;
+  &.on {
+    background: #ffdb52;
+  }
+  @include md {
+    padding-top: 120px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
   .top {
     display: flex;
     .tx-1 {
       width: 50%;
+      @include md {
+        width: 340px;
+      }
       span {
         &:nth-child(1) {
           color: #2d1c11;
@@ -384,36 +506,70 @@ body {
   .img-1 {
     width: 1227px;
     margin: 150px auto 0;
+    @include md {
+      width: 1000px;
+      margin-top: 140px;
+    }
   }
   .img-2 {
     margin-top: 25px;
     margin-bottom: 40px;
     text-align: center;
+    @include md {
+      margin-top: 150px;
+    }
   }
   .img-3 {
     width: 1230px;
     margin: 0 auto;
+    @include md {
+      width: 923px;
+    }
   }
   .img-4 {
     position: relative;
     margin-top: 120px;
+    .only-tablet {
+      display: none;
+    }
+    @include md {
+      .only-pc {
+        display: none;
+      }
+      .only-tablet {
+        display: block;
+        width: 1100px;
+        margin: 0 auto;
+      }
+    }
     .img-5 {
       position: absolute;
       bottom: -100px;
       right: -60px;
       width: calc(616px / 2);
+      @include md {
+        right: 80px;
+        bottom: -40px;
+      }
     }
     .img-6 {
       position: absolute;
       bottom: -80px;
       left: 80px;
       width: calc(344px / 2);
+      @include md {
+        bottom: -30px;
+        left: 140px;
+      }
     }
   }
 }
 .con-9 {
   margin-bottom: -400px;
   padding-top: 180px;
+  @include md {
+    padding-top: 160px;
+  }
   .top {
     text-align: center;
     .tx-1 {
@@ -445,17 +601,36 @@ body {
     z-index: 1;
     width: calc(2564px / 2);
     margin: 70px auto 0;
+    .only-tablet {
+      display: none;
+    }
+    @include md {
+      width: 1020px;
+      margin-top: 40px;
+      .only-pc {
+        display: none;
+      }
+      .only-tablet {
+        display: block;
+      }
+    }
   }
 }
 .con-10 {
   position: relative;
   padding-top: 400px;
-  background: #005d00;
+  transition: all 2s;
+  &.on {
+    background: #005d00;
+  }
   .bg-1 {
     position: absolute;
     top: 270px;
     left: 0;
     width: calc(652px / 2);
+    @include md {
+      width: 245px;
+    }
   }
 }
 .con-11 {
@@ -471,6 +646,9 @@ body {
   .top {
     display: flex;
     margin-bottom: 240px;
+    @include md {
+      margin-bottom: 140px;
+    }
     .tx-1 {
       width: 50%;
       color: #2d1c11;
@@ -492,6 +670,15 @@ body {
       letter-spacing: -0.3px;
       text-transform: lowercase;
       opacity: 0.7;
+    }
+  }
+  .swiper {
+    overflow: visible;
+  }
+  .swiper-slide {
+    width: 600px;
+    img {
+      cursor: pointer;
     }
   }
   .swiper-button-wrapper {
@@ -563,4 +750,28 @@ body {
     line-height: 100%; /* 24px */
     opacity: 0.3;
   }
+}
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  .img {
+    position: relative;
+  }
+  .btn-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+}
+
+.modal img {
+  max-width: 960px;
+  display: block;
 }

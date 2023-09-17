@@ -66,7 +66,8 @@
             </div>
           </div>
           <div class="circle-wrap wow fadeInUp">
-            <img src="assets/img_con4_7.png" alt="" />
+            <img src="assets/img_con4_7.png" alt="" class="only-pc" />
+            <img src="assets/img_con4_7_t.png" alt="" class="only-tablet" />
           </div>
           <div class="bg bg-1">
             <img src="assets/img_con4_1.png" alt="" />
@@ -100,7 +101,7 @@
                   제품 경쟁력이<br />
                   강조되지 않는 콘텐츠
                 </div>
-                <div class="tx-3 wow fadeInUp">
+                <div class="tx-3">
                   친환경 유리용기, 유기농 재료 사용 등<br />
                   푸드케어만의 제품 경쟁력을<br />
                   확실하게 드러낼 수 있는 콘텐츠를 기획합니다.
@@ -115,7 +116,7 @@
                   일관된 톤앤매너가 적용된<br />
                   콘텐츠 디자인
                 </div>
-                <div class="tx-3 wow fadeInUp">
+                <div class="tx-3">
                   자사 커머스 앱 내의 다양한 경험 접점에<br />
                   일관된 디자인을 적용하여<br />
                   통합적인 브랜드 경험을 제공합니다.
@@ -130,7 +131,7 @@
                   브랜드 가치를 강화하는<br />
                   커뮤니케이션 매너
                 </div>
-                <div class="tx-3 wow fadeInUp">
+                <div class="tx-3">
                   고객에게 친밀감과 신뢰감을 동시에 제공하여<br />브랜드
                   만족도를 높일 수 있는<br />
                   커뮤니케이션 매너를 정립합니다.
@@ -193,7 +194,16 @@
             <img src="assets/img_con8_3.png" alt="" />
           </div>
           <div class="img-4">
-            <img src="assets/img_con8_4.png" alt="" class="wow fadeInUp" />
+            <img
+              src="assets/img_con8_4.png"
+              alt=""
+              class="wow fadeInUp only-pc"
+            />
+            <img
+              src="assets/img_con8_4_t.png"
+              alt=""
+              class="wow fadeInUp only-tablet"
+            />
             <div class="img-5">
               <img src="assets/img_con8_5.png" alt="" class="wow fadeInUp" />
             </div>
@@ -211,7 +221,8 @@
               모든 디자인 콘텐츠를 기획 및 디자인하였습니다.
             </div>
             <div class="img wow fadeInUp">
-              <img src="assets/img_con9_1.png" alt="" />
+              <img src="assets/img_con9_1.png" alt="" class="only-pc" />
+              <img src="assets/img_con9_1_t.png" alt="" class="only-tablet" />
             </div>
           </div>
         </div>
@@ -250,16 +261,32 @@
             </div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="assets/img_con12_1.png" alt="" />
+                <img
+                  src="assets/img_con12_1.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_1.png')"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="assets/img_con12_2.png" alt="" />
+                <img
+                  src="assets/img_con12_2.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_2.png')"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="assets/img_con12_3.png" alt="" />
+                <img
+                  src="assets/img_con12_3.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_3.png')"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="assets/img_con12_1.png" alt="" />
+                <img
+                  src="assets/img_con12_1.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_1.png')"
+                />
               </div>
             </div>
           </div>
@@ -278,12 +305,33 @@
         </div>
       </div>
     </div>
+    <div id="myModal" class="modal">
+      <div class="img">
+        <img id="modalImage" src="" alt="" />
+        <div class="btn-close">
+          <img src="assets/icon_btn_close-2.svg" alt="" />
+        </div>
+      </div>
+    </div>
     <script>
+      function openModal(imagePath) {
+        var modal = document.getElementById("myModal");
+        var modalImage = document.getElementById("modalImage");
+
+        modal.style.display = "flex";
+        modalImage.src = imagePath;
+
+        // 모달 영역 이외를 클릭하면 모달이 닫히도록 설정 (선택 사항)
+        modal.onclick = function () {
+          modal.style.display = "none";
+        };
+      }
+
       new WOW().init();
 
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "3",
-        spaceBetween: 30,
+        slidesPerView: "auto",
+        spaceBetween: 12,
         // autoplay: {
         //   delay: 2500,
         //   disableOnInteraction: false,
@@ -304,6 +352,62 @@
           });
         });
       });
+
+      const con5 = document.querySelector(".con-5");
+      const con8 = document.querySelector(".con-8");
+      const con10 = document.querySelector(".con-10");
+
+      const option = {
+        threshold: 0.1,
+      };
+
+      let isCon5Intersecting = false;
+      let isCon8Intersecting = false;
+      let isCon10Intersecting = false;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === con5) {
+            if (entry.isIntersecting) {
+              if (!isCon5Intersecting) {
+                con5.classList.add("on");
+                isCon5Intersecting = true;
+              }
+            } else {
+              con5.classList.remove("on");
+              isCon5Intersecting = false;
+            }
+          }
+
+          if (entry.target === con8) {
+            if (entry.isIntersecting) {
+              if (!isCon8Intersecting) {
+                con8.classList.add("on");
+                isCon8Intersecting = true;
+              }
+            } else {
+              con8.classList.remove("on");
+              isCon8Intersecting = false;
+            }
+          }
+
+          if (entry.target === con10) {
+            if (entry.isIntersecting) {
+              if (!isCon10Intersecting) {
+                con10.classList.add("on");
+                isCon10Intersecting = true;
+              }
+            } else {
+              con10.classList.remove("on");
+              isCon10Intersecting = false;
+            }
+          }
+        });
+      }, option);
+
+      observer.observe(con5);
+      observer.observe(con8);
+      observer.observe(con10);
     </script>
   </body>
 </html>
