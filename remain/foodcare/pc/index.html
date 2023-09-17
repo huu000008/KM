@@ -202,10 +202,98 @@
             </div>
           </div>
         </div>
+        <div class="con-9">
+          <div class="top">
+            <div class="tx-1 wow fadeInUp">contents design</div>
+            <div class="tx-2 wow fadeInUp">
+              회사소개, 브랜드스토리, 제품상세소개, 매거진, 배너 등 푸드케어
+              클레에 필요한<br />
+              모든 디자인 콘텐츠를 기획 및 디자인하였습니다.
+            </div>
+            <div class="img wow fadeInUp">
+              <img src="assets/img_con9_1.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="con-10">
+          <div class="img wow fadeInUp">
+            <img src="assets/img_con10_1.png" alt="" />
+          </div>
+          <div class="bg-1">
+            <img src="assets/img_con10_2.png" alt="" />
+          </div>
+        </div>
+        <div class="con-11">
+          <div class="img">
+            <img src="assets/img_con11_1.png" alt="" class="wow img_big" />
+          </div>
+          <div class="img">
+            <img src="assets/img_con11_2.png" alt="" class="wow img_big" />
+          </div>
+        </div>
+        <div class="con-12">
+          <div class="top">
+            <div class="tx-1 wow fadeInUp">photography</div>
+            <div class="tx-2 wow fadeInUp">
+              모든 콘텐츠에 사용되는 컨셉 사진과 제품 사진 촬영을
+              진행했습니다.<br />
+              브랜드 이미지의 경우, 유아 식품 브랜드에 맞는 밝고 가족적인
+              이미지를<br />
+              연출하였으며 식품의 제형과 식감을 효과적으로 전달할 수 있도록<br />
+              푸드스타일링을 더해 촬영하였습니다.
+            </div>
+          </div>
+          <div class="swiper mySwiper wow fadeInUp">
+            <div class="swiper-button-wrapper">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/img_con12_1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img_con12_2.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img_con12_3.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img_con12_1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="con-13">
+          <div class="tx-1 wow fadeInUp">
+            A more enhanced<br />
+            brand experience.<br />
+            <span> Foodcare cle Promotion contents. </span>
+          </div>
+          <div class="tx-2 wow fadeInUp">
+            <a href="#!">Client</a>
+            <span>Foodcare</span>
+          </div>
+          <div class="tx-3 wow fadeInUp">© 2023 remainlayer</div>
+        </div>
       </div>
     </div>
     <script>
       new WOW().init();
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "3",
+        spaceBetween: 30,
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // },
+        speed: 1000,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
       document.addEventListener("DOMContentLoaded", function () {
         const boxes = document.querySelectorAll(".con-5 .box");
