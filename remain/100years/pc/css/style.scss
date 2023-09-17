@@ -19,7 +19,10 @@ body {
   transition: all 2s;
   background: #111;
   color: #fff;
-  &.on {
+}
+.h1 {
+  h1 {
+    font-family: "Noto Serif KR", sans-serif;
   }
 }
 .wrapper {
@@ -237,6 +240,10 @@ body {
 .con-5 {
   padding-top: 230px;
   text-align: center;
+  @include md {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .text {
     &-1 {
       color: #fff;
@@ -264,6 +271,9 @@ body {
   .box {
     &:nth-child(2) {
       margin-top: 80px;
+      @include md {
+        margin-top: 0;
+      }
     }
     .inner {
       display: flex;
@@ -289,9 +299,17 @@ body {
       .td-ud {
         border-bottom: 1px solid #fff;
       }
+      @include md {
+        width: 100%;
+        height: auto;
+        padding: 70px 0;
+      }
     }
     .text-1 {
       text-align: left;
+      @include md {
+        text-align: center;
+      }
     }
     &-wrap {
       display: flex;
@@ -299,6 +317,10 @@ body {
       gap: 40px;
       margin-top: 390px;
       margin-bottom: 300px;
+      @include md {
+        flex-direction: column;
+        margin-top: 260px;
+      }
     }
   }
   .img {
@@ -311,21 +333,39 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include md {
+    background-color: #000;
+    background-image: url(../assets/img_con6_1_t.png);
+    background-position: 0 0;
+    background-size: contain;
+  }
   .inner {
     width: 1280px;
     margin: 0 auto;
+    @include md {
+      width: 100%;
+      padding-left: 48px;
+      padding-right: 48px;
+    }
   }
   .box {
     width: 640px;
     height: 500px;
     padding: 32px;
     border: 1px solid #222;
+    @include md {
+      width: 50%;
+    }
     &-wrap {
       display: flex;
       flex-wrap: wrap;
       width: 1280px;
       margin-left: auto;
       margin-top: 120px;
+      @include md {
+        width: 100%;
+        margin-top: 380px;
+      }
     }
     .text-1 {
       margin-bottom: 88px;
@@ -337,6 +377,9 @@ body {
       line-height: 100%; /* 12px */
       text-transform: uppercase;
       opacity: 0.4;
+      @include md {
+        opacity: 0.7;
+      }
     }
     .text-2 {
       color: #fff;
@@ -390,11 +433,19 @@ body {
 .con-7 {
   padding-top: 140px;
   background: #27423e;
+  @include md {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
   .top {
     display: flex;
     justify-content: space-between;
     width: 1280px;
     margin: 0 auto;
+    @include md {
+      flex-direction: column;
+      width: 100%;
+    }
     .text-3 {
       color: #fff;
       font-family: Noto Serif KR;
@@ -405,6 +456,9 @@ body {
       letter-spacing: -0.3px;
       text-transform: uppercase;
       opacity: 0.4;
+      @include md {
+        margin-top: 32px;
+      }
     }
   }
   .circle {
@@ -417,6 +471,10 @@ body {
     height: 352px;
     background-color: rgba(32, 51, 48, 0.5);
     border-radius: 50%;
+    @include md {
+      width: 294px;
+      height: 294px;
+    }
     &-wrap {
       display: flex;
       justify-content: center;
@@ -473,6 +531,10 @@ body {
     flex-wrap: wrap;
     width: 1080px;
     margin: 140px auto 0;
+    @include md {
+      column-gap: 70px;
+      justify-content: center;
+    }
     .img {
       display: flex;
       flex-direction: column;
@@ -516,6 +578,17 @@ body {
   .img-2 {
     width: 1490px;
     margin: 0 auto;
+    @include md {
+      width: 1013px;
+      margin: 0 auto;
+      img {
+        &:nth-child(3) {
+          width: 715px;
+          margin-left: auto;
+          margin-top: -100px;
+        }
+      }
+    }
   }
 }
 .con-11 {
@@ -535,6 +608,9 @@ body {
       font-weight: 700;
       line-height: 100%; /* 20px */
       text-transform: uppercase;
+      @include md {
+        text-align: left;
+      }
     }
     .text-2 {
       color: #fff;
@@ -546,6 +622,9 @@ body {
       letter-spacing: -0.3px;
       text-transform: uppercase;
       opacity: 0.6;
+      @include md {
+        margin-top: 12px;
+      }
     }
     .img {
       width: calc(754px / 2);
@@ -555,6 +634,10 @@ body {
       display: flex;
       justify-content: space-between;
       margin-bottom: 100px;
+      @include md {
+        flex-direction: column;
+        margin-bottom: 50px;
+      }
     }
     &-wrap {
       display: flex;
@@ -564,8 +647,14 @@ body {
 }
 .con-12 {
   display: flex;
+  @include md {
+    flex-direction: column;
+  }
   & > div {
     width: 50%;
+    @include md {
+      width: 100%;
+    }
   }
   .box-img {
     overflow: hidden;
@@ -577,6 +666,11 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      @include md {
+        height: 1320px;
+        padding-left: 48px;
+        padding-right: 48px;
+      }
     }
     .text-1 {
       position: absolute;
@@ -620,6 +714,12 @@ body {
     padding-right: 110px;
     padding-top: 430px;
     padding-bottom: 160px;
+    @include md {
+      padding-top: 80px;
+      padding-left: 48px;
+      padding-bottom: 200px;
+      padding-right: 48px;
+    }
     .text-wrap {
       display: flex;
       margin-top: 34px;
@@ -690,5 +790,65 @@ body {
     font-weight: 700;
     line-height: 100%; /* 24px */
     opacity: 0.3;
+  }
+}
+.con-14 {
+  padding: 140px 0;
+  background: #f0efea;
+  @include md {
+    padding-bottom: 0;
+  }
+  .top {
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+    @include md {
+      flex-direction: column;
+      width: 100%;
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+    .section-title-1 {
+      width: 50%;
+      .text-1 {
+        color: #000;
+      }
+      .text-2 {
+        color: #000;
+      }
+    }
+    .text-3 {
+      color: #222;
+      font-family: Noto Serif KR;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 158%; /* 34.76px */
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      @include md {
+        margin-top: 32px;
+      }
+    }
+  }
+  .img {
+    max-width: 1420px;
+    width: 100%;
+    margin: 120px auto 0;
+    @include md {
+      margin-top: 140px;
+    }
+  }
+}
+
+.only-tablet {
+  display: none;
+}
+@include md {
+  .only-pc {
+    display: none;
+  }
+  .only-tablet {
+    display: block;
   }
 }
