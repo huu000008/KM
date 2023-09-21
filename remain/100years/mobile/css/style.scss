@@ -421,7 +421,6 @@ body {
   padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
-  background: #27423e;
   .section-title-1 {
     .text-1 {
       color: #fff;
@@ -458,7 +457,7 @@ body {
     gap: 6px;
     width: 180px;
     height: 180px;
-    background-color: rgba(32, 51, 48, 0.5);
+    background-color: rgba(32, 51, 48, 1);
     border-radius: 50%;
     &-wrap {
       display: flex;
@@ -511,7 +510,6 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 80px;
-  background: #1b1b1b;
   .img-wrap {
     margin: 80px auto 0;
     .swiper {
@@ -792,7 +790,15 @@ body {
     }
   }
 }
-
+.con-15 {
+  &.on {
+    background: #27423e;
+    transition: all 2s;
+    &.on {
+      background: #212120;
+    }
+  }
+}
 .only-tablet {
   display: none;
 }

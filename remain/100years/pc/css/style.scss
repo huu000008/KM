@@ -433,9 +433,6 @@ body {
 .con-7 {
   padding-top: 140px;
   transition: all 2s;
-  &.on {
-    background: #27423e;
-  }
   @include md {
     padding-left: 48px;
     padding-right: 48px;
@@ -472,7 +469,7 @@ body {
     gap: 6px;
     width: 352px;
     height: 352px;
-    background-color: rgba(32, 51, 48, 0.5);
+    background-color: rgba(35, 57, 54, 1);
     border-radius: 50%;
     @include md {
       width: 294px;
@@ -527,11 +524,7 @@ body {
   margin-top: -340px;
   padding-top: 650px;
   padding-bottom: 220px;
-  background: #27423e;
   transition: all 2s;
-  &.on {
-    background: #1b1b1b;
-  }
   .img-wrap {
     display: flex;
     column-gap: 120px;
@@ -852,6 +845,13 @@ body {
     @include md {
       margin-top: 140px;
     }
+  }
+}
+.con-15 {
+  background: #27423e;
+  transition: all 2s;
+  &.on {
+    background: #212120;
   }
 }
 

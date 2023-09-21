@@ -435,9 +435,6 @@ body {
   padding-top: 140px;
   transition: all 2s;
 }
-.con-7.on {
-  background: #27423e;
-}
 @media (max-width: 1440px) {
   .con-7 {
     padding-left: 48px;
@@ -480,7 +477,7 @@ body {
   gap: 6px;
   width: 352px;
   height: 352px;
-  background-color: rgba(32, 51, 48, 0.5);
+  background-color: rgb(35, 57, 54);
   border-radius: 50%;
 }
 @media (max-width: 1440px) {
@@ -537,11 +534,7 @@ body {
   margin-top: -340px;
   padding-top: 650px;
   padding-bottom: 220px;
-  background: #27423e;
   transition: all 2s;
-}
-.con-8.on {
-  background: #1b1b1b;
 }
 .con-8 .img-wrap {
   display: flex;
@@ -893,6 +886,14 @@ body {
   .con-14 .img {
     margin-top: 140px;
   }
+}
+
+.con-15 {
+  background: #27423e;
+  transition: all 2s;
+}
+.con-15.on {
+  background: #212120;
 }
 
 .only-tablet {

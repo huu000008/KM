@@ -1,0 +1,37 @@
+@import url(../../../common/css/style.css);
+img {
+  max-width: 100%;
+}
+
+body {
+  background: var(--neutral-gray-black, #000);
+}
+
+.h1 {
+  padding-top: 70px;
+}
+.h1 h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 80px */
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.con-1 {
+  height: 996px;
+  background-image: url(../assets/img_con1_1.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 1920px;
+}/*# sourceMappingURL=style.css.map */
