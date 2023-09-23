@@ -331,16 +331,40 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="text-3 wow fadeInUp">
-                    주문상품 및 배송 정보,<br />
-                    결제 정보 입력 ui,<br />
-                    사용성 개선
+                    상품 및 브랜드 관련<br />
+                    주요정보 시인성 개선
                   </div>
                   <div class="text-4 wow fadeInUp">
-                    주문 및 결제 UI 사용성 개선
+                    정보 위계가 명료하게 구분된 상품 정보 제공
                   </div>
                   <div class="text-5 wow fadeInUp">
-                    전 연령대의 고객이 주문 시 필요한 정보를 한눈에 보고 쉽게
-                    입력할 수 있도록 UI 화면 플로우를 개선합니다.
+                    상품 카테고리의 전체적인 위계와 라벨명, 상품 상세정보가
+                    직관적으로 인지될 수 있도록 카테고리 및 상세페이지 영역을
+                    개선합니다.
+                  </div>
+                  <div class="text-4 wow fadeInUp">
+                    비주얼 패턴을 적용한 배너 디자인 개선
+                  </div>
+                  <div class="text-5 wow fadeInUp">
+                    사용자 인지를 돕기 위해 클릭 가능한 영역과 불가능한 영역의
+                    구분을 명료하게 디자인하고, 사용자의 행동을 정확하게
+                    유도합니다.
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-3 wow fadeInUp">
+                    온라인 서비스에 맞는<br />
+                    브랜드 가이드라인 구축
+                  </div>
+                  <div class="text-4 wow fadeInUp">
+                    오프라인 브랜딩의 연장선에서<br />
+                    온라인 환경에 맞는 브랜드 가이드 구축 및 적용
+                  </div>
+                  <div class="text-5 wow fadeInUp">
+                    기존 오프라인 상에서만 적용되어 온 브랜드 가이드라인을
+                    바탕으로 온라인 서비스에 적용하기 용이한 컬러, 서체, 아이콘
+                    등의 가이드라인을 새롭게 구축하여 모바일 플랫폼에서도 일관된
+                    브랜드 경험 제공
                   </div>
                 </div>
               </div>
@@ -385,10 +409,9 @@
                   사용성 개선
                 </div>
                 <div class="text-2 wow fadeInUp">
-                  주요 고객층이 중장년 연령대에 분포하는 점을 고려하여,<br />
-                  주문 시 필요한 정보를 한눈에 파악하고<br />
-                  배송 및 결제 정보를 손쉽게 입력할 수 있도록 UI 화면 플로우를
-                  개선합니다.
+                  주요 고객층이 중장년 연령대에 분포하는 점을 고려하여, 주문 시
+                  필요한 정보를 한눈에 파악하고 배송 및 결제 정보를 손쉽게
+                  입력할 수 있도록 UI 화면 플로우를 개선합니다.
                 </div>
               </div>
             </div>
@@ -445,10 +468,9 @@
                   개선
                 </div>
                 <div class="text-2 wow fadeInUp">
-                  배너와 버튼 디자인에 비주얼 패턴을 적용하여<br />
-                  사용자의 행동을 정확하게 유도하고, 상품 및 브랜드 정보
-                  영역에서<br />
-                  시각적 정보 위계를 명료하게 구분하여 시인성을 높입니다.
+                  배너와 버튼 디자인에 비주얼 패턴을 적용하여 사용자의 행동을
+                  정확하게 유도하고, 상품 및 브랜드 정보 영역에서 시각적 정보
+                  위계를 명료하게 구분하여 시인성을 높입니다.
                 </div>
               </div>
             </div>
@@ -557,25 +579,6 @@
           type: "fraction",
         },
       });
-
-      const item_1 = document.querySelector(".con-15");
-      const body = document.body;
-
-      const option = {
-        threshold: 0.2,
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.target === item_1 && entry.isIntersecting) {
-            body.classList.add("on");
-          } else if (entry.target === item_1 && !entry.isIntersecting) {
-            body.classList.remove("on");
-          }
-        });
-      }, option);
-
-      observer.observe(item_1);
     </script>
   </body>
 </html>

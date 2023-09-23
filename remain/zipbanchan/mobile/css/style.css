@@ -14,6 +14,10 @@ body.on {
   background: var(--p, #284733);
 }
 
+.h1 h1 {
+  font-family: "Noto Serif KR", sans-serif;
+}
+
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -383,6 +387,7 @@ body.on {
   opacity: 0.7;
 }
 .con-9 .text-3 {
+  margin-bottom: 70px;
   color: #fff;
   font-size: 24px;
   font-style: normal;
@@ -392,7 +397,7 @@ body.on {
   text-transform: uppercase;
 }
 .con-9 .text-4 {
-  margin-top: 70px;
+  margin-top: 30px;
   color: #fff;
   font-size: 16px;
   font-style: normal;
@@ -413,7 +418,7 @@ body.on {
 }
 .con-9 .left {
   width: 100%;
-  padding: 50px 20px 130px;
+  padding: 50px 20px 80px;
 }
 .con-9 .right {
   width: 100%;
@@ -579,6 +584,10 @@ body.on {
   margin-left: 0;
 }
 
+.con-15 {
+  background: #284733;
+}
+
 .con-13 {
   padding-top: 80px;
   text-align: center;
@@ -655,8 +664,6 @@ body .con-14::after {
 }
 .con-18 .box-wrap .box.green {
   box-sizing: content-box;
-  padding-top: 35px;
-  padding-bottom: 35px;
   background: #284733;
 }
 .con-18 .box-wrap .box.green span {
