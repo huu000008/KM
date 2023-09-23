@@ -220,8 +220,8 @@ img {
 
 .img_big {
   visibility: visible !important;
-  transform: scale(1.05);
-  transition: all ease-in-out 1s;
+  transform: scale(1.03);
+  transition: all ease-in-out 0.8s;
 }
 .img_big.animated {
   transform: scale(1);

@@ -457,6 +457,7 @@ body {
     gap: 6px;
     width: 180px;
     height: 180px;
+    padding-bottom: 20px;
     background-color: rgba(32, 51, 48, 1);
     border-radius: 50%;
     &-wrap {
@@ -477,7 +478,7 @@ body {
       color: #fff;
       text-align: center;
       font-family: Poppins;
-      font-size: 20px;
+      font-size: 12px;
       font-style: normal;
       font-weight: 300;
       line-height: 100%; /* 32px */

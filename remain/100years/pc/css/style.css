@@ -224,6 +224,19 @@ body {
   padding-top: 230px;
   text-align: center;
 }
+.con-5 .sm-br {
+  display: none;
+}
+@media (max-width: 1180px) {
+  .con-5 .sm-br {
+    display: block;
+  }
+}
+@media (max-width: 1180px) {
+  .con-5 .sm-visible {
+    display: none;
+  }
+}
 @media (max-width: 1440px) {
   .con-5 {
     padding-left: 20px;
@@ -255,7 +268,7 @@ body {
 .con-5 .box:nth-child(2) {
   margin-top: 80px;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1180px) {
   .con-5 .box:nth-child(2) {
     margin-top: 0;
   }
@@ -287,8 +300,15 @@ body {
 }
 @media (max-width: 1440px) {
   .con-5 .box .inner {
-    width: 100%;
+    width: 540px;
+    height: 540px;
+  }
+}
+@media (max-width: 1180px) {
+  .con-5 .box .inner {
+    width: 800px;
     height: auto;
+    margin: 0 auto;
     padding: 70px 0;
   }
 }
@@ -300,6 +320,11 @@ body {
     text-align: center;
   }
 }
+@media (max-width: 1180px) {
+  .con-5 .box .text-1 {
+    margin-bottom: 32px;
+  }
+}
 .con-5 .box-wrap {
   display: flex;
   justify-content: center;
@@ -307,9 +332,10 @@ body {
   margin-top: 390px;
   margin-bottom: 300px;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1180px) {
   .con-5 .box-wrap {
     flex-direction: column;
+    gap: 10px;
     margin-top: 260px;
   }
 }
@@ -456,7 +482,7 @@ body {
 .con-7 .top .text-3 {
   color: #fff;
   font-family: Noto Serif KR;
-  font-size: 22px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 33px */
@@ -477,6 +503,7 @@ body {
   gap: 6px;
   width: 352px;
   height: 352px;
+  padding-bottom: 30px;
   background-color: rgb(35, 57, 54);
   border-radius: 50%;
 }
@@ -607,12 +634,7 @@ body {
 }
 
 .con-11 {
-  margin-top: -500px;
-  padding-top: 700px;
-  background-color: rgb(229, 225, 222);
-  transition: all 2s;
-}
-.con-11.on {
+  padding-top: 170px;
   background-color: rgb(39, 66, 62);
 }
 .con-11 .box {
@@ -733,7 +755,7 @@ body {
   margin-top: 24px;
   color: #fff;
   font-family: Noto Serif KR;
-  font-size: 22px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 158%; /* 34.76px */
@@ -765,6 +787,7 @@ body {
 .con-12 .box-text .text-4 {
   display: flex;
   gap: 10px;
+  min-width: 270px;
   color: #fff;
   font-family: Poppins;
   font-size: 18px;
@@ -775,10 +798,9 @@ body {
   opacity: 0.6;
 }
 .con-12 .box-text .text-5 {
-  margin-left: 150px;
   color: #fff;
   font-family: Noto Serif KR;
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 148%; /* 41.44px */
@@ -786,7 +808,7 @@ body {
 }
 
 .con-13 {
-  padding: 80px 0 110px;
+  padding: 108px 0 110px;
   text-align: center;
 }
 .con-13 .text-1 {
@@ -865,7 +887,7 @@ body {
 .con-14 .top .text-3 {
   color: #222;
   font-family: Noto Serif KR;
-  font-size: 22px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 158%; /* 34.76px */
