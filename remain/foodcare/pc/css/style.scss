@@ -18,8 +18,6 @@ body {
   font-weight: 400;
   transition: all 2s;
   background: #fffef6;
-  &.on {
-  }
 }
 .wrapper {
   max-width: 1920px;
@@ -133,6 +131,13 @@ body {
       height: 52px;
       margin: 0 auto 24px;
       background-color: #fff;
+      color: #965c34;
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 16px */
+      text-transform: uppercase;
       border-radius: 50%;
     }
     .text-2 {
@@ -197,10 +202,8 @@ body {
   padding-top: 180px;
   padding-bottom: 300px;
   text-align: center;
+  background: #005d00;
   transition: all 2s;
-  &.on {
-    background: #005d00;
-  }
   @include md {
     padding-bottom: 200px;
   }
@@ -282,9 +285,20 @@ body {
       }
       &:hover {
         border: 2px solid rgba(255, 255, 255, 0.5);
+        transform: rotate(1deg);
       }
       &.on {
         background-color: #fff;
+        .tx-1 {
+          span {
+            &:nth-child(1) {
+              display: none;
+            }
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
         .tx-1,
         .tx-2 {
           color: #4f270e;
@@ -313,6 +327,14 @@ body {
           font-weight: 600;
           line-height: 100%; /* 16px */
           text-transform: lowercase;
+        }
+        span {
+          &:nth-child(1) {
+            display: block;
+          }
+          &:nth-child(2) {
+            display: none;
+          }
         }
       }
       .tx-2 {
@@ -393,7 +415,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 838px;
+      width: 740px;
       padding: 34px 0 36px;
       border-radius: 16px;
       background: #ffdb52;
@@ -510,6 +532,9 @@ body {
       width: 1000px;
       margin-top: 140px;
     }
+    &:hover {
+      transform: rotate(1deg);
+    }
   }
   .img-2 {
     margin-top: 25px;
@@ -524,6 +549,9 @@ body {
     margin: 0 auto;
     @include md {
       width: 923px;
+    }
+    &:hover {
+      transform: rotate(1deg);
     }
   }
   .img-4 {
@@ -547,6 +575,10 @@ body {
       bottom: -100px;
       right: -60px;
       width: calc(616px / 2);
+      transition: all 0.3s;
+      &:hover {
+        transform: rotate(1deg);
+      }
       @include md {
         right: 80px;
         bottom: -40px;
@@ -557,6 +589,9 @@ body {
       bottom: -80px;
       left: 80px;
       width: calc(344px / 2);
+      &:hover {
+        transform: rotate(1deg);
+      }
       @include md {
         bottom: -30px;
         left: 140px;
@@ -619,10 +654,8 @@ body {
 .con-10 {
   position: relative;
   padding-top: 400px;
+  background: #005d00;
   transition: all 2s;
-  &.on {
-    background: #005d00;
-  }
   .bg-1 {
     position: absolute;
     top: 270px;

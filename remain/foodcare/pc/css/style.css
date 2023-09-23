@@ -9,6 +9,7 @@ body {
   transition: all 2s;
   background: #fffef6;
 }
+
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -139,6 +140,13 @@ body {
   height: 52px;
   margin: 0 auto 24px;
   background-color: #fff;
+  color: #965c34;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 16px */
+  text-transform: uppercase;
   border-radius: 50%;
 }
 .con-4 .text-wrap .text-2 {
@@ -206,10 +214,8 @@ body {
   padding-top: 180px;
   padding-bottom: 300px;
   text-align: center;
-  transition: all 2s;
-}
-.con-5.on {
   background: #005d00;
+  transition: all 2s;
 }
 @media (max-width: 1440px) {
   .con-5 {
@@ -296,9 +302,16 @@ body {
 }
 .con-5 .box-wrap .box:hover {
   border: 2px solid rgba(255, 255, 255, 0.5);
+  transform: rotate(1deg);
 }
 .con-5 .box-wrap .box.on {
   background-color: #fff;
+}
+.con-5 .box-wrap .box.on .tx-1 span:nth-child(1) {
+  display: none;
+}
+.con-5 .box-wrap .box.on .tx-1 span:nth-child(2) {
+  display: block;
 }
 .con-5 .box-wrap .box.on .tx-1,
 .con-5 .box-wrap .box.on .tx-2 {
@@ -330,6 +343,12 @@ body {
     line-height: 100%; /* 16px */
     text-transform: lowercase;
   }
+}
+.con-5 .box-wrap .box .tx-1 span:nth-child(1) {
+  display: block;
+}
+.con-5 .box-wrap .box .tx-1 span:nth-child(2) {
+  display: none;
 }
 .con-5 .box-wrap .box .tx-2 {
   color: #fff;
@@ -419,7 +438,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 838px;
+  width: 740px;
   padding: 34px 0 36px;
   border-radius: 16px;
   background: #ffdb52;
@@ -543,6 +562,9 @@ body {
     margin-top: 140px;
   }
 }
+.con-8 .img-1:hover {
+  transform: rotate(1deg);
+}
 .con-8 .img-2 {
   margin-top: 25px;
   margin-bottom: 40px;
@@ -561,6 +583,9 @@ body {
   .con-8 .img-3 {
     width: 923px;
   }
+}
+.con-8 .img-3:hover {
+  transform: rotate(1deg);
 }
 .con-8 .img-4 {
   position: relative;
@@ -584,6 +609,10 @@ body {
   bottom: -100px;
   right: -60px;
   width: 308px;
+  transition: all 0.3s;
+}
+.con-8 .img-4 .img-5:hover {
+  transform: rotate(1deg);
 }
 @media (max-width: 1440px) {
   .con-8 .img-4 .img-5 {
@@ -596,6 +625,9 @@ body {
   bottom: -80px;
   left: 80px;
   width: 172px;
+}
+.con-8 .img-4 .img-6:hover {
+  transform: rotate(1deg);
 }
 @media (max-width: 1440px) {
   .con-8 .img-4 .img-6 {
@@ -664,10 +696,8 @@ body {
 .con-10 {
   position: relative;
   padding-top: 400px;
-  transition: all 2s;
-}
-.con-10.on {
   background: #005d00;
+  transition: all 2s;
 }
 .con-10 .bg-1 {
   position: absolute;

@@ -95,7 +95,10 @@
           </div>
           <div class="box-wrap">
             <div class="box">
-              <div class="tx-1 wow fadeInUp">UX Problem</div>
+              <div class="tx-1 wow fadeInUp">
+                <span>UX Problem</span>
+                <span>UX Solution</span>
+              </div>
               <div class="tx-wrap">
                 <div class="tx-2 wow fadeInUp">
                   제품 경쟁력이<br />
@@ -110,7 +113,10 @@
               <div class="btn wow fadeInUp"></div>
             </div>
             <div class="box">
-              <div class="tx-1 wow fadeInUp">UX Solution</div>
+              <div class="tx-1 wow fadeInUp">
+                <span>UX Problem</span>
+                <span>UX Solution</span>
+              </div>
               <div class="tx-wrap">
                 <div class="tx-2 wow fadeInUp">
                   일관된 톤앤매너가 적용된<br />
@@ -125,7 +131,10 @@
               <div class="btn wow fadeInUp"></div>
             </div>
             <div class="box">
-              <div class="tx-1 wow fadeInUp">UX Solution</div>
+              <div class="tx-1 wow fadeInUp">
+                <span>UX Problem</span>
+                <span>UX Solution</span>
+              </div>
               <div class="tx-wrap">
                 <div class="tx-2 wow fadeInUp">
                   브랜드 가치를 강화하는<br />
@@ -283,9 +292,37 @@
               </div>
               <div class="swiper-slide">
                 <img
-                  src="assets/img_con12_1.png"
+                  src="assets/img_con12_4.png"
                   alt=""
                   onclick="openModal('assets/img_con12_1.png')"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img_con12_5.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_5.png')"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img_con12_6.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_6.png')"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img_con12_7.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_7.png')"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img_con12_8.png"
+                  alt=""
+                  onclick="openModal('assets/img_con12_8.png')"
                 />
               </div>
             </div>
@@ -353,32 +390,16 @@
         });
       });
 
-      const con5 = document.querySelector(".con-5");
       const con8 = document.querySelector(".con-8");
-      const con10 = document.querySelector(".con-10");
 
       const option = {
         threshold: 0.1,
       };
 
-      let isCon5Intersecting = false;
       let isCon8Intersecting = false;
-      let isCon10Intersecting = false;
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.target === con5) {
-            if (entry.isIntersecting) {
-              if (!isCon5Intersecting) {
-                con5.classList.add("on");
-                isCon5Intersecting = true;
-              }
-            } else {
-              con5.classList.remove("on");
-              isCon5Intersecting = false;
-            }
-          }
-
           if (entry.target === con8) {
             if (entry.isIntersecting) {
               if (!isCon8Intersecting) {
@@ -390,24 +411,10 @@
               isCon8Intersecting = false;
             }
           }
-
-          if (entry.target === con10) {
-            if (entry.isIntersecting) {
-              if (!isCon10Intersecting) {
-                con10.classList.add("on");
-                isCon10Intersecting = true;
-              }
-            } else {
-              con10.classList.remove("on");
-              isCon10Intersecting = false;
-            }
-          }
         });
       }, option);
 
-      observer.observe(con5);
       observer.observe(con8);
-      observer.observe(con10);
     </script>
   </body>
 </html>

@@ -136,13 +136,12 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  color: #fff;
-  text-align: center;
+  color: #965c34;
   font-family: Poppins;
-  font-size: 10px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 10px */
+  line-height: 100%; /* 16px */
   text-transform: uppercase;
 }
 .con-4 .text-wrap .text-2 {
@@ -246,6 +245,12 @@ body {
 .con-5 .box-wrap .box.on {
   background: #fefcea;
 }
+.con-5 .box-wrap .box.on .tx-1 span:nth-child(1) {
+  display: none;
+}
+.con-5 .box-wrap .box.on .tx-1 span:nth-child(2) {
+  display: block;
+}
 .con-5 .box-wrap .box.on .tx-1,
 .con-5 .box-wrap .box.on .tx-2 {
   color: #4f270e;
@@ -265,6 +270,12 @@ body {
   line-height: 100%; /* 10px */
   text-transform: lowercase;
   opacity: 0.8;
+}
+.con-5 .box-wrap .box .tx-1 span:nth-child(1) {
+  display: block;
+}
+.con-5 .box-wrap .box .tx-1 span:nth-child(2) {
+  display: none;
 }
 .con-5 .box-wrap .box .tx-2 {
   margin-top: 18px;
@@ -372,10 +383,8 @@ body {
 
 .con-8 {
   padding: 70px 0 100px;
-  transition: all 2s;
-}
-.con-8.on {
   background: #ffdb52;
+  transition: all 2s;
 }
 .con-8 .top {
   display: flex;
@@ -491,10 +500,8 @@ body {
 .con-10 {
   position: relative;
   padding-top: 200px;
-  transition: all 2s;
-}
-.con-10.on {
   background: #005d00;
+  transition: all 2s;
 }
 .con-10 .bg-1 {
   position: absolute;
