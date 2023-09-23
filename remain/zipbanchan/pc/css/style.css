@@ -722,11 +722,33 @@ body.on {
   text-align: center;
 }
 .con-13 .img {
-  margin-top: -660px;
+  margin-top: -38vw;
+}
+.con-13 .img .md {
+  display: none;
+  margin-top: -48vw;
+}
+.con-13 .img .sm {
+  display: none;
+  margin-top: -44vw;
+}
+@media (max-width: 1440px) {
+  .con-13 .img .lg {
+    display: none;
+  }
+  .con-13 .img .md {
+    display: block;
+  }
 }
 @media (max-width: 1180px) {
   .con-13 .img {
     margin-top: -46vw;
+  }
+  .con-13 .img .md {
+    display: none;
+  }
+  .con-13 .img .sm {
+    display: block;
   }
 }
 

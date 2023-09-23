@@ -674,7 +674,8 @@ body {
   }
 }
 .con-11 .box .img {
-  width: 377px;
+  width: 100%;
+  max-width: 630px;
   margin: 0 auto;
 }
 .con-11 .box .text-wrap {

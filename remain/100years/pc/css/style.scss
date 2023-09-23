@@ -648,7 +648,8 @@ body {
       }
     }
     .img {
-      width: calc(754px / 2);
+      width: 100%;
+      max-width: 630px;
       margin: 0 auto;
     }
     .text-wrap {

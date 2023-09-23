@@ -666,9 +666,31 @@ body {
 .con-13 {
   text-align: center;
   .img {
-    margin-top: -660px;
+    margin-top: -38vw;
+    .md {
+      display: none;
+      margin-top: -48vw;
+    }
+    .sm {
+      display: none;
+      margin-top: -44vw;
+    }
+    @include md {
+      .lg {
+        display: none;
+      }
+      .md {
+        display: block;
+      }
+    }
     @include sm {
       margin-top: -46vw;
+      .md {
+        display: none;
+      }
+      .sm {
+        display: block;
+      }
     }
   }
 }
