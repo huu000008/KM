@@ -316,6 +316,7 @@ body {
       background-color: #e9e9e9;
     }
     .day {
+      position: relative;
       height: 160px;
       padding: 25px 35px;
       text-align: right;
@@ -326,6 +327,63 @@ body {
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      &.bar {
+        &.start {
+          &::after {
+            left: 15px;
+            border-radius: 100px 0 0 100px;
+          }
+        }
+        &.end {
+          &::after {
+            right: 15px;
+            border-radius: 0 100px 100px 0;
+          }
+        }
+        &.blue {
+          &::after {
+            background: #74b5ff;
+          }
+        }
+        &.yellow {
+          &::after {
+            background: #ffda57;
+          }
+        }
+        &.text {
+          &::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Pretendard;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.8px;
+            content: "휴무";
+          }
+          &.yellow {
+            &::after {
+              color: #3d3d3d;
+            }
+          }
+          &.blue {
+            &::after {
+              color: #fff;
+            }
+          }
+        }
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          left: 0;
+          transform: translateY(-50%);
+          height: 40px;
+          content: "";
+        }
+      }
     }
   }
 }
@@ -334,6 +392,25 @@ body {
   .top {
     display: flex;
     align-items: center;
+    .conTitle {
+      position: relative;
+      span {
+        position: relative;
+        z-index: 2;
+      }
+      &::before {
+        position: absolute;
+        top: -60px;
+        left: -70px;
+        z-index: 1;
+        width: 122px;
+        height: 108px;
+        background-image: url(../img/img_bullet_3.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        content: "";
+      }
+    }
     .moreBtn {
       color: #222;
       font-family: Pretendard;
@@ -395,8 +472,11 @@ body {
   padding-top: 120px;
   padding-bottom: 120px;
   .top {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .tx1 {
+      position: relative;
       margin-top: 12px;
       color: #9d9d9d;
       text-align: center;
@@ -406,11 +486,35 @@ body {
       font-weight: 500;
       line-height: normal;
       letter-spacing: -0.78px;
+      &::before {
+        position: absolute;
+        top: -110px;
+        left: -150px;
+        width: 155px;
+        height: 158px;
+        background-image: url(../img/img_arrow.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        content: "";
+      }
     }
   }
   .bottom {
+    position: relative;
     width: 1430px;
     margin: 60px auto 0;
+    &::after {
+      position: absolute;
+      bottom: -30px;
+      right: 40px;
+      z-index: 1;
+      width: 70px;
+      height: 65px;
+      background-image: url(../img/img_bullet_2.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      content: "";
+    }
     .box {
       padding: 60px;
       border-radius: 16px;
@@ -510,6 +614,9 @@ body {
 .con5 {
   padding-top: 120px;
   padding-bottom: 120px;
+  background-image: url(../img/img_bg_2.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
   .top {
     display: flex;
     align-items: center;
@@ -601,6 +708,21 @@ body {
       font-weight: 500;
       line-height: normal;
       letter-spacing: -0.78px;
+    }
+  }
+  .conInner {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      z-index: 1;
+      width: 138px;
+      height: 144px;
+      background-image: url(../img/img_bullet_1.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      content: "";
     }
   }
   .swiper-slide {
