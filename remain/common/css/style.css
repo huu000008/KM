@@ -245,7 +245,7 @@ img {
 }
 .footer.black .tx-3 {
   color: #fff;
-  opacity: 0.3s;
+  opacity: 0.3;
 }
 @media (max-width: 1180px) {
   .footer {

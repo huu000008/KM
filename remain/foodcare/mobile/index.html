@@ -377,31 +377,31 @@
         });
       });
 
-      const con5 = document.querySelector(".con-5");
+      // const con5 = document.querySelector(".con-5");
 
-      const option = {
-        threshold: 0.1,
-      };
+      // const option = {
+      //   threshold: 0.1,
+      // };
 
-      let isCon5Intersecting = false;
+      // let isCon5Intersecting = false;
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.target === con5) {
-            if (entry.isIntersecting) {
-              if (!isCon5Intersecting) {
-                con5.classList.add("on");
-                isCon5Intersecting = true;
-              }
-            } else {
-              con5.classList.remove("on");
-              isCon5Intersecting = false;
-            }
-          }
-        });
-      }, option);
+      // const observer = new IntersectionObserver((entries) => {
+      //   entries.forEach((entry) => {
+      //     if (entry.target === con5) {
+      //       if (entry.isIntersecting) {
+      //         if (!isCon5Intersecting) {
+      //           con5.classList.add("on");
+      //           isCon5Intersecting = true;
+      //         }
+      //       } else {
+      //         con5.classList.remove("on");
+      //         isCon5Intersecting = false;
+      //       }
+      //     }
+      //   });
+      // }, option);
 
-      observer.observe(con5);
+      // observer.observe(con5);
     </script>
   </body>
 </html>

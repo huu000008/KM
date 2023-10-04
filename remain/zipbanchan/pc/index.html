@@ -420,11 +420,13 @@
           </div>
         </div>
         <div class="con-15">
-          <div class="con-13">
-            <div class="img">
-              <img src="assets/img_con12_1920.png" alt="" class="lg" />
-              <img src="assets/img_con12_1440.png" alt="" class="md" />
-              <img src="assets/img_con12_1180.png" alt="" class="sm" />
+          <div class="inner">
+            <div class="con-13">
+              <div class="img">
+                <img src="assets/img_con12_1920.png" alt="" class="lg" />
+                <img src="assets/img_con12_1440.png" alt="" class="md" />
+                <img src="assets/img_con12_1180.png" alt="" class="sm" />
+              </div>
             </div>
           </div>
           <div class="con-12 type-2 white">
@@ -519,6 +521,33 @@
           </div>
         </div>
       </div>
+      <div class="footer black">
+        <div class="tx-1 wow fadeInUp">
+          Total solution based on<br />
+          cognitive process verification.<br />
+          반찬연구소 app renewal
+        </div>
+        <div class="tx-2 wow fadeInUp">
+          <a href="#!">Client</a>
+          <span>집반찬연구소</span>
+        </div>
+        <div class="tx-3 wow fadeInUp">© 2023 remainlayer</div>
+        <div class="contact">
+          <div class="left">
+            <div class="tx-4 wow fadeInUp">
+              Remain Studio brings together various<br />
+              creators to create an image of a new brand.
+            </div>
+            <div class="tx-5 wow fadeInUp">
+              리메인 스튜디오는 다양한 창작자들이 모여 새로운 브랜드의 이미지를
+              만듭니다.
+            </div>
+          </div>
+          <div class="right wow fadeInUp">
+            <a href="#!">contact us</a>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       new WOW().init();
@@ -550,11 +579,11 @@
         },
       });
 
-      const item_1 = document.querySelector(".con-15");
+      const item_1 = document.querySelector(".con-16");
       const body = document.body;
 
       const option = {
-        threshold: 0.2,
+        threshold: 0.1,
       };
 
       const observer = new IntersectionObserver((entries) => {

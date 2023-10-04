@@ -423,6 +423,8 @@ body {
     justify-content: center;
     gap: 44px;
     margin-top: 220px;
+    padding-left: 40px;
+    padding-right: 40px;
     @include md {
       margin-top: 130px;
       gap: 16px;

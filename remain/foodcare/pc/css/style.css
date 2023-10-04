@@ -442,6 +442,8 @@ body {
   justify-content: center;
   gap: 44px;
   margin-top: 220px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 @media (max-width: 1440px) {
   .con-7 .box-wrap {
