@@ -166,10 +166,21 @@ body {
   background-image: url(../assets/icon_arrow_left.svg);
 }
 
+body.on .con-4 {
+  background: #000;
+}
+body.on .con-4 .text-wrap .item .text-1 {
+  color: #fff;
+}
+body.on .con-4 .text-wrap .item .text-2 {
+  color: #fff;
+}
+
 .con-4 {
   padding: 18px 32px 0;
   overflow: hidden;
-  background-color: #fff;
+  background: #fff;
+  transition: all 1s;
 }
 .con-4 .img {
   border-radius: 10px;
@@ -236,41 +247,47 @@ body {
 }
 .con-4 .text-wrap .item .text-1 {
   margin-bottom: 12px;
-  color: var(--neutral-gray-black, #000);
+  color: #000;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
   line-height: 100%; /* 48px */
   text-transform: capitalize;
+  transition: all 1s;
 }
 .con-4 .text-wrap .item .text-2 {
-  color: var(--neutral-gray-black, #000);
+  color: #000;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 180%; /* 25.2px */
   text-transform: capitalize;
   opacity: 0.8;
+  transition: all 1s;
 }
 
 body.on .con-5 {
   background: #000;
 }
+body.on .con-5 .text-1 {
+  color: #fff;
+}
 
 .con-5 {
   padding: 60px 32px 0;
   overflow: hidden;
-  background: rgb(0, 44, 95);
+  background: #fff;
   transition: all 1s;
 }
 .con-5 .text-1 {
-  color: #fff;
+  color: #000;
   font-size: 80px;
   font-style: normal;
   font-weight: 400;
   line-height: 110%; /* 88px */
   text-transform: capitalize;
   opacity: 0.9;
+  transition: all 1s;
 }
 .con-5 .text-2 {
   margin: 160px 0 220px;

@@ -24,6 +24,22 @@ body {
   margin: 0 auto;
   overflow: hidden;
 }
+.footer {
+  background: none;
+  .tx-1 {
+    span {
+      color: #ffb100;
+    }
+  }
+  .tx-2 {
+    color: #222;
+    opacity: 0.6;
+  }
+  .tx-3 {
+    color: #222;
+    opacity: 0.3;
+  }
+}
 .con-1 {
   height: 900px;
   background-image: url(../assets/img_con1_1.png);
@@ -407,6 +423,8 @@ body {
     justify-content: center;
     gap: 44px;
     margin-top: 220px;
+    padding-left: 40px;
+    padding-right: 40px;
     @include md {
       margin-top: 130px;
       gap: 16px;
@@ -736,52 +754,6 @@ body {
   .swiper-button-next:after,
   .swiper-button-prev:after {
     display: none;
-  }
-}
-.con-13 {
-  padding-top: 80px;
-  padding-bottom: 110px;
-  text-align: center;
-  .tx-1 {
-    margin-bottom: 60px;
-    color: #222;
-    text-align: center;
-    font-family: SUIT;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%; /* 39.6px */
-    text-transform: capitalize;
-    span {
-      color: #ffb100;
-    }
-  }
-  .tx-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: #222;
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%; /* 24px */
-    opacity: 0.6;
-    a {
-      text-decoration: underline;
-    }
-  }
-  .tx-3 {
-    margin-top: 100px;
-    color: #222;
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%; /* 24px */
-    opacity: 0.3;
   }
 }
 .modal {

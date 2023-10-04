@@ -129,12 +129,13 @@ body {
       align-items: center;
       justify-content: center;
       margin: 0 auto 24px;
-      color: #965c34;
+      color: #fff;
+      text-align: center;
       font-family: Poppins;
-      font-size: 16px;
+      font-size: 10px;
       font-style: normal;
       font-weight: 700;
-      line-height: 100%; /* 16px */
+      line-height: 100%; /* 10px */
       text-transform: uppercase;
     }
     .text-2 {
@@ -174,10 +175,10 @@ body {
   padding-top: 70px;
   padding-bottom: 100px;
   text-align: center;
+  background: #005d00;
   transition: all 2s;
-  &.on {
-    background: #005d00;
-  }
+  // &.on {
+  // }
   .bg-1 {
     position: absolute;
     top: -27px;
