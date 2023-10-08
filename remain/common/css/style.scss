@@ -388,6 +388,9 @@ img {
     }
     span {
       color: #ffb100;
+      &.green {
+        color: #78ff48;
+      }
     }
   }
   .tx-2 {

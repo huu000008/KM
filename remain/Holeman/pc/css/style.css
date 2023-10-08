@@ -41,6 +41,17 @@ body {
 .con-title.white .tx-3 {
   color: #000;
 }
+.con-title.large .tx-2 {
+  text-align: center;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+  font-family: Montserrat;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%; /* 67.5px */
+  letter-spacing: -1px;
+  text-transform: capitalize;
+}
 .con-title > img {
   width: 128px;
   margin: 0 auto 7px;
@@ -61,10 +72,10 @@ body {
   text-align: center;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
   font-family: Montserrat;
-  font-size: 75px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 700;
-  line-height: 90%; /* 67.5px */
+  line-height: 66px; /* 110% */
   letter-spacing: -1px;
   text-transform: capitalize;
   background: linear-gradient(107deg, #fff 65%, rgba(255, 255, 255, 0.43) 100%);
@@ -82,6 +93,9 @@ body {
   font-weight: 500;
   line-height: 150%; /* 27px */
 }
+.con-title .tx-3.white {
+  color: #fff;
+}
 
 .con-1 {
   height: 996px;
@@ -93,6 +107,48 @@ body {
 
 .con-2 {
   padding-top: 280px;
+}
+.con-2 .con-title {
+  position: relative;
+}
+.con-2 .con-title .poa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.con-2 .con-title .poa-1 {
+  width: 80.5px;
+  margin-left: -226px;
+  margin-top: -144px;
+}
+.con-2 .con-title .poa-2 {
+  width: 80.5px;
+  margin-left: 226px;
+  margin-top: -144px;
+}
+.con-2 .con-title .poa-3 {
+  width: 84.5px;
+  margin-left: -398px;
+  margin-top: -31px;
+}
+.con-2 .con-title .poa-4 {
+  width: 94px;
+  margin-left: 387px;
+  margin-top: -52px;
+}
+.con-2 .con-title .poa-5 {
+  width: 80.5px;
+  margin-left: -249px;
+  margin-top: 182px;
+}
+.con-2 .con-title .poa-6 {
+  width: 80.5px;
+  margin-left: 266px;
+  margin-top: 197px;
+}
+.con-2 .con-title .poa-7 {
+  margin-top: 241px;
 }
 
 .con-3 {
@@ -109,6 +165,7 @@ body {
   width: 338.5px;
   margin: 0 auto;
   text-align: center;
+  animation: floatAnimation 3s infinite ease-in-out;
 }
 .con-3 .tx-1 {
   margin-top: 130px;
@@ -163,6 +220,9 @@ body {
   bottom: -150px;
   left: 0;
   width: 301.5px;
+}
+.con-5 .poa img {
+  animation: floatAnimation 3s infinite ease-in-out;
 }
 
 .con-6 {
@@ -277,7 +337,7 @@ body {
 
 .con-9 {
   padding-top: 534px;
-  padding-bottom: 1163px;
+  padding-bottom: 1060px;
   background-image: url(../assets/img_con9_5.png);
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -311,4 +371,115 @@ body {
   width: 263px;
   margin-top: 250px;
   margin-left: 310px;
+}
+
+.con-10 {
+  padding-top: 136px;
+  padding-bottom: 150px;
+  background: #141316;
+  transition: all 1s;
+}
+.con-10.on {
+  background: #78ff48;
+}
+.con-10 .inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  width: 1140px;
+  margin: 0 auto;
+}
+.con-10 .img-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+.con-10 .img-wrap:nth-child(2) {
+  margin-top: 150px;
+}
+.con-10 .img-wrap:nth-child(3) {
+  margin-top: 500px;
+}
+.con-10 .img {
+  width: 332px;
+}
+.con-10 .img .tx-4 {
+  margin-top: 14px;
+  color: #757575;
+  text-align: center;
+  font-family: SUIT;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+
+.con-11 {
+  padding-top: 134px;
+  background: #fa8cc0;
+  transition: all 1s;
+}
+.con-11.on {
+  background: #000;
+}
+.con-11 .inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.con-11 .img-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.con-12 {
+  padding-top: 360px;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+.con-12 .item-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding-top: 185px;
+  padding-bottom: 250px;
+  background-image: url(../assets/img_con12_1.png);
+  background-repeat: no-repeat;
+  background-position: top 115px center;
+  background-size: 16.666666vw;
+}
+
+.con-13 {
+  padding-top: 134px;
+  padding-bottom: 110px;
+  background: #000;
+  background-image: url(../assets/img_con13_2.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 290px;
+  background-size: contain;
+  transition: all 1s;
+}
+.con-13.on {
+  background: #e59600;
+}
+.con-13 .img {
+  width: 310px;
+  margin: 52px auto 0;
+}
+
+.con-14 {
+  padding: 90px 0;
+  text-align: center;
+  background: #f0ddab;
+}
+.con-14 img {
+  width: 520px;
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }/*# sourceMappingURL=style.css.map */
