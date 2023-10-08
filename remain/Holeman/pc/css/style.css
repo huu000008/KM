@@ -11,15 +11,7 @@ body {
   padding-top: 70px;
 }
 .h1 h1 {
-  color: #fff;
-  text-align: center;
   font-family: Montserrat;
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 80px */
-  letter-spacing: -0.8px;
-  text-transform: uppercase;
 }
 
 .wrapper {
