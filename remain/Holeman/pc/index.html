@@ -252,27 +252,27 @@
           <div class="inner">
             <div class="img-wrap">
               <div class="img wow animate__animated animate__fadeInUp">
-                <img src="assets/img_con10_0.png" alt="" />
+                <img src="assets/img_con10_1.png" alt="" />
                 <div class="tx-4">잠금화면</div>
               </div>
               <div class="img wow animate__animated animate__fadeInUp">
-                <img src="assets/img_con10_0.png" alt="" />
+                <img src="assets/img_con10_2.png" alt="" />
                 <div class="tx-4">달력</div>
               </div>
             </div>
             <div class="img-wrap">
               <div class="img wow animate__animated animate__fadeInUp">
-                <img src="assets/img_con10_0.png" alt="" />
+                <img src="assets/img_con10_3.png" alt="" />
                 <div class="tx-4">메세지</div>
               </div>
               <div class="img wow animate__animated animate__fadeInUp">
-                <img src="assets/img_con10_0.png" alt="" />
+                <img src="assets/img_con10_4.png" alt="" />
                 <div class="tx-4">음악</div>
               </div>
             </div>
             <div class="img-wrap">
               <div class="img wow animate__animated animate__fadeInUp">
-                <img src="assets/img_con10_0.png" alt="" />
+                <img src="assets/img_con10_5.png" alt="" />
                 <div class="tx-4">설정</div>
               </div>
             </div>
@@ -395,7 +395,6 @@
     <script>
       new WOW().init();
 
-      const item1 = document.querySelector(".con-10");
       const item2 = document.querySelector(".con-13");
       const body = document.body;
 
@@ -405,12 +404,6 @@
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.target === item1 && entry.isIntersecting) {
-            item1.classList.add("on");
-          } else {
-            item1.classList.remove("on");
-          }
-
           if (entry.target === item2 && entry.isIntersecting) {
             item2.classList.add("on");
           } else {
@@ -419,7 +412,6 @@
         });
       }, option);
 
-      observer.observe(item1);
       observer.observe(item2);
     </script>
   </body>
