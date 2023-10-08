@@ -3713,8 +3713,8 @@
     transform: rotate(0);
   }
   50% {
-    -webkit-transform: rotate(6deg);
-    transform: rotate(6deg);
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
   }
   to {
     -webkit-transform: rotate(0);
