@@ -5,6 +5,7 @@ img {
 }
 
 body {
+  overflow-x: hidden;
   background: var(--neutral-gray-black, #000);
 }
 
@@ -14,10 +15,34 @@ body {
   text-transform: capitalize;
 }
 
+.swiper-pagination-wrap {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.swiper-pagination-fraction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #bcbbb2;
+  font-family: Cormorant;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .swiper-horizontal > .swiper-pagination-progressbar,
 .swiper-pagination-progressbar.swiper-pagination-horizontal,
 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  top: 50%;
+  left: 40px;
+  right: 40px;
+  width: auto;
   height: 1px;
 }
 
@@ -171,12 +196,18 @@ body {
 .con-2__3 {
   margin-top: 60px;
 }
-.con-2__3 .swiper-horizontal > .swiper-pagination-progressbar,
-.con-2__3 .swiper-pagination-progressbar.swiper-pagination-horizontal,
-.con-2__3 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
-.con-2__3 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.con-2__3 .swiper-wrapper {
   position: relative;
-  height: 1px;
+}
+.con-2__3 .swiper-wrapper::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 195px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.79%, #000 100%);
+  pointer-events: none;
+  content: "";
 }
 .con-2__3 .tx1 {
   position: absolute;
@@ -668,6 +699,17 @@ body {
   background-position: bottom right;
   background-size: cover;
 }
+.con-7 .swiper-pagination-wrap {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+.con-7 .swiper-pagination-fraction {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  z-index: 11;
+}
 .con-7 .swiper {
   margin-top: 40px;
 }
@@ -706,8 +748,6 @@ body {
 .con-7 .swiper-pagination-progressbar.swiper-pagination-horizontal,
 .con-7 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
 .con-7 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
-  top: auto;
-  bottom: 40px;
   z-index: 11;
 }
 
@@ -1002,11 +1042,4 @@ body.on .con-12 .poa-inner {
 }
 .con-19 .swiper {
   margin-top: 80px;
-}
-.con-19 .swiper-horizontal > .swiper-pagination-progressbar,
-.con-19 .swiper-pagination-progressbar.swiper-pagination-horizontal,
-.con-19 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
-.con-19 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
-  top: auto;
-  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
