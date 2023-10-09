@@ -3698,13 +3698,16 @@
 
 @-webkit-keyframes custom01 {
   0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
   }
   to {
-    visibility: hidden;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
   }
 }
 @keyframes custom01 {
@@ -3724,4 +3727,37 @@
 .animate__custom01 {
   -webkit-animation-name: custom01;
   animation-name: custom01;
+}
+
+@-webkit-keyframes custom02 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+@keyframes custom02 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+.animate__custom02 {
+  -webkit-animation-name: custom02;
+  animation-name: custom02;
 }
