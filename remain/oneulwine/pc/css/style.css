@@ -8,9 +8,6 @@ body {
   background: var(--neutral-gray-black, #000);
 }
 
-.h1 {
-  padding-top: 70px;
-}
 .h1 h1 {
   color: #fff;
   text-align: center;
@@ -864,7 +861,9 @@ body.on .con-12 .poa-inner {
   }
 }
 .con-12 .con-inner .con {
+  width: 1180px;
   height: 1080px;
+  margin: 0 auto;
   padding-bottom: 40px;
   background-repeat: no-repeat;
   background-position: center;
@@ -892,16 +891,16 @@ body.on .con-12 .poa-inner {
   background: #1a1a1a;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
 }
-.con-12 .poa.con-13 .tx2::after {
+.con-12 .poa.con-13-text .tx2::after {
   content: "1. 테마 별 구독 서비스 기획";
 }
-.con-12 .poa.con-14 .tx2::after {
+.con-12 .poa.con-14-text .tx2::after {
   content: "2. 와인 정보 소개";
 }
-.con-12 .poa.con-15 .tx2::after {
+.con-12 .poa.con-15-text .tx2::after {
   content: "3. 구독 옵션 선택 및 결제";
 }
-.con-12 .poa.con-16 .tx2::after {
+.con-12 .poa.con-16-text .tx2::after {
   content: "4. 서비스 후기 작성 & 구독 현황";
 }
 .con-12 .poa .tx1 {
@@ -927,17 +926,41 @@ body.on .con-12 .poa-inner {
 .con-13 {
   background-image: url(../assets/img_con12_1.png);
 }
+@media (max-width: 1440px) {
+  .con-13 {
+    height: 977px !important;
+    background-image: url(../assets/img_con12_1_0.png);
+  }
+}
 
 .con-14 {
   background-image: url(../assets/img_con12_2.png);
+}
+@media (max-width: 1440px) {
+  .con-14 {
+    height: 979px !important;
+    background-image: url(../assets/img_con12_2_0.png);
+  }
 }
 
 .con-15 {
   background-image: url(../assets/img_con12_3.png);
 }
+@media (max-width: 1440px) {
+  .con-15 {
+    height: 975px !important;
+    background-image: url(../assets/img_con12_3_0.png);
+  }
+}
 
 .con-16 {
   background-image: url(../assets/img_con12_4.png);
+}
+@media (max-width: 1440px) {
+  .con-16 {
+    height: 1076px !important;
+    background-image: url(../assets/img_con12_4_0.png);
+  }
 }
 
 .con-17 {
@@ -1105,4 +1128,15 @@ body.on .con-12 .poa-inner {
 }
 .con-19 .img {
   margin-top: 88px;
+}
+.con-19 .img .sm {
+  display: none;
+}
+@media (max-width: 1180px) {
+  .con-19 .img .lg {
+    display: none;
+  }
+  .con-19 .img .sm {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

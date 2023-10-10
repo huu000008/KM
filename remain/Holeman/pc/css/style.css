@@ -7,9 +7,6 @@ body {
   background: var(--neutral-gray-black, #000);
 }
 
-.h1 {
-  padding-top: 70px;
-}
 .h1 h1 {
   font-family: Montserrat;
 }
@@ -48,6 +45,11 @@ body {
   width: 128px;
   margin: 0 auto 7px;
 }
+@media (max-width: 1440px) {
+  .con-title > img {
+    width: 120px;
+  }
+}
 .con-title .tx-1 {
   margin-bottom: 70px;
   color: #fff;
@@ -61,6 +63,7 @@ body {
   opacity: 0.3;
 }
 .con-title .tx-2 {
+  margin: 0 auto;
   text-align: center;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
   font-family: Montserrat;
@@ -76,7 +79,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .con-title .tx-3 {
-  margin-top: 26px;
+  margin-top: 16px;
   color: #bdbdc0;
   text-align: center;
   font-family: SUIT;
@@ -90,7 +93,7 @@ body {
 }
 
 .con-1 {
-  height: 996px;
+  height: 1055px;
   background-image: url(../assets/img_con1_1.png);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -102,6 +105,9 @@ body {
 }
 .con-2 .con-title {
   position: relative;
+}
+.con-2 .con-title .tx-2 {
+  width: 667px;
 }
 .con-2 .con-title .poa {
   position: absolute;
@@ -216,11 +222,25 @@ body {
 .con-5 .poa img {
   animation: floatAnimation 3s infinite ease-in-out;
 }
+.con-5 .poa img.md {
+  display: none;
+}
+@media (max-width: 1440px) {
+  .con-5 .poa img.lg {
+    display: none;
+  }
+  .con-5 .poa img.md {
+    display: block;
+  }
+}
 
 .con-6 {
   padding-top: 200px;
   padding-bottom: 100px;
   text-align: center;
+}
+.con-6 .con-title .tx-2 {
+  width: 626px;
 }
 .con-6 .tx-4 {
   display: inline-flex;
@@ -293,11 +313,14 @@ body {
   background-position: center top 70px;
   background-size: 1920px;
 }
+.con-7 .con-title .tx-2 {
+  width: 423px;
+}
 
 .con-8 {
   margin-top: 138px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .con-8 .img-wrap {
   display: flex;
@@ -343,6 +366,9 @@ body {
 }
 .con-9 .con-title {
   position: relative;
+}
+.con-9 .con-title .tx-2 {
+  width: 702px;
 }
 .con-9 .con-title .poa {
   position: absolute;
@@ -448,6 +474,9 @@ body {
 .con-11.on {
   background: #000;
 }
+.con-11 .con-title .tx-2 {
+  width: 476px;
+}
 .con-11 .inner {
   max-width: 1140px;
   margin: 0 auto;
@@ -473,6 +502,9 @@ body {
   padding-top: 360px;
   margin-left: -40px;
   margin-right: -40px;
+}
+.con-12 .con-title .tx-2 {
+  width: 516px;
 }
 .con-12 .item-wrap {
   display: flex;
@@ -505,6 +537,9 @@ body {
 .con-13 .img {
   width: 310px;
   margin: 52px auto 0;
+}
+.con-13 .con-title .tx-2 {
+  width: 653px;
 }
 
 .con-14 {

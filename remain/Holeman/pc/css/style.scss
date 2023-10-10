@@ -17,7 +17,6 @@ body {
   background: var(--neutral-gray-black, #000);
 }
 .h1 {
-  padding-top: 70px;
   h1 {
     font-family: Montserrat;
   }
@@ -57,6 +56,9 @@ body {
   & > img {
     width: 128px;
     margin: 0 auto 7px;
+    @include md {
+      width: 120px;
+    }
   }
   .tx-1 {
     margin-bottom: 70px;
@@ -71,6 +73,7 @@ body {
     opacity: 0.3;
   }
   .tx-2 {
+    margin: 0 auto;
     text-align: center;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
     font-family: Montserrat;
@@ -90,7 +93,7 @@ body {
     -webkit-text-fill-color: transparent;
   }
   .tx-3 {
-    margin-top: 26px;
+    margin-top: 16px;
     color: #bdbdc0;
     text-align: center;
     font-family: SUIT;
@@ -104,7 +107,7 @@ body {
   }
 }
 .con-1 {
-  height: 996px;
+  height: 1055px;
   background-image: url(../assets/img_con1_1.png);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -114,6 +117,9 @@ body {
   padding-top: 280px;
   .con-title {
     position: relative;
+    .tx-2 {
+      width: calc(1334px / 2);
+    }
     .poa {
       position: absolute;
       top: 50%;
@@ -223,6 +229,17 @@ body {
     width: calc(603px / 2);
     img {
       animation: floatAnimation 3s infinite ease-in-out;
+      &.md {
+        display: none;
+      }
+      @include md {
+        &.lg {
+          display: none;
+        }
+        &.md {
+          display: block;
+        }
+      }
     }
   }
 }
@@ -230,6 +247,11 @@ body {
   padding-top: 200px;
   padding-bottom: 100px;
   text-align: center;
+  .con-title {
+    .tx-2 {
+      width: calc(1252px / 2);
+    }
+  }
   .tx-4 {
     display: inline-flex;
     align-items: center;
@@ -300,11 +322,16 @@ body {
   background-repeat: no-repeat;
   background-position: center top 70px;
   background-size: 1920px;
+  .con-title {
+    .tx-2 {
+      width: calc(846px / 2);
+    }
+  }
 }
 .con-8 {
   margin-top: 138px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
   .img-wrap {
     display: flex;
     gap: 16px;
@@ -346,6 +373,9 @@ body {
   }
   .con-title {
     position: relative;
+    .tx-2 {
+      width: calc(1404px / 2);
+    }
     .poa {
       position: absolute;
       top: 50%;
@@ -442,6 +472,11 @@ body {
   &.on {
     background: #000;
   }
+  .con-title {
+    .tx-2 {
+      width: calc(952px / 2);
+    }
+  }
   .inner {
     max-width: 1140px;
     margin: 0 auto;
@@ -467,6 +502,11 @@ body {
   padding-top: 360px;
   margin-left: -40px;
   margin-right: -40px;
+  .con-title {
+    .tx-2 {
+      width: calc(1032px / 2);
+    }
+  }
   .item-wrap {
     display: flex;
     justify-content: space-between;
@@ -495,6 +535,11 @@ body {
   .img {
     width: 310px;
     margin: 52px auto 0;
+  }
+  .con-title {
+    .tx-2 {
+      width: calc(1306px / 2);
+    }
   }
 }
 .con-14 {
