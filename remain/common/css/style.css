@@ -149,7 +149,7 @@ img {
   display: block;
   text-align: center;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .h1 {
     padding-top: 80px;
   }
@@ -165,7 +165,7 @@ img {
   letter-spacing: -0.8px;
   text-transform: uppercase;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .h1 h1 {
     margin-bottom: 12px;
     color: #fff;
@@ -183,7 +183,7 @@ img {
   justify-content: center;
   font-family: "Poppins";
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .h1 .tag-wrap {
     flex-wrap: wrap;
     row-gap: 10px;
@@ -199,7 +199,7 @@ img {
   line-height: 90%; /* 14.4px */
   text-transform: lowercase;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .h1 .tag-wrap span {
     color: #fff;
     text-align: center;
@@ -223,7 +223,7 @@ img {
   opacity: 0.5;
   content: "";
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .h1 .tag-wrap span + span::before {
     height: 8px;
   }
@@ -258,7 +258,7 @@ img {
   color: #fff;
   opacity: 0.3;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer {
     padding-top: 60px;
     padding-bottom: 30px;
@@ -276,7 +276,7 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .contact {
     margin-top: 70px;
     margin-left: 20px;
@@ -297,7 +297,7 @@ img {
   line-height: 130%; /* 41.6px */
   text-transform: lowercase;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .contact .left .tx-4 {
     color: #fff;
     text-align: center;
@@ -321,7 +321,7 @@ img {
   font-weight: 400;
   line-height: 130%; /* 20.8px */
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .contact .left .tx-5 {
     margin-top: 13px;
     color: #fff;
@@ -333,7 +333,7 @@ img {
     line-height: 160%; /* 20.8px */
   }
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .contact .right {
     width: 100%;
   }
@@ -354,7 +354,7 @@ img {
   border: 1px solid #fff;
   border-radius: 40px;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .contact .right a {
     height: 48px;
     margin-top: 33px;
@@ -377,7 +377,7 @@ img {
   line-height: 110%; /* 39.6px */
   text-transform: capitalize;
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .tx-1 {
     margin-bottom: 36px;
     text-align: center;
@@ -407,7 +407,7 @@ img {
   font-weight: 700;
   line-height: 100%; /* 24px */
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .tx-2 {
     gap: 8px;
     text-align: center;
@@ -431,7 +431,7 @@ img {
   font-weight: 700;
   line-height: 100%; /* 24px */
 }
-@media (max-width: 1179px) {
+@media (max-width: 768px) {
   .footer .tx-3 {
     margin-top: 60px;
     text-align: center;
