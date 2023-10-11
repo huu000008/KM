@@ -313,8 +313,15 @@ body {
       width: 268px;
     }
     &.lock {
-      opacity: 0.5;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      background: none;
+      .tx-4 {
+        border: none;
+        opacity: 0.5;
+      }
+      .tx-5 {
+        opacity: 0.5;
+      }
     }
     .img {
       width: 80px;

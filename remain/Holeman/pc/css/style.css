@@ -308,8 +308,15 @@ body {
   }
 }
 .con-6 .box.lock {
-  opacity: 0.5;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  background: none;
+}
+.con-6 .box.lock .tx-4 {
+  border: none;
+  opacity: 0.5;
+}
+.con-6 .box.lock .tx-5 {
+  opacity: 0.5;
 }
 .con-6 .box .img {
   width: 80px;

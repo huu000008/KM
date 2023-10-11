@@ -424,7 +424,7 @@ body {
   inset: 0;
   right: 100%;
   background: #fff;
-  transition: all 2s;
+  transition: all 1s;
   content: "";
 }
 
@@ -984,10 +984,13 @@ body.on .con-12 .poa-inner {
     gap: 35px;
     transform: translateY(285px);
     margin-top: -160px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 .con-17 .img-wrap img {
   width: 576px;
+  filter: drop-shadow(0px 9.3333339691px 95.6666717529px rgba(0, 0, 0, 0.25));
 }
 .con-17 .img-wrap .right {
   transform: translateY(285px);

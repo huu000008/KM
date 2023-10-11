@@ -216,6 +216,18 @@ body {
       content: "";
     }
   }
+  .swiper-slide {
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 195px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.79%, #000 100%);
+      content: "";
+    }
+  }
   .tx1 {
     position: absolute;
     top: 16px;
@@ -474,7 +486,7 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-45deg);
-      width: 180px;
+      width: 122px;
       height: 1px;
       &.on {
         &::after {
@@ -486,7 +498,7 @@ body {
         inset: 0;
         right: 100%;
         background: #fff;
-        transition: all 2s;
+        transition: all 1s;
         content: "";
       }
     }
@@ -626,7 +638,7 @@ body {
   }
   .img {
     position: relative;
-    width: 404px;
+    width: 200px;
     margin: 70px auto 90px;
     @include sm {
       margin-top: 50px;
@@ -643,7 +655,7 @@ body {
       }
       &-2 {
         width: 53px;
-        margin-left: 91px;
+        margin-left: 66px;
         margin-top: -55px;
       }
     }
@@ -662,6 +674,7 @@ body {
       line-height: 130%; /* 31.2px */
       letter-spacing: 1px;
       text-transform: uppercase;
+      opacity: 0.4;
     }
     .tx2 {
       margin-top: 5px;
@@ -684,6 +697,7 @@ body {
       font-style: normal;
       font-weight: 300;
       line-height: 160%; /* 20.8px */
+      opacity: 0.8;
       @include sm {
         margin-top: 16px;
       }
@@ -780,7 +794,8 @@ body {
   }
   .img {
     width: 100%;
-    margin: 52px auto 0;
+    margin: 54px auto 0;
+    padding-bottom: 48px;
   }
 }
 .con-10 {
@@ -805,7 +820,6 @@ body.on {
   }
 }
 .con-12 {
-  padding-bottom: 240px;
   .con-title {
     margin-top: 160px;
     .tx1 {
@@ -917,6 +931,7 @@ body.on {
     }
     img {
       width: 280 + 280 + 16px;
+      filter: drop-shadow(0px 4px 41px rgba(0, 0, 0, 0.25));
     }
     .right {
       transform: translateY(285px);
@@ -1025,5 +1040,17 @@ body.on {
   }
   .swiper {
     margin-top: 80px;
+  }
+  .swiper-slide {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 75px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+      content: "";
+    }
   }
 }

@@ -209,6 +209,18 @@ body {
   pointer-events: none;
   content: "";
 }
+.con-2__3 .swiper-slide {
+  position: relative;
+}
+.con-2__3 .swiper-slide::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 195px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.79%, #000 100%);
+  content: "";
+}
 .con-2__3 .tx1 {
   position: absolute;
   top: 16px;
@@ -477,7 +489,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
-  width: 180px;
+  width: 122px;
   height: 1px;
 }
 .con-3 .img .line.on::after {
@@ -488,7 +500,7 @@ body {
   inset: 0;
   right: 100%;
   background: #fff;
-  transition: all 2s;
+  transition: all 1s;
   content: "";
 }
 
@@ -626,7 +638,7 @@ body {
 }
 .con-5 .img {
   position: relative;
-  width: 404px;
+  width: 200px;
   margin: 70px auto 90px;
 }
 @media (max-width: 1180px) {
@@ -647,7 +659,7 @@ body {
 }
 .con-5 .img .flame-2 {
   width: 53px;
-  margin-left: 91px;
+  margin-left: 66px;
   margin-top: -55px;
 }
 
@@ -662,6 +674,7 @@ body {
   line-height: 130%; /* 31.2px */
   letter-spacing: 1px;
   text-transform: uppercase;
+  opacity: 0.4;
 }
 .con-6 .con-title .tx2 {
   margin-top: 5px;
@@ -684,6 +697,7 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 160%; /* 20.8px */
+  opacity: 0.8;
 }
 @media (max-width: 1180px) {
   .con-6 .con-title .tx3 {
@@ -783,7 +797,8 @@ body {
 }
 .con-9 .img {
   width: 100%;
-  margin: 52px auto 0;
+  margin: 54px auto 0;
+  padding-bottom: 48px;
 }
 
 .con-10 {
@@ -808,9 +823,6 @@ body.on .con-12 .poa-inner {
   display: block;
 }
 
-.con-12 {
-  padding-bottom: 240px;
-}
 .con-12 .con-title {
   margin-top: 160px;
 }
@@ -910,6 +922,7 @@ body.on .con-12 .poa-inner {
 }
 .con-17 .img-wrap img {
   width: 576px;
+  filter: drop-shadow(0px 4px 41px rgba(0, 0, 0, 0.25));
 }
 .con-17 .img-wrap .right {
   transform: translateY(285px);
@@ -1019,4 +1032,16 @@ body.on .con-12 .poa-inner {
 }
 .con-19 .swiper {
   margin-top: 80px;
+}
+.con-19 .swiper-slide {
+  position: relative;
+}
+.con-19 .swiper-slide::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  content: "";
 }/*# sourceMappingURL=style.css.map */

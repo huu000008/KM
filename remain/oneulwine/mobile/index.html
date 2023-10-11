@@ -28,24 +28,32 @@
         </div>
         <div class="con-2">
           <div class="con-title">
-            <div class="tx1">project overview</div>
-            <div class="tx2">
+            <div class="tx1 wow animate__animated animate__fadeInUp">
+              project overview
+            </div>
+            <div class="tx2 wow animate__animated animate__fadeInUp">
               project<br />
               <span> oneul, wine </span>
             </div>
           </div>
           <div class="logo">
-            <img src="assets/img_con1_2.png" alt="" />
+            <img
+              src="assets/img_con1_2.png"
+              alt=""
+              class="wow animate__animated animate__fadeInUp"
+            />
           </div>
         </div>
-        <div class="con-2__1">
+        <div class="con-2__1 wow animate__animated animate__fadeInUp">
           <span>UX & Service Planning</span>
           <span>photography</span>
           <span>Branding Strategy & Design</span>
         </div>
         <div class="con-2__2">
-          <div class="tx1">overview</div>
-          <div class="tx2">
+          <div class="tx1 wow animate__animated animate__fadeInUp">
+            overview
+          </div>
+          <div class="tx2 wow animate__animated animate__fadeInUp">
             온-오프라인 와인의 경험을 연결하여 와인 구독과 모임 서비스를
             제공하는 오늘,와인한잔 어플리케이션 프로젝트를 진행하였습니다.
             이전까지 오프라인 매장을 기반으로 한 소비자와 본사, 가맹점주의
@@ -56,17 +64,19 @@
         <div class="con-2__3">
           <div class="swiper mySwiper-1">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/img_con2_2.png" alt="" />
-                <div class="tx1">Insight 01</div>
+              <div class="swiper-slide wow animate__animated animate__fadeInUp">
+                <img src="assets/img_con2_2.png" alt="" class="wow" />
+                <div class="tx1">
+                  <div class="wow">Insight 01</div>
+                </div>
                 <div class="tx">
-                  <div class="tx2">힐링 홈술 문화</div>
-                  <div class="tx3">
+                  <div class="tx2 wow">힐링 홈술 문화</div>
+                  <div class="tx3 wow">
                     나만의 힐링 타임을 혼술로 즐기는 문화 확산.
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide wow animate__animated animate__fadeInUp">
                 <img src="assets/img_con2_3.png" alt="" />
                 <div class="tx1">Insight 02</div>
                 <div class="tx">
@@ -77,7 +87,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide wow animate__animated animate__fadeInUp">
                 <img src="assets/img_con2_4.png" alt="" />
                 <div class="tx1">Insight 03</div>
                 <div class="tx">
@@ -229,7 +239,7 @@
               <div class="tx1 wow animate__animated animate__fadeInUp">01</div>
               <div class="tx2 wow animate__animated animate__fadeInUp">
                 가장 가까운 거점<br />
-                물류센터 매장을 빠르게 연결
+                물류센터 매장을<br />빠르게 연결
               </div>
               <div class="tx3 wow animate__animated animate__fadeInUp">
                 서울 시내 곳곳의 매장에서 직배송된 신선한 안주와<br />
@@ -313,7 +323,10 @@
                 하나의 관리자 페이지를 통해 배송 확인부터 정산까지<br />
                 가맹점주들이 손쉽게 관리할 수 있도록 구축했습니다.
               </div>
-              <div class="img wow animate__animated animate__custom02">
+              <div
+                class="img wow animate__animated animate__custom02"
+                data-wow-delay="1s"
+              >
                 <img src="assets/img_con9_1.png" alt="" />
               </div>
             </div>
@@ -343,8 +356,10 @@
         <div class="con-11"></div>
         <div class="con-12">
           <div class="con-title">
-            <div class="tx1">03-1</div>
-            <div class="tx2">service flow</div>
+            <div class="tx1 wow animate__animated animate__fadeInUp">03-1</div>
+            <div class="tx2 wow animate__animated animate__fadeInUp">
+              service flow
+            </div>
           </div>
           <div class="con-inner">
             <div class="con-13 con">
@@ -492,6 +507,10 @@
         spaceBetween: 0,
         centeredSlides: true,
         speed: 1000,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         // navigation: {
         //   nextEl: ".swiper-button-next",
         //   prevEl: ".swiper-button-prev",
@@ -504,7 +523,7 @@
       var swiper = new Swiper(".mySwiper-3", {
         slidesPerView: "auto",
         loop: true,
-        loopedSlides: 1,
+        loopedSlides: 2,
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,

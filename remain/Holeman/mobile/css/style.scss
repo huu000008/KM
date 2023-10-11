@@ -206,8 +206,8 @@ body {
   .tx-4 {
     display: inline-flex;
     align-items: center;
-    height: 30px;
-    padding: 0 20px;
+    height: 24px;
+    padding: 0 12px;
     border-radius: 100px;
     border: 1px solid rgba(237, 237, 237, 0.08);
     color: #fff;
@@ -266,8 +266,15 @@ body {
       display: flex;
     }
     &.lock {
-      opacity: 0.5;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      background: none;
+      .tx-4 {
+        border: none;
+        opacity: 0.5;
+      }
+      .tx-5 {
+        opacity: 0.5;
+      }
     }
     .img {
       width: 50px;
@@ -406,6 +413,8 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   background: #fa8cc0;
+  background-image: url(../assets/bg_3.png);
+  background-size: cover;
   transition: all 1s;
   &.on {
     background: #000;
@@ -466,8 +475,11 @@ body {
   background-size: contain;
   transition: all 1s;
   .img {
-    width: 194px;
+    width: 200px;
     margin: 48px auto 0;
+    img {
+      filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1));
+    }
   }
 }
 .con-14 {
