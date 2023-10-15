@@ -6,7 +6,7 @@ img {
 body {
   font-family: "Noto Serif KR", sans-serif;
   font-weight: 400;
-  transition: all 2s;
+  transition: all 1s;
   background: var(--p, #284733);
 }
 body.on {
@@ -25,6 +25,9 @@ body.on {
 
 .h1 h1 {
   font-family: "Noto Serif KR", sans-serif;
+}
+.h1 .tag-wrap {
+  opacity: 0.8;
 }
 
 @media (max-width: 1180px) {
@@ -53,7 +56,7 @@ body.on {
 .page-desc {
   margin-top: 14px;
   color: #4b5f52;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 160%; /* 38.4px */
@@ -68,20 +71,22 @@ body.on {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 193px;
-  height: 65px;
+  width: 140px;
+  height: 48px;
   background-image: url(../assets/img_con2_1.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   content: "";
 }
 
 .con-1 {
-  height: 1200px;
+  height: 1080px;
   background-color: rgb(40, 71, 51);
   background-image: url(../assets/img_con1_1.png);
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: cover;
 }
 
 .con-2 {
@@ -162,7 +167,7 @@ body.on {
   text-transform: lowercase;
   background-image: url(../assets/img_con4_1.png);
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: right bottom;
 }
 .con-4 .item.toBe .box span {
   opacity: 0.8;
@@ -673,7 +678,7 @@ body.on {
 }
 .con-12 .text-2 {
   color: #000;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 36px */
@@ -694,7 +699,8 @@ body.on {
 }
 @media (max-width: 1180px) {
   .con-12.type-2 .inner {
-    padding-top: 140px;
+    padding-top: 67px;
+    padding-bottom: 200px;
   }
 }
 .con-12.type-2 .text-wrap {
@@ -728,7 +734,14 @@ body.on {
   text-align: center;
 }
 .con-13 .img {
-  margin-top: -30vw;
+  width: 1440px;
+  margin: -550px auto 0;
+}
+@media (max-width: 1440px) {
+  .con-13 .img {
+    width: 1180px;
+    margin: -500px auto 0;
+  }
 }
 .con-13 .img .md {
   display: none;
@@ -737,9 +750,6 @@ body.on {
   display: none;
 }
 @media (max-width: 1440px) {
-  .con-13 .img {
-    margin-top: -48vw;
-  }
   .con-13 .img .lg {
     display: none;
   }
@@ -748,9 +758,6 @@ body.on {
   }
 }
 @media (max-width: 1180px) {
-  .con-13 .img {
-    margin-top: -46vw;
-  }
   .con-13 .img .md {
     display: none;
   }
@@ -781,6 +788,11 @@ body .con-14::after {
   background: linear-gradient(180deg, rgba(40, 70, 51, 0) 0%, #284633 70%);
   content: "";
 }
+.con-14 .img-1 {
+  width: 520px;
+  margin: 0 auto;
+  filter: drop-shadow(40px 80px 60px rgba(0, 0, 0, 0.15));
+}
 .con-14 .img-2 {
   display: flex;
   justify-content: center;
@@ -789,11 +801,12 @@ body .con-14::after {
 }
 @media (max-width: 1180px) {
   .con-14 .img-2 {
-    margin-top: 130px;
+    margin-top: 124px;
     gap: 18px;
   }
 }
 .con-14 .img-2 img {
+  width: 360px;
   border-radius: 8px;
 }
 
@@ -805,6 +818,21 @@ body .con-14::after {
 @media (max-width: 1180px) {
   .con-16 .con-12 .text-2 {
     margin-top: 0;
+  }
+}
+.con-16 .con-12.type-2 .inner {
+  padding-bottom: 180px;
+}
+
+.con-17 .sm {
+  display: none;
+}
+@media (max-width: 1180px) {
+  .con-17 .lg {
+    display: none;
+  }
+  .con-17 .sm {
+    display: block;
   }
 }
 
@@ -893,4 +921,10 @@ body .con-14::after {
   background-image: url(../assets/img_con20_1.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+}
+@media (max-width: 1180px) {
+  .con-20 {
+    background-image: url(../assets/img_con20_2.png);
+  }
 }/*# sourceMappingURL=style.css.map */

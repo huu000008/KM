@@ -495,9 +495,7 @@ body {
 .con-8 {
   padding: 70px 60px 200px;
   transition: all 2s;
-  &.on {
-    background: #ffdb52;
-  }
+  background: #ffdb52;
   @include md {
     padding-top: 120px;
     padding-right: 40px;

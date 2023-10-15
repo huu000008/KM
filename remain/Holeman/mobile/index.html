@@ -243,7 +243,7 @@
                 src="assets/img_con9_4.png"
                 alt=""
                 class="wow animate__animated animate__zoomIn"
-                data-wow-delay="0.9s"
+                data-wow-delay="0.2s"
               />
             </div>
           </div>
@@ -257,7 +257,7 @@
               </div>
               <div class="img wow animate__animated animate__fadeInUp">
                 <img src="assets/img_con10_2.png" alt="" />
-                <div class="tx-4">달력</div>
+                <div class="tx-4">음악</div>
               </div>
             </div>
             <div class="img-wrap">
@@ -267,7 +267,7 @@
               </div>
               <div class="img wow animate__animated animate__fadeInUp">
                 <img src="assets/img_con10_4.png" alt="" />
-                <div class="tx-4">음악</div>
+                <div class="tx-4">달력</div>
               </div>
             </div>
             <div class="img-wrap">
@@ -414,10 +414,10 @@
         loop: true,
         loopedSlides: 2,
         centeredSlides: true,
-        // autoplay: {
-        //   delay: 2500,
-        //   disableOnInteraction: true,
-        // },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: true,
+        },
         speed: 1000,
         // navigation: {
         //   nextEl: ".swiper-button-next",
@@ -431,8 +431,6 @@
       var swiper = new Swiper(".mySwiper-2", {
         slidesPerView: "1",
         spaceBetween: 20,
-        loop: true,
-        loopedSlides: 2,
         centeredSlides: true,
         speed: 1000,
         // navigation: {

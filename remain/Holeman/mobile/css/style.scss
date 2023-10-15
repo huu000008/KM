@@ -269,6 +269,7 @@ body {
       border: 1px solid rgba(255, 255, 255, 0.1);
       background: none;
       .tx-4 {
+        padding: 0;
         border: none;
         opacity: 0.5;
       }
@@ -283,7 +284,7 @@ body {
   }
 }
 .con-7 {
-  padding-top: 240px;
+  padding-top: 112px;
   background-image: url(../assets/img_con7_1.png);
   background-repeat: no-repeat;
   background-position: center top 20px;
@@ -357,7 +358,7 @@ body {
     }
     .poa-4 {
       width: 125px;
-      margin-top: 191px;
+      margin-top: 140px;
       margin-left: 82px;
     }
   }
@@ -427,18 +428,22 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: -100px;
-    transform: translateY(177px);
+    margin-top: -90px;
+    transform: translateY(140px);
     > div {
       width: 238px;
+      filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.15));
     }
     .right {
-      transform: translateY(-90px);
+      transform: translateY(-80px);
       margin-left: auto;
     }
     .img-2 {
       width: 168px;
       margin-left: auto;
+    }
+    .img-3 {
+      margin-top: 20px;
     }
   }
 }

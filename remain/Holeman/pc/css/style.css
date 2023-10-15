@@ -522,6 +522,12 @@ body {
   background: #fa8cc0;
   transition: all 1s;
 }
+@media (max-width: 1440px) {
+  .con-11 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
 .con-11::before {
   position: absolute;
   top: 0;
@@ -555,8 +561,13 @@ body {
   justify-content: center;
   gap: 60px;
   position: relative;
-  transform: translateY(177px);
+  transform: translateY(156px);
   margin-top: -100px;
+}
+@media (max-width: 1180px) {
+  .con-11 .img-wrap {
+    transform: translateY(136px);
+  }
 }
 .con-11 .img-wrap > div {
   width: 50%;
@@ -569,8 +580,13 @@ body {
   gap: 12px;
 }
 .con-11 .img-wrap .left .img-4 img {
-  width: 280px;
-  box-shadow: 22.46366px 16.84775px 44.92733px 0px rgba(0, 0, 0, 0.15);
+  max-width: 280px;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.15));
+}
+@media (max-width: 1440px) {
+  .con-11 .img-wrap .left .img-4 img {
+    width: 240px;
+  }
 }
 .con-11 .img-wrap .img-2 {
   width: 380.5px;
@@ -580,8 +596,13 @@ body {
   gap: 12px;
 }
 .con-11 .img-wrap .img-3 img {
-  width: 280px;
+  max-width: 280px;
   box-shadow: 22.46366px 16.84775px 44.92733px 0px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1440px) {
+  .con-11 .img-wrap .img-3 img {
+    width: 240px;
+  }
 }
 
 .con-12 {
@@ -606,7 +627,8 @@ body {
 @media (max-width: 1180px) {
   .con-12 .item-wrap {
     gap: 40px;
-    background-size: 20vw;
+    background-size: 19vw;
+    padding-top: 188px;
   }
 }
 

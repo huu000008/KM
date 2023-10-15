@@ -157,40 +157,54 @@
             </div>
           </div>
         </div>
-        <div class="con-5">
-          <div class="text-1 wow animate__animated animate__fadeInUp">
-            Eleifend netus sit at neque vitae massa eu fringilla sed.<br />
-            scelerisque tristique.
+        <div class="con-55">
+          <div class="con-5">
+            <div class="text-1 wow animate__animated animate__fadeInUp">
+              Eleifend netus sit at neque vitae massa eu fringilla sed.<br />
+              scelerisque tristique.
+            </div>
+            <div class="img">
+              <img
+                src="assets/img_con5_1.png"
+                alt=""
+                class="wow animate__animated animate__fadeInUp"
+              />
+            </div>
+            <div class="text-2 wow animate__animated animate__fadeInUp">
+              Eleifend netus sit at neque vitae massa<br />
+              eu fringilla sed. Lobortis nunc tortor ac scelerisque tristique.
+            </div>
           </div>
-          <div class="img">
-            <img src="assets/img_con5_1.png" alt="" />
+          <div class="con-6">
+            <div class="img img-1">
+              <img
+                src="assets/img_con6_1.png"
+                alt=""
+                class="wow animate__animated animate__fadeInUp"
+              />
+            </div>
+            <div class="img img-2">
+              <img
+                src="assets/img_con6_2.png"
+                alt=""
+                class="wow animate__animated animate__fadeInUp"
+              />
+            </div>
           </div>
-          <div class="text-2 wow animate__animated animate__fadeInUp">
-            Eleifend netus sit at neque vitae massa<br />
-            eu fringilla sed. Lobortis nunc tortor ac scelerisque tristique.
-          </div>
-        </div>
-        <div class="con-6">
-          <div class="img img-1">
+          <div class="con-7">
             <img
-              src="assets/img_con6_1.png"
+              src="assets/img_con7_1.png"
               alt=""
               class="wow animate__animated animate__fadeInUp"
             />
           </div>
-          <div class="img img-2">
-            <img
-              src="assets/img_con6_2.png"
-              alt=""
-              class="wow animate__animated animate__fadeInUp"
-            />
-          </div>
-        </div>
-        <div class="con-7">
-          <img src="assets/img_con7_1.png" alt="" />
         </div>
         <div class="con-8">
-          <img src="assets/img_con8_1.png" alt="" />
+          <img
+            src="assets/img_con8_1.png"
+            alt=""
+            class="wow animate__animated animate__fadeInUp"
+          />
           <div class="img">
             <div class="left">
               <img
@@ -254,7 +268,7 @@
       //   },
       // });
 
-      const con5 = document.querySelector(".con-5");
+      const con55 = document.querySelector(".con-55");
       const body = document.body;
 
       const option = {
@@ -263,7 +277,7 @@
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.target === con5 && entry.isIntersecting) {
+          if (entry.target === con55 && entry.isIntersecting) {
             body.classList.add("on");
           } else {
             body.classList.remove("on");
@@ -271,7 +285,7 @@
         });
       }, option);
 
-      observer.observe(con5);
+      observer.observe(con55);
     </script>
   </body>
 </html>

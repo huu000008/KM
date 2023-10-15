@@ -520,8 +520,6 @@ body {
 .con-8 {
   padding: 70px 60px 200px;
   transition: all 2s;
-}
-.con-8.on {
   background: #ffdb52;
 }
 @media (max-width: 1440px) {

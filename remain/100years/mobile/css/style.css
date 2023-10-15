@@ -63,6 +63,7 @@ body {
   font-weight: 600;
   line-height: 150%; /* 36px */
   text-transform: lowercase;
+  opacity: 0.9;
 }
 .section-title-2 .text-3 {
   margin-top: 14px;
@@ -540,10 +541,23 @@ body {
 .con-10 .img-2 img:nth-child(3) {
   margin-top: 60px;
 }
+.con-10 .section-title-2 .text-2 {
+  color: #222;
+}
+.con-10 .section-title-2 .text-3 {
+  opacity: 0.6;
+  color: #222;
+}
 
 .con-11 {
   padding-top: 60px;
   background-color: rgb(39, 66, 62);
+}
+.con-11 .section-title-2 .text-2 {
+  margin-top: 4px;
+}
+.con-11 .section-title-2 .text-3 {
+  opacity: 0.8;
 }
 .con-11 .swiper-horizontal > .swiper-pagination-bullets,
 .con-11 .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -552,12 +566,16 @@ body {
   bottom: 100px;
 }
 .con-11 .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
   transition: all 0.3s;
+  background-color: #fff;
+  opacity: 0.2;
 }
 .con-11 .swiper-pagination-bullet-active {
   width: 20px;
   border-radius: 30px;
-  background-color: #fff;
+  opacity: 1;
 }
 .con-11 .box {
   width: 100%;
@@ -794,12 +812,12 @@ body {
   width: 32px;
 }
 
+.con-15 {
+  background: #212120;
+}
 .con-15.on {
   background: #27423e;
   transition: all 2s;
-}
-.con-15.on.on {
-  background: #212120;
 }
 
 .only-tablet {

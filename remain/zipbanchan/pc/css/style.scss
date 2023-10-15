@@ -16,7 +16,7 @@ img {
 body {
   font-family: "Noto Serif KR", sans-serif;
   font-weight: 400;
-  transition: all 2s;
+  transition: all 1s;
   background: var(--p, #284733);
 
   &.on {
@@ -34,6 +34,9 @@ body {
 .h1 {
   h1 {
     font-family: "Noto Serif KR", sans-serif;
+  }
+  .tag-wrap {
+    opacity: 0.8;
   }
 }
 @include sm {
@@ -61,7 +64,7 @@ body {
 .page-desc {
   margin-top: 14px;
   color: #4b5f52;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 160%; /* 38.4px */
@@ -74,20 +77,22 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 193px;
-    height: 65px;
+    width: 140px;
+    height: 48px;
     background-image: url(../assets/img_con2_1.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     content: "";
   }
 }
 .con-1 {
-  height: 1200px;
+  height: 1080px;
   background-color: rgba(40, 71, 51, 1);
   background-image: url(../assets/img_con1_1.png);
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: cover;
 }
 .con-2 {
   padding: 116px 0;
@@ -154,7 +159,7 @@ body {
         text-transform: lowercase;
         background-image: url(../assets/img_con4_1.png);
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: right bottom;
         span {
           opacity: 0.8;
         }
@@ -625,7 +630,7 @@ body {
   }
   .text-2 {
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 36px */
@@ -645,7 +650,8 @@ body {
       padding-top: 240px;
       padding-bottom: 110px;
       @include sm {
-        padding-top: 140px;
+        padding-top: 67px;
+        padding-bottom: 200px;
       }
     }
     .text-wrap {
@@ -673,7 +679,12 @@ body {
 .con-13 {
   text-align: center;
   .img {
-    margin-top: -30vw;
+    width: 1440px;
+    margin: -550px auto 0;
+    @include md {
+      width: 1180px;
+      margin: -500px auto 0;
+    }
     .md {
       display: none;
     }
@@ -681,7 +692,6 @@ body {
       display: none;
     }
     @include md {
-      margin-top: -48vw;
       .lg {
         display: none;
       }
@@ -690,7 +700,6 @@ body {
       }
     }
     @include sm {
-      margin-top: -46vw;
       .md {
         display: none;
       }
@@ -724,16 +733,22 @@ body {
     background: linear-gradient(180deg, rgba(40, 70, 51, 0) 0%, #284633 70%);
     content: "";
   }
+  .img-1 {
+    width: 520px;
+    margin: 0 auto;
+    filter: drop-shadow(40px 80px 60px rgba(0, 0, 0, 0.15));
+  }
   .img-2 {
     display: flex;
     justify-content: center;
     gap: 60px;
     margin-top: 200px;
     @include sm {
-      margin-top: 130px;
+      margin-top: 124px;
       gap: 18px;
     }
     img {
+      width: 360px;
       border-radius: 8px;
     }
   }
@@ -750,6 +765,22 @@ body {
       @include sm {
         margin-top: 0;
       }
+    }
+  }
+  .con-12.type-2 .inner {
+    padding-bottom: 180px;
+  }
+}
+.con-17 {
+  .sm {
+    display: none;
+  }
+  @include sm {
+    .lg {
+      display: none;
+    }
+    .sm {
+      display: block;
     }
   }
 }
@@ -832,4 +863,8 @@ body {
   background-image: url(../assets/img_con20_1.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  @include sm {
+    background-image: url(../assets/img_con20_2.png);
+  }
 }

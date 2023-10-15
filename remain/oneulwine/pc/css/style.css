@@ -773,6 +773,7 @@ body {
 .con-9 .img {
   width: 626px;
   margin: 52px auto 0;
+  --animate-duration: 2s;
 }
 
 .con-10 {
@@ -801,9 +802,6 @@ body.on .con-12 .poa-inner {
   display: block;
 }
 
-.con-12 {
-  padding-bottom: 240px;
-}
 .con-12 .con-title {
   margin-top: 160px;
 }
@@ -861,13 +859,19 @@ body.on .con-12 .poa-inner {
   }
 }
 .con-12 .con-inner .con {
-  width: 1180px;
+  width: 1230px;
   height: 1080px;
   margin: 0 auto;
   padding-bottom: 40px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 1920px;
+}
+@media (max-width: 1440px) {
+  .con-12 .con-inner .con {
+    width: 1180px;
+    background-size: cover;
+  }
 }
 .con-12 .poa-inner {
   display: none;
