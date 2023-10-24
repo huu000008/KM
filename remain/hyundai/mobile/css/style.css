@@ -183,9 +183,6 @@ body.on .con-4 .text-wrap .item .text-2 {
   background-color: #fff;
   transition: all 1s;
 }
-.con-4 .img {
-  border-radius: 2px;
-}
 .con-4 .img-2 {
   margin-top: -20px;
   margin-left: 60px;
@@ -272,20 +269,6 @@ body.on .con-5 .text-1 {
   position: relative;
   margin-top: 28px;
   text-align: center;
-}
-.con-5 .img::after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 40px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-  content: "";
-}
-@media (max-width: 1440px) {
-  .con-5 .img::after {
-    width: 1920px;
-  }
 }
 
 .con-6 {

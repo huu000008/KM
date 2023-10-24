@@ -86,7 +86,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 15px;
+  border-radius: 6px;
 }
 .con-3 .inner-title {
   position: absolute;
@@ -102,7 +102,7 @@ body {
   width: 525px;
   margin-right: 0;
   margin-left: auto;
-  border-radius: 8px;
+  border-radius: 4px;
   background: rgba(0, 0, 0, 0.9);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
@@ -181,13 +181,25 @@ body.on .con-4 .text-wrap .item .text-2 {
 }
 
 .con-4 {
-  padding: 18px 32px 0;
   overflow: hidden;
   background: #fff;
   transition: all 1s;
 }
 .con-4 .img {
-  border-radius: 10px;
+  border-radius: 6px;
+}
+.con-4 .size-md {
+  display: none;
+}
+@media (max-width: 1440px) {
+  .con-4 .size-md {
+    display: block;
+  }
+}
+@media (max-width: 1440px) {
+  .con-4 .img-1 {
+    display: none;
+  }
 }
 .con-4 .img-2 {
   width: 950px;
@@ -270,12 +282,8 @@ body.on .con-4 .text-wrap .item .text-2 {
   transition: all 1s;
 }
 
-body.on .con-5,
-body.on .con-6 {
+body.on .con-5 {
   background: #000;
-}
-body.on .con-7 {
-  background: linear-gradient(180deg, rgba(0, 44, 95, 0) 50%, #002c5f 100%);
 }
 body.on .con-5 .text-1 {
   color: #fff;
@@ -313,15 +321,6 @@ body.on .con-5 .text-1 {
   margin-top: 100px;
   text-align: center;
 }
-@media (max-width: 1440px) {
-  .con-5 .img {
-    margin-top: -20px;
-    margin-left: 145px;
-  }
-  .con-5 .img img {
-    max-width: 1920px;
-  }
-}
 .con-5 .img::after {
   position: absolute;
   left: 0;
@@ -342,7 +341,7 @@ body.on .con-5 .text-1 {
   justify-content: center;
   gap: 32px;
   padding-bottom: 300px;
-  background: #fff;
+  background: #000;
   transition: all 1s;
 }
 .con-6 .img-1,
@@ -355,7 +354,7 @@ body.on .con-5 .text-1 {
 
 .con-7 {
   text-align: center;
-  background: #fff;
+  background: linear-gradient(180deg, rgba(0, 44, 95, 0) 50%, #002c5f 100%);
   transition: all 1s;
 }
 .con-7 img {
@@ -388,7 +387,7 @@ body.on .con-5 .text-1 {
 }
 @media (max-width: 1440px) {
   .con-8 .img .left img {
-    transform: scale(0.75);
+    width: 160px;
   }
 }
 .con-8 .img .right {

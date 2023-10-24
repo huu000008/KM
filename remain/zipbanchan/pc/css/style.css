@@ -641,14 +641,14 @@ body.on {
   width: 100%;
   margin: 0 auto;
   padding-top: 140px;
-  padding-bottom: 750px;
+  padding-bottom: 600px;
   padding-left: 40px;
   padding-right: 40px;
 }
 @media (max-width: 1180px) {
   .con-12 .inner {
     padding-top: 110px;
-    padding-bottom: 56vw;
+    padding-bottom: 52vw;
   }
 }
 .con-12 .text-wrap {
@@ -740,7 +740,12 @@ body.on {
 @media (max-width: 1440px) {
   .con-13 .img {
     width: 1180px;
-    margin: -500px auto 0;
+    margin: -566px auto 0;
+  }
+}
+@media (max-width: 1180px) {
+  .con-13 .img {
+    margin: -480px auto 0;
   }
 }
 .con-13 .img .md {
@@ -926,5 +931,8 @@ body .con-14::after {
 @media (max-width: 1180px) {
   .con-20 {
     background-image: url(../assets/img_con20_2.png);
+  }
+  .con-20 img {
+    width: 340px;
   }
 }/*# sourceMappingURL=style.css.map */

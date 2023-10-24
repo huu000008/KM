@@ -599,12 +599,12 @@ body {
     width: 100%;
     margin: 0 auto;
     padding-top: 140px;
-    padding-bottom: 750px;
+    padding-bottom: 600px;
     padding-left: 40px;
     padding-right: 40px;
     @include sm {
       padding-top: 110px;
-      padding-bottom: 56vw;
+      padding-bottom: 52vw;
     }
   }
   .text-wrap {
@@ -683,7 +683,10 @@ body {
     margin: -550px auto 0;
     @include md {
       width: 1180px;
-      margin: -500px auto 0;
+      margin: -566px auto 0;
+    }
+    @include sm {
+      margin: -480px auto 0;
     }
     .md {
       display: none;
@@ -866,5 +869,8 @@ body {
   background-size: cover;
   @include sm {
     background-image: url(../assets/img_con20_2.png);
+    img {
+      width: 340px;
+    }
   }
 }

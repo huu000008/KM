@@ -523,6 +523,10 @@ body {
   padding-bottom: 120px;
   background-color: rgb(229, 225, 222);
 }
+.con-10 .section-title-2 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .con-10 .section-title-2 .text-1 {
   color: #000;
 }
@@ -552,6 +556,10 @@ body {
 .con-11 {
   padding-top: 60px;
   background-color: rgb(39, 66, 62);
+}
+.con-11 .section-title-2 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .con-11 .section-title-2 .text-2 {
   margin-top: 4px;
