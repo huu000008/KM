@@ -221,21 +221,39 @@ body {
       display: none;
     }
   }
+  .img-2-inner {
+    height: 700px;
+    @include md {
+      height: auto;
+    }
+  }
   .img-2 {
     width: 950px;
-    margin-left: 200px;
+    margin-left: 235px;
     margin-top: -290px;
     @include md {
       margin-top: -200px;
+      margin-left: 460px;
+    }
+    @include sm {
+      width: 932px;
+      margin-left: 216px;
     }
   }
   .img-3 {
+    position: absolute;
+    right: 133px;
     width: 540px;
     margin-left: 65px;
     margin-top: 75px;
     @include md {
-      margin-top: -170px;
-      margin-left: 0;
+      position: relative;
+      inset: 0;
+      margin-top: -231px;
+      margin-left: 32px;
+    }
+    @include sm {
+      margin-top: -175px;
     }
   }
   .img-4 {
@@ -334,22 +352,6 @@ body {
     position: relative;
     margin-top: 100px;
     text-align: center;
-    &::after {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 220px;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 100%
-      );
-      content: "";
-      @include md {
-        width: 1920px;
-      }
-    }
   }
 }
 .con-6 {
@@ -396,7 +398,7 @@ body {
       img {
         max-width: 217px;
         @include md {
-          width: 160px;
+          max-width: 300px;
         }
       }
     }
@@ -405,7 +407,7 @@ body {
       background-color: #222;
       text-align: center;
       img {
-        max-width: 685px;
+        max-width: 550px;
         width: 100%;
       }
     }

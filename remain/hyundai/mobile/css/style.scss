@@ -198,15 +198,15 @@ body {
   transition: all 1s;
   .img-2 {
     margin-top: -20px;
-    margin-left: 60px;
+    margin-left: 79px;
     &-inner {
       margin: 0 -20px;
     }
   }
   .img-3 {
-    margin-top: 25px;
+    margin-top: 27px;
     padding-left: 20px;
-    padding-right: 110px;
+    padding-right: 117px;
   }
   .img-4 {
     &-inner {
@@ -247,12 +247,8 @@ body {
 
 body {
   &.on {
-    .con-5,
-    .con-6 {
+    .con-5 {
       background: #000;
-    }
-    .con-7 {
-      background: linear-gradient(180deg, #002c5f00 50%, #002c5f 100%);
     }
     .con-5 .text-1 {
       color: #fff;
@@ -298,7 +294,7 @@ body {
   gap: 8px;
   padding: 0 20px 120px;
   transition: all 1s;
-  background: #fff;
+  background: #000;
   .img-2 {
     margin-top: 30px;
   }
@@ -306,7 +302,7 @@ body {
 .con-7 {
   text-align: center;
   transition: all 1s;
-  background: #fff;
+  background: linear-gradient(180deg, #002c5f00 50%, #002c5f 100%);
   img {
     width: 240px;
     margin: 0 auto;
