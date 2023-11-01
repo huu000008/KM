@@ -614,21 +614,30 @@ body {
   width: 516px;
 }
 .con-12 .item-wrap {
-  display: flex;
-  justify-content: space-between;
-  gap: 100px;
   padding-top: 207px;
   padding-bottom: 258px;
-  background-image: url(../assets/img_con12_1.png);
-  background-repeat: no-repeat;
-  background-position: top 135px center;
-  background-size: 16.666666vw;
+}
+.con-12 .item-wrap .md,
+.con-12 .item-wrap .sm {
+  display: none;
+}
+@media (max-width: 1440px) {
+  .con-12 .item-wrap .lg {
+    display: none;
+  }
+  .con-12 .item-wrap .md {
+    display: block;
+  }
 }
 @media (max-width: 1180px) {
   .con-12 .item-wrap {
-    gap: 40px;
-    background-size: 19vw;
     padding-top: 188px;
+  }
+  .con-12 .item-wrap .md {
+    display: none;
+  }
+  .con-12 .item-wrap .sm {
+    display: block;
   }
 }
 

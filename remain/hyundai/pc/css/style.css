@@ -258,13 +258,15 @@ body.on .con-4 .text-wrap .item .text-2 {
 }
 .con-4 .img-4-inner {
   margin-top: 130px;
+  margin-left: 32px;
+  margin-right: 32px;
   overflow: hidden;
   border-radius: 8px;
 }
 @media (max-width: 1440px) {
   .con-4 .img-4-inner {
     position: relative;
-    width: 100%;
+    width: auto;
     height: 866px;
   }
 }
@@ -275,6 +277,8 @@ body.on .con-4 .text-wrap .item .text-2 {
   width: 1170px;
   margin-top: 60px;
   padding-bottom: 260px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 @media (max-width: 1440px) {
   .con-4 .text-wrap {

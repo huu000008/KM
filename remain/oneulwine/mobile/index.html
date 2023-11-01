@@ -601,6 +601,7 @@
 
       const item_1 = document.querySelector(".con-3 .img .line");
       const item_2 = document.querySelector(".con-12 .con-inner");
+      const item_3 = document.querySelector(".con-7");
 
       const body = document.body;
 
@@ -620,11 +621,17 @@
           } else {
             body.classList.remove("on");
           }
+          if (entry.target === item_3 && entry.isIntersecting) {
+            swiper2.autoplay.start();
+          } else {
+            swiper2.autoplay.stop();
+          }
         });
       }, option);
 
       observer.observe(item_1);
       observer.observe(item_2);
+      observer.observe(item_3);
 
       window.addEventListener("scroll", function () {
         var scrollPosition =
