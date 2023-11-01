@@ -204,7 +204,7 @@ body {
 .con-3 .swiper-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 88px;
 }
 .con-3 .swiper-slide {
   display: flex;
