@@ -654,12 +654,18 @@ body {
   position: relative;
 }
 .modal .btn-close {
+  display: flex;
+  justify-content: flex-end;
   position: absolute;
   top: -50px;
   right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.modal .btn-close img {
   width: 30px;
   height: 30px;
-  cursor: pointer;
 }
 
 .modal img {

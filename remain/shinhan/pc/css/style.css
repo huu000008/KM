@@ -64,6 +64,7 @@ body {
 }
 .con-1 .logo-text .text-wrap {
   width: 50%;
+  padding-right: 40px;
 }
 @media (max-width: 1180px) {
   .con-1 .logo-text .text-wrap {
@@ -243,7 +244,7 @@ body {
   color: #fff;
   text-align: center;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 120%; /* 33.6px */
@@ -278,8 +279,14 @@ body {
   flex-direction: column;
   height: 67%;
 }
+.con-3 .item .text-1 {
+  width: 26px;
+}
+.con-3 .item .text-1 img {
+  width: 100%;
+}
 .con-3 .item .text-2 {
-  margin-top: 28px;
+  margin-top: 20px;
   color: #fff;
   text-align: center;
   font-family: SUIT;
@@ -359,7 +366,7 @@ body {
   color: #fff;
   text-align: center;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 28px */

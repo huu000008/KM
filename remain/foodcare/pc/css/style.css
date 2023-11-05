@@ -44,8 +44,12 @@ body {
 }
 @media (max-width: 1440px) {
   .con-2 {
+    width: 720px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .con-2 br {
+    display: none;
   }
 }
 .con-2 .img {

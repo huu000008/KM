@@ -652,12 +652,18 @@ body {
     position: relative;
   }
   .btn-close {
+    display: flex;
+    justify-content: flex-end;
     position: absolute;
     top: -50px;
     right: 0;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 

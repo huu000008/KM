@@ -50,8 +50,12 @@ body {
 .con-2 {
   padding: 60px 60px 180px;
   @include md {
+    width: 720px;
     padding-left: 40px;
     padding-right: 40px;
+    br {
+      display: none;
+    }
   }
   .img {
     width: 62px;

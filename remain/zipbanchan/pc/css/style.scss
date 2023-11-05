@@ -618,14 +618,11 @@ body {
   .text-1 {
     width: 700px;
     color: var(--p, #284733);
-    font-size: 69px;
+    font-size: 52px;
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 89.7px */
     text-transform: uppercase;
-    @include sm {
-      font-size: 60px;
-    }
   }
   .text-2 {
     color: #000;
@@ -659,9 +656,6 @@ body {
     }
     .text-1 {
       width: auto;
-      @include sm {
-        font-size: 60px;
-      }
     }
     .text-2 {
       margin-top: 60px;
@@ -739,6 +733,9 @@ body {
     width: 520px;
     margin: 0 auto;
     filter: drop-shadow(40px 80px 60px rgba(0, 0, 0, 0.15));
+    @include sm {
+      width: 500px;
+    }
   }
   .img-2 {
     display: flex;
@@ -752,6 +749,9 @@ body {
     img {
       width: 360px;
       border-radius: 8px;
+      @include sm {
+        width: 320px;
+      }
     }
   }
 }
