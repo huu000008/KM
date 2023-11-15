@@ -183,20 +183,9 @@ body {
   .img-wrap-2 {
     margin-top: 0px;
     overflow: hidden;
-    padding-bottom: 340px;
-    background-image: url(../assets/img_con2_4.png);
-    background-repeat: no-repeat;
-    background-position: 0 center;
-    background-size: contain;
-    background-attachment: fixed;
+    padding-bottom: 200px;
     .img-1 {
       margin-left: 0;
-      img {
-        visibility: hidden;
-      }
-      @include md {
-        margin: 0 80px;
-      }
       img {
         max-width: 100%;
       }
@@ -204,12 +193,12 @@ body {
     .img-2 {
       position: relative;
       width: 100%;
-      margin-top: -275px;
+      margin-top: -280px;
       @include md {
-        margin-top: -175px;
+        margin-top: -200px;
       }
       @include sm {
-        margin-top: -100px;
+        margin-top: -165px;
       }
       img {
         width: 100%;
