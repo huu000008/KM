@@ -71,4 +71,19 @@ document.addEventListener("DOMContentLoaded", function () {
   if (tabs.length > 0) {
     tabs[0].click();
   }
+
+  const slider = document.getElementById("image-slider");
+  let scrollAmount = 0;
+  const scrollStep = 1; // 스크롤 속도
+
+  function loopScroll() {
+    scrollAmount -= scrollStep;
+    if (Math.abs(scrollAmount) >= slider.offsetWidth / 2) {
+      scrollAmount = 0; // 무한 롤링을 위해 스크롤을 초기화
+    }
+    slider.style.transform = `translateX(${scrollAmount}px)`;
+    requestAnimationFrame(loopScroll);
+  }
+
+  loopScroll();
 });
