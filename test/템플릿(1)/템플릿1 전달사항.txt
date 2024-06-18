@@ -1,0 +1,46 @@
+템플릿 전달사항
+
+[룸프리뷰]
+https://www.claviscorp.com/kr/index.php
+ 
+
+[스폐셜 리스트]
+(사진에 링크 걸어주세요)
+https://www.claviscorp.com/kr/sub/capabillity/adhesion.php
+
+
+[스폐셜효과]
+http://www.poolvilla-sea-rin.com/html/index.html
+ 
+
+[예약안내 / 푸터 바로 위(글자)]
+~파트너로 가장 먼저 찾는 회사 < 문구 효과
+* 플러스 버튼 마우스 오버 시 나오는 효과 오른쪽에 이미지 따로 적용해두었습니다.
+https://www.claviscorp.com/kr/index.php
+
+
+[예약버튼 효과(BOOKING)]
+(사이트 객실 부분 BOOKING 그라데이션 효과로 적용)
+http://www.denbasta-ryokan.com/html/bbs/content.php?co_id=room3
+
+
+[푸터]
+(맨 밑 동그라미에서 네모로 되는 빅 푸터)
+https://www.masstige.biz/main/main.html
+
+
+[헤더 오버 시]
+http://ssolhouse.kr/html/index.html
+
+
+[어바웃/뷰]
+(슬라이드 되는 효과)
+https://www.newin.co.kr/
+
+
+* 전체적으로 아래서 위로 떠오르는 효과로 요청드립니다.
+http://www.le-pavilion-poolvilla.kr/html/index.html
+
+- pc/mo 레이어 확인하시면
+'메뉴클릭' 레이어 클릭하셔서 클릭 시 나오는 디자인 확인해주시면 됩니다.
+감사합니다.
