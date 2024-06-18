@@ -1,0 +1,110 @@
+@import url(reset.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  vertical-align: top;
+}
+body {
+  font-size: 14px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #000;
+  line-height: 1.2;
+}
+
+.w1440 {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.conTitle {
+  .tx1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d3a80;
+  }
+  .tx2 {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+  .bold {
+    display: inline-flex;
+    font-weight: 600;
+  }
+  .spot {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #2d3a80;
+    }
+  }
+}
+.wrapper {
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.4);
+  .menu {
+    display: flex;
+    gap: 100px;
+    .depth1 {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+    }
+    .depth2 {
+      display: none;
+    }
+  }
+  .btnReservation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+.con1 {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    inset: 0;
+    width: auto;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: none;
+    text-align: left;
+  }
+}
