@@ -576,7 +576,10 @@ body {
   background-color: #000;
 }
 
-.con7 .image-slider {
-  display: flex;
+.con7 .swiper-wrapper {
   gap: 40px;
+  transition-timing-function: linear;
+}
+.con7 .swiper-slide {
+  width: 500px;
 }/*# sourceMappingURL=style.css.map */

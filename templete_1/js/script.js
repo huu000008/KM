@@ -49,6 +49,22 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  const swiperSlides = document.querySelectorAll(".con7 .swiper");
+
+  swiperSlides.forEach(function (element, index) {
+    element.classList.add("swiper-" + index);
+    let swiper = new Swiper(".swiper-" + index, {
+      autoplay: {
+        delay: 1,
+        desableOnInteraction: false,
+      },
+      speed: 8e3,
+      loop: true,
+      slidesPerView: "auto",
+      freemode: true,
+    });
+  });
+
   var tabs = document.querySelectorAll(".tab");
   var contents = document.querySelectorAll(".tab-content");
 
@@ -71,19 +87,4 @@ document.addEventListener("DOMContentLoaded", function () {
   if (tabs.length > 0) {
     tabs[0].click();
   }
-
-  const slider = document.getElementById("image-slider");
-  let scrollAmount = 0;
-  const scrollStep = 1; // 스크롤 속도
-
-  function loopScroll() {
-    scrollAmount -= scrollStep;
-    if (Math.abs(scrollAmount) >= slider.offsetWidth / 2) {
-      scrollAmount = 0; // 무한 롤링을 위해 스크롤을 초기화
-    }
-    slider.style.transform = `translateX(${scrollAmount}px)`;
-    requestAnimationFrame(loopScroll);
-  }
-
-  loopScroll();
 });
