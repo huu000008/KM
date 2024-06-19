@@ -120,11 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const typingElement2 = document.getElementById("typing2");
   const cursorElement1 = document.getElementById("cursor1");
   const cursorElement2 = document.getElementById("cursor2");
+  const footerElement = document.getElementById("footer");
 
-  const text1 = typingElement1.textContent; // 첫 번째 줄 텍스트를 가져옴
-  const text2 = typingElement2.textContent; // 두 번째 줄 텍스트를 가져옴
+  const text1 = typingElement1.textContent.trim(); // 첫 번째 줄 텍스트를 가져와서 앞뒤 공백 제거
+  const text2 = typingElement2.textContent.trim(); // 두 번째 줄 텍스트를 가져와서 앞뒤 공백 제거
 
-  const speed = 100; // 타이핑 속도 (밀리초)
+  const speed = 100;
 
   typingElement1.textContent = ""; // 텍스트 초기화
   typingElement2.textContent = ""; // 텍스트 초기화
@@ -140,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       cursorElement1.style.display = "none"; // 첫 번째 줄 타이핑이 끝나면 커서 숨기기
       cursorElement2.style.display = "inline-block"; // 두 번째 줄 커서 보이기
-      typeSecondLine();
+      typeSecondLine(); // 첫 번째 줄 타이핑이 끝나면 바로 두 번째 줄 타이핑 시작
     }
   }
 
@@ -150,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       index2++;
       setTimeout(typeSecondLine, speed);
     } else {
-      // cursorElement2.style.animation = 'none'; // 타이핑이 끝나면 커서 애니메이션을 멈춤
+      // cursorElement2.style.display = "none"; // 두 번째 줄 타이핑이 끝나면 커서 숨기기
     }
   }
 
@@ -160,17 +161,30 @@ document.addEventListener("DOMContentLoaded", function () {
     threshold: 0.1, // 요소가 10% 이상 보일 때
   };
 
-  const observer = new IntersectionObserver((entries) => {
+  const typingObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         document.querySelector(".typing-container").style.visibility =
           "visible"; // 요소가 보일 때 타이핑 효과 시작
         cursorElement1.style.display = "inline-block"; // 첫 번째 줄 커서 보이기
-        typeFirstLine();
-        observer.disconnect(); // 한 번만 실행되도록 옵저버 해제
+        typeFirstLine(); // 첫 번째 줄 타이핑 시작
+        typingObserver.disconnect(); // 한 번만 실행되도록 옵저버 해제
       }
     });
   }, observerOptions);
 
-  observer.observe(typingElement1);
+  typingObserver.observe(typingElement1);
+
+  // Footer가 화면에 보이면 클래스 추가
+  const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        footerElement.classList.add("footer-visible");
+      } else {
+        footerElement.classList.remove("footer-visible");
+      }
+    });
+  }, observerOptions);
+
+  footerObserver.observe(footerElement);
 });
