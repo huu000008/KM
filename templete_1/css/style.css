@@ -482,6 +482,39 @@ body {
   padding-bottom: 240px;
   text-align: center;
 }
+.con4 .typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.con4 .typing-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.con4 .typing-line-wrapper {
+  display: flex;
+  align-items: center;
+}
+.con4 .typing-line {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.con4 .cursor {
+  display: none;
+  width: 2px;
+  height: 1.2em;
+  margin-left: 10px;
+  background-color: black;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
 .con4 .btnBooking {
   margin-top: 80px;
 }
@@ -576,10 +609,7 @@ body {
   background-color: #000;
 }
 
-.con7 .swiper-wrapper {
+.con7 {
+  display: flex;
   gap: 40px;
-  transition-timing-function: linear;
-}
-.con7 .swiper-slide {
-  width: 500px;
 }/*# sourceMappingURL=style.css.map */
