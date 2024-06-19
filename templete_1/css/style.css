@@ -97,6 +97,9 @@ body {
   width: 250px;
   height: 55px;
   border: 1px solid #000;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
   background: linear-gradient(to right, rgba(96, 70, 58, 0) 25%, rgba(121, 123, 204, 0.8) 75%);
   background-position: 1% 50%;
   background-size: 400% 300%;
@@ -121,21 +124,57 @@ body {
 
 .conTitle .tx1 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   color: #2d3a80;
 }
 .conTitle .tx2 {
   margin-top: 20px;
   font-size: 40px;
+  font-weight: 700;
+}
+.conTitle .tx3 {
+  margin-top: 40px;
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 500;
 }
 .conTitle .bold {
   display: inline-flex;
-  font-weight: 600;
+  font-weight: 700;
 }
 .conTitle .spot {
   position: relative;
 }
 .conTitle .spot::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2d3a80;
+}
+
+.conTitle2 .tx1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3a80;
+}
+.conTitle2 .tx2 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.conTitle2 .tx3 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.conTitle2 .spot {
+  position: relative;
+}
+.conTitle2 .spot::after {
   content: "";
   position: absolute;
   right: -20px;
@@ -457,11 +496,13 @@ body {
   opacity: 1;
 }
 
-.con2 {
+.con3 {
   padding-top: 100px;
   text-align: center;
 }
-
+.con3.mb230 {
+  margin-bottom: 230px;
+}
 .con3 .tabs {
   display: flex;
   justify-content: center;
@@ -472,7 +513,7 @@ body {
   cursor: pointer;
   color: #ddd;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .con3 .tab-active {
   position: relative;
@@ -629,4 +670,102 @@ body {
 .con7 {
   display: flex;
   gap: 40px;
+}
+
+.con8 {
+  margin-top: 235px;
+  margin-bottom: 220px;
+  padding-top: 230px;
+  padding-bottom: 230px;
+  background-color: #f5f6f8;
+}
+.con8 .w1440 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.con8 .textWrap {
+  width: 590px;
+}
+.con8 .imgWrap {
+  position: absolute;
+  left: 590px;
+  width: 1088px;
+}
+.con8 .btnBooking_2 {
+  margin-top: 45px;
+}
+
+.con10 {
+  display: flex;
+  gap: 30px;
+  margin-top: 180px;
+}
+
+.con11 {
+  padding-top: 230px;
+  padding-bottom: 120px;
+}
+
+.con12 {
+  display: flex;
+  gap: 120px;
+  padding-bottom: 180px;
+}
+.con12 .left {
+  width: 80%;
+}
+.con12 .left .tx1 {
+  margin-top: 50px;
+  font-size: 100px;
+  font-weight: 800;
+  color: #f5f6f8;
+}
+.con12 .right {
+  margin-top: -160px;
+}
+.con12 .img {
+  position: relative;
+}
+.con12 .img .num,
+.con12 .img .text {
+  position: absolute;
+}
+.con12 .img_1 .num {
+  top: 100%;
+  left: 20px;
+  margin-top: 20px;
+}
+.con12 .img_1 .text {
+  top: 100%;
+  right: 20px;
+  margin-top: 20px;
+}
+.con12 .img_2 {
+  display: inline-flex;
+  margin-bottom: 80px;
+}
+.con12 .img_2 .num {
+  top: 0;
+  right: -30px;
+  margin-top: 20px;
+}
+.con12 .img_2 .text {
+  bottom: 0;
+  right: -30px;
+  margin-bottom: 20px;
+}
+.con12 .img_3 {
+  display: inline-flex;
+  margin-bottom: 80px;
+}
+.con12 .img_3 .num {
+  top: 0;
+  left: -30px;
+  margin-top: 20px;
+}
+.con12 .img_3 .text {
+  bottom: 0;
+  left: -30px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

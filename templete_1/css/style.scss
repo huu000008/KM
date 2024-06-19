@@ -98,6 +98,9 @@ body {
   width: 250px;
   height: 55px;
   border: 1px solid #000;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
   background: linear-gradient(
     to right,
     rgba(96, 70, 58, 0) 25%,
@@ -127,16 +130,53 @@ body {
 .conTitle {
   .tx1 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 800;
     color: #2d3a80;
   }
   .tx2 {
     margin-top: 20px;
     font-size: 40px;
+    font-weight: 700;
+  }
+  .tx3 {
+    margin-top: 40px;
+    line-height: 1.8;
+    font-size: 18px;
+    font-weight: 500;
   }
   .bold {
     display: inline-flex;
+    font-weight: 700;
+  }
+  .spot {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #2d3a80;
+    }
+  }
+}
+.conTitle2 {
+  .tx1 {
+    font-size: 18px;
     font-weight: 600;
+    color: #2d3a80;
+  }
+  .tx2 {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .tx3 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
   }
   .spot {
     position: relative;
@@ -457,11 +497,12 @@ body {
     }
   }
 }
-.con2 {
+.con3 {
   padding-top: 100px;
   text-align: center;
-}
-.con3 {
+  &.mb230 {
+    margin-bottom: 230px;
+  }
   .tabs {
     display: flex;
     justify-content: center;
@@ -472,7 +513,7 @@ body {
     cursor: pointer;
     color: #ddd;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
   }
   .tab-active {
     position: relative;
@@ -629,4 +670,100 @@ body {
 .con7 {
   display: flex;
   gap: 40px;
+}
+.con8 {
+  margin-top: 235px;
+  margin-bottom: 220px;
+  padding-top: 230px;
+  padding-bottom: 230px;
+  background-color: #f5f6f8;
+  .w1440 {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .textWrap {
+    width: 590px;
+  }
+  .imgWrap {
+    position: absolute;
+    left: 590px;
+    width: 1088px;
+  }
+  .btnBooking_2 {
+    margin-top: 45px;
+  }
+}
+.con10 {
+  display: flex;
+  gap: 30px;
+  margin-top: 180px;
+}
+.con11 {
+  padding-top: 230px;
+  padding-bottom: 120px;
+}
+.con12 {
+  display: flex;
+  gap: 120px;
+  padding-bottom: 180px;
+  .left {
+    width: 80%;
+    .tx1 {
+      margin-top: 50px;
+      font-size: 100px;
+      font-weight: 800;
+      color: #f5f6f8;
+    }
+  }
+  .right {
+    margin-top: -160px;
+  }
+  .img {
+    position: relative;
+    .num,
+    .text {
+      position: absolute;
+    }
+    &_1 {
+      .num {
+        top: 100%;
+        left: 20px;
+        margin-top: 20px;
+      }
+      .text {
+        top: 100%;
+        right: 20px;
+        margin-top: 20px;
+      }
+    }
+    &_2 {
+      display: inline-flex;
+      margin-bottom: 80px;
+      .num {
+        top: 0;
+        right: -30px;
+        margin-top: 20px;
+      }
+      .text {
+        bottom: 0;
+        right: -30px;
+        margin-bottom: 20px;
+      }
+    }
+    &_3 {
+      display: inline-flex;
+      margin-bottom: 80px;
+      .num {
+        top: 0;
+        left: -30px;
+        margin-top: 20px;
+      }
+      .text {
+        bottom: 0;
+        left: -30px;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }

@@ -1,6 +1,10 @@
 $(document).ready(function () {
-  // AOS 초기화
-  AOS.init();
+  // Initialize AOS
+  AOS.init({
+    once: true, // 애니메이션이 한 번만 실행되도록 설정
+  });
+
+  const locomotiveScroll = new LocomotiveScroll();
 
   // Swiper 초기화 함수
   function initSwiper(container, options) {
