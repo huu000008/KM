@@ -37,8 +37,24 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   @include md {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include sm {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+.imgOb {
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .btnBooking {
@@ -171,6 +187,10 @@ body {
     line-height: 1.8;
     font-size: 18px;
     font-weight: 500;
+    @include md {
+      margin-top: 20px;
+      font-size: 16px;
+    }
   }
   .bold {
     display: inline-flex;
@@ -200,16 +220,27 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: #2d3a80;
+    @include md {
+      font-size: 16px;
+    }
   }
   .tx2 {
     margin-top: 20px;
     font-size: 30px;
     font-weight: 700;
+    @include md {
+      margin-top: 10px;
+      font-size: 20px;
+    }
   }
   .tx3 {
     margin-top: 15px;
     font-size: 18px;
     font-weight: 500;
+    @include md {
+      margin-top: 10px;
+      font-size: 14px;
+    }
   }
   .spot {
     position: relative;
@@ -635,6 +666,9 @@ body {
   }
   &.mb230 {
     margin-bottom: 230px;
+    @include md {
+      margin-bottom: 80px;
+    }
   }
   .swiper {
     @include md {
@@ -662,7 +696,7 @@ body {
     background: none;
     border-radius: 0;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
   }
   .swiper-pagination-bullet-active {
     position: relative;
@@ -886,21 +920,59 @@ body {
   padding-top: 230px;
   padding-bottom: 230px;
   background-color: #f5f6f8;
+  @include md {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
   .w1440 {
     display: flex;
     align-items: center;
     position: relative;
+    @include md {
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
   .textWrap {
     width: 590px;
+    @include md {
+      width: auto;
+    }
   }
   .imgWrap {
     position: absolute;
     left: 590px;
     width: 1088px;
+    @include md {
+      position: relative;
+      left: 0;
+      width: auto;
+      margin-top: 40px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
   .btnBooking_2 {
     margin-top: 45px;
+    @include md {
+      margin-top: 25px;
+    }
+  }
+}
+.con9 {
+  text-align: center;
+  .pc {
+    @include md {
+      display: none;
+    }
+  }
+  .mobile {
+    display: none;
+    @include md {
+      display: inline-flex;
+    }
   }
 }
 .con10 {
@@ -911,67 +983,160 @@ body {
 .con11 {
   padding-top: 230px;
   padding-bottom: 120px;
+  @include md {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
 }
 .con12 {
-  display: flex;
-  gap: 120px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr; /* 왼쪽 컬럼을 더 크게 설정 */
+  grid-gap: 60px 110px;
   padding-bottom: 180px;
-  .left {
-    width: 80%;
-    .tx1 {
-      margin-top: 50px;
-      font-size: 100px;
-      font-weight: 800;
-      color: #f5f6f8;
+  @include md {
+    display: flex;
+    grid-gap: 0;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+  }
+  .tx1 {
+    font-size: 100px;
+    font-weight: 800;
+    color: #f5f6f8;
+    @include md {
+      display: flex;
+      justify-content: center;
+      order: 4;
+      width: 100%;
+      font-size: 50px;
+      white-space: nowrap;
     }
   }
-  .right {
-    margin-top: -160px;
-  }
   .img {
-    position: relative;
+    .inner {
+      position: relative;
+      display: inline-flex;
+      width: 100%;
+    }
     .num,
     .text {
       position: absolute;
     }
     &_1 {
+      @include md {
+        width: 50%;
+        order: 2;
+      }
+      .inner {
+        padding-left: 30px;
+      }
+      .imgOb {
+        width: 100%;
+        padding-top: 63%;
+        @include md {
+          padding-top: 87%;
+        }
+      }
       .num {
         top: 100%;
         left: 20px;
         margin-top: 20px;
+        @include md {
+          left: 40px;
+          height: 10px;
+          margin-top: 10px;
+          img {
+            height: 100%;
+          }
+        }
       }
       .text {
         top: 100%;
         right: 20px;
         margin-top: 20px;
+        @include md {
+          right: 10px;
+          height: 10px;
+          margin-top: 10px;
+          img {
+            height: 100%;
+          }
+        }
       }
     }
     &_2 {
-      display: inline-flex;
-      margin-bottom: 80px;
+      width: 50%;
+      @include md {
+        order: 1;
+        padding-left: 40px;
+        .inner {
+          width: 83%;
+        }
+      }
+      @include sm {
+        padding-left: 20px;
+      }
+      .imgOb {
+        width: 100%;
+        padding-top: 127%;
+        @include md {
+          padding-top: 116%;
+        }
+      }
       .num {
         top: 0;
         right: -30px;
         margin-top: 20px;
+        @include md {
+          right: -20px;
+          width: 10px;
+          margin-top: 10px;
+        }
       }
       .text {
         bottom: 0;
-        right: -30px;
+        right: -20px;
         margin-bottom: 20px;
+        @include md {
+          width: 10px;
+          margin-bottom: 10px;
+        }
       }
     }
     &_3 {
-      display: inline-flex;
-      margin-bottom: 80px;
+      width: 100%;
+      margin-top: -100px;
+      @include md {
+        order: 3;
+        margin-top: 40px;
+        padding-left: 100px;
+      }
+      .imgOb {
+        width: 100%;
+        padding-top: 64%;
+        @include md {
+          padding-top: 58%;
+        }
+      }
       .num {
         top: 0;
         left: -30px;
         margin-top: 20px;
+        @include md {
+          left: -20px;
+          width: 10px;
+          margin-bottom: 10px;
+        }
       }
       .text {
         bottom: 0;
         left: -30px;
         margin-bottom: 20px;
+        @include md {
+          left: -20px;
+          width: 10px;
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -979,11 +1144,26 @@ body {
 .con13 {
   padding-top: 240px;
   padding-bottom: 240px;
+  @include md {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .itemWrap {
     display: grid;
     grid-gap: 120px 40px;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 70px;
+    @include md {
+      grid-gap: 40px 20px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 40px;
+      img {
+        width: 100%;
+      }
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   .item {
     font-weight: 500;
@@ -1009,17 +1189,38 @@ body {
 }
 .con14 {
   padding-top: 240px;
+  @include md {
+    padding-top: 70px;
+  }
+  .pc {
+    display: block;
+    @include md {
+      display: none;
+    }
+  }
+  .mobile {
+    display: none;
+    @include md {
+      display: block;
+    }
+  }
   .conTitle {
     margin-bottom: 40px;
   }
   .address {
     font-size: 20px;
+    @include md {
+      font-size: 18px;
+    }
+    .tx1 {
+      margin-top: 35px;
+      margin-bottom: 10px;
+      color: #2d3a80;
+      font-weight: 700;
+    }
   }
-  .tx1 {
-    margin-top: 35px;
-    margin-bottom: 10px;
-    color: #2d3a80;
-    font-weight: 700;
+  img {
+    width: 100%;
   }
   .underline {
     position: relative;
