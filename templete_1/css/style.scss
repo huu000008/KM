@@ -496,6 +496,9 @@ body {
     position: relative;
     transition: all 0.3s;
     overflow: hidden;
+    img {
+      width: 100%;
+    }
     @include md {
       width: 100%;
     }
@@ -819,14 +822,24 @@ body {
 .con6 {
   padding-top: 230px;
   padding-bottom: 80px;
+  @include md {
+    padding-top: 70px;
+    padding-bottom: 45px;
+  }
   img {
     margin-top: 60px;
+    @include md {
+      margin-top: 40px;
+    }
   }
   .txWrap {
     margin: 30px 0;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.6;
+    @include md {
+      font-size: 16px;
+    }
     .blue {
       color: #2d3a80;
     }
@@ -838,12 +851,19 @@ body {
     .bar {
       width: 500px;
       height: 1px;
-      background-color: #000;
+      background-color: #343d7d;
+      @include md {
+        width: 50px;
+        height: 3px;
+      }
     }
     .t2 {
       position: relative;
       font-size: 20px;
       font-weight: 600;
+      @include md {
+        font-size: 16px;
+      }
       &::after {
         content: "";
         position: absolute;

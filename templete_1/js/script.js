@@ -93,32 +93,30 @@ $(document).ready(function () {
       let position = 0;
       const speed = 1;
       const width = $container.width();
-
-      function cloneImages() {
-        $container.find("img").each(function () {
-          $container.append($(this).clone());
-        });
-      }
+      const totalWidth = $container[0].scrollWidth;
 
       function roll() {
         position -= speed;
-        if (Math.abs(position) >= width) {
+        if (Math.abs(position) >= totalWidth / 2) {
           position = 0;
-          $container
-            .find("img:lt(" + $container.find("img").length / 2 + ")")
-            .remove();
-          cloneImages();
         }
         $container.css("transform", `translateX(${position}px)`);
         requestAnimationFrame(roll);
       }
 
-      cloneImages();
       roll();
     }
   }
 
-  startRolling($(".con7"));
+  function cloneImages($container) {
+    $container.find("img").each(function () {
+      $container.append($(this).clone());
+    });
+  }
+
+  const $con7 = $(".con7");
+  cloneImages($con7);
+  startRolling($con7);
 
   // 타이핑 효과
   function typingEffect($element1, $element2, cursor1, cursor2, container) {
