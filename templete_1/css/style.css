@@ -1,5 +1,9 @@
 @import url(reset.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+* {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -21,6 +25,18 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+@media (max-width: 1440px) {
+  .w1440 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 1180px) {
+  .w1440 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .btnBooking {
@@ -127,10 +143,20 @@ body {
   font-weight: 800;
   color: #2d3a80;
 }
+@media (max-width: 1440px) {
+  .conTitle .tx1 {
+    font-size: 16px;
+  }
+}
 .conTitle .tx2 {
   margin-top: 20px;
   font-size: 40px;
-  font-weight: 700;
+}
+@media (max-width: 1440px) {
+  .conTitle .tx2 {
+    margin-top: 10px;
+    font-size: 24px;
+  }
 }
 .conTitle .tx3 {
   margin-top: 40px;
@@ -154,6 +180,13 @@ body {
   height: 10px;
   border-radius: 50%;
   background-color: #2d3a80;
+}
+@media (max-width: 1440px) {
+  .conTitle .spot::after {
+    right: -10px;
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .conTitle2 .tx1 {
@@ -206,9 +239,24 @@ body {
   align-items: center;
   height: 120px;
 }
+@media (max-width: 1440px) {
+  .header .w1440 {
+    height: 80px;
+  }
+}
+@media (max-width: 1440px) {
+  .header .logo {
+    width: 110px;
+  }
+}
 .header .menu {
   display: flex;
   gap: 100px;
+}
+@media (max-width: 1440px) {
+  .header .menu {
+    display: none;
+  }
 }
 .header .menu .depth1 {
   font-size: 18px;
@@ -218,6 +266,15 @@ body {
 .header .menu .depth2 {
   display: none;
 }
+.header .right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header .btnMenu {
+  display: flex;
+  cursor: pointer;
+}
 .header .btnReservation {
   display: flex;
   align-items: center;
@@ -225,6 +282,15 @@ body {
   font-size: 18px;
   font-weight: 500;
   color: #fff;
+}
+@media (max-width: 1440px) {
+  .header .btnReservation {
+    gap: 8px;
+    font-size: 14px;
+  }
+  .header .btnReservation img {
+    width: 20px;
+  }
 }
 
 .footer {
@@ -296,6 +362,12 @@ body {
   font-size: 40px;
   color: #fff;
 }
+@media (max-width: 1440px) {
+  .con0 .tx1 {
+    bottom: 60px;
+    font-size: 20px;
+  }
+}
 .con0 .swiperNavi {
   display: flex;
   align-items: center;
@@ -307,10 +379,20 @@ body {
   transform: translateX(-50%);
   z-index: 10;
 }
+@media (max-width: 1440px) {
+  .con0 .swiperNavi {
+    gap: 40px;
+  }
+}
 .con0 .swiperNavi .bar {
   width: 1px;
   height: 90px;
   background-color: #fff;
+}
+@media (max-width: 1440px) {
+  .con0 .swiperNavi .bar {
+    height: 40px;
+  }
 }
 .con0 .swiper-button-next,
 .con0 .swiper-button-prev {
@@ -325,37 +407,72 @@ body {
   color: #fff;
   font-size: 18px;
 }
+@media (max-width: 1440px) {
+  .con0 .swiper-button-next,
+  .con0 .swiper-button-prev {
+    font-size: 14px;
+  }
+  .con0 .swiper-button-next img,
+  .con0 .swiper-button-prev img {
+    width: 16px;
+  }
+}
 .con0 .swiper-button-next:after,
 .con0 .swiper-rtl .swiper-button-prev:after,
 .con0 .swiper-button-prev:after,
 .con0 .swiper-rtl .swiper-button-next:after {
-  content: "";
+  display: none;
 }
 
 .con1 {
-  padding-top: 240px;
+  overflow: hidden;
+  margin-top: 230px;
   padding-bottom: 130px;
+}
+@media (max-width: 1440px) {
+  .con1 {
+    margin-top: 70px;
+    padding-bottom: 80px;
+  }
 }
 .con1 .w1440 {
   display: flex;
+  flex-direction: column;
   position: relative;
-}
-.con1 .left {
-  width: 525px;
 }
 .con1 .right {
   position: absolute;
   left: 525px;
   bottom: 0;
+  z-index: 10;
   width: 100%;
+  max-width: 1440px;
   margin-left: 25px;
+  overflow: hidden;
+}
+@media (max-width: 1440px) {
+  .con1 .right {
+    order: 2;
+    position: relative;
+    inset: 0;
+    margin-left: 0;
+    margin-top: 30px;
+  }
 }
 .con1 .swiperControl {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 15px;
+  width: 500px;
   margin-top: 50px;
+}
+@media (max-width: 1440px) {
+  .con1 .swiperControl {
+    order: 3;
+    width: 100%;
+    margin-top: 15px;
+  }
 }
 .con1 .fraction {
   display: flex;
@@ -377,6 +494,11 @@ body {
   position: relative;
   transition: all 0.3s;
   overflow: hidden;
+}
+@media (max-width: 1440px) {
+  .con1 .swiper-slide {
+    width: 100%;
+  }
 }
 .con1 .swiper-slide:hover {
   border-radius: 50%;
@@ -457,6 +579,17 @@ body {
   font-size: 20px;
   color: #ddd;
 }
+@media (max-width: 1440px) {
+  .con1 .swiper-horizontal > .swiper-pagination-bullets,
+  .con1 .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .con1 .swiper-pagination-custom,
+  .con1 .swiper-pagination-fraction {
+    gap: 15px;
+    order: 4;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
 .con1 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .con1 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   display: flex;
@@ -490,6 +623,12 @@ body {
   font-weight: 600;
   color: #2d3a80;
 }
+@media (max-width: 1440px) {
+  .con1 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active,
+  .con1 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    font-size: 18px;
+  }
+}
 .con1 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active::before,
 .con1 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active::before {
   margin-left: 0;
@@ -500,39 +639,55 @@ body {
   padding-top: 100px;
   text-align: center;
 }
+@media (max-width: 1440px) {
+  .con3 {
+    padding-top: 0;
+  }
+}
 .con3.mb230 {
   margin-bottom: 230px;
 }
-.con3 .tabs {
+@media (max-width: 1440px) {
+  .con3 .swiper {
+    margin-top: 40px;
+  }
+}
+.con3 .swiper-pagination {
   display: flex;
   justify-content: center;
-  gap: 70px;
-  margin: 80px 0 50px;
+  gap: 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  position: relative;
+  inset: 0;
 }
-.con3 .tab {
-  cursor: pointer;
-  color: #ddd;
+@media (max-width: 1440px) {
+  .con3 .swiper-pagination {
+    display: none;
+  }
+}
+.con3 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.con3 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  margin: 0;
+  background: none;
+  border-radius: 0;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
 }
-.con3 .tab-active {
+.con3 .swiper-pagination-bullet-active {
   position: relative;
   color: #2d3a80;
 }
-.con3 .tab-active::after {
+.con3 .swiper-pagination-bullet-active:after {
   content: "";
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: #2d3a80;
-}
-.con3 .tab-content {
-  display: none;
-}
-.con3 .tab-content-active {
-  display: block;
 }
 
 .con4 {

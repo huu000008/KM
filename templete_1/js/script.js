@@ -56,6 +56,35 @@ $(document).ready(function () {
         $(".con1 .number").text(this.realIndex + 1);
       },
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  });
+
+  // con3 Swiper
+  initSwiper($(".con3"), {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    pagination: {
+      el: $(".con3 .swiper-pagination")[0],
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}">${$(".con3 .swiper-slide")
+          .eq(index)
+          .data("title")}</span>`;
+      },
+    },
   });
 
   // 이미지 롤링
@@ -90,18 +119,6 @@ $(document).ready(function () {
   }
 
   startRolling($(".con7"));
-
-  // 탭 전환
-  $(".tab")
-    .on("click", function () {
-      var target = $(this).data("tab");
-      $(".tab").removeClass("tab-active");
-      $(".tab-content").removeClass("tab-content-active");
-      $(this).addClass("tab-active");
-      $("#" + target).addClass("tab-content-active");
-    })
-    .first()
-    .click();
 
   // 타이핑 효과
   function typingEffect($element1, $element2, cursor1, cursor2, container) {
