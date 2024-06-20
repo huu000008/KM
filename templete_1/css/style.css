@@ -28,12 +28,6 @@ body {
 }
 @media (max-width: 1440px) {
   .w1440 {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media (max-width: 1180px) {
-  .w1440 {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -120,6 +114,13 @@ body {
   background-position: 1% 50%;
   background-size: 400% 300%;
   transition: 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@media (max-width: 1440px) {
+  .btnBooking_2 {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
 .btnBooking_2:after {
   content: "";
@@ -301,6 +302,12 @@ body {
   text-align: center;
   color: #fff;
 }
+@media (max-width: 1440px) {
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 .footer.footer-visible::before {
   transform: scale(10);
 }
@@ -322,6 +329,11 @@ body {
   position: relative;
   font-size: 30px;
 }
+@media (max-width: 1440px) {
+  .footer .tx1 {
+    font-size: 13px;
+  }
+}
 .footer .tx1:before {
   content: "";
   position: absolute;
@@ -331,6 +343,13 @@ body {
   height: 10px;
   border-radius: 50%;
   background-color: #fff;
+}
+@media (max-width: 1440px) {
+  .footer .tx1:before {
+    right: -10px;
+    width: 6px;
+    height: 6px;
+  }
 }
 .footer .tx1::after {
   content: "";
@@ -347,8 +366,20 @@ body {
   font-size: 100px;
   font-weight: 700;
 }
+@media (max-width: 1440px) {
+  .footer .tx2 {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+}
 .footer .tx3 {
   font-size: 14px;
+}
+@media (max-width: 1440px) {
+  .footer .tx3 {
+    font-size: 12px;
+  }
 }
 
 .con0 {
@@ -695,6 +726,12 @@ body {
   padding-bottom: 240px;
   text-align: center;
 }
+@media (max-width: 1440px) {
+  .con4 {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+}
 .con4 .typing-container {
   display: flex;
   justify-content: center;
@@ -731,6 +768,11 @@ body {
 .con4 .btnBooking {
   margin-top: 80px;
 }
+@media (max-width: 1440px) {
+  .con4 .btnBooking {
+    margin-top: 50px;
+  }
+}
 .con4 .conTitle .tx0 {
   margin-bottom: -70px;
   font-size: 80px;
@@ -738,12 +780,28 @@ body {
   text-transform: uppercase;
   color: #f8f8f8;
 }
+@media (max-width: 1440px) {
+  .con4 .conTitle .tx0 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1440px) {
+  .con4 .conTitle .tx2 {
+    font-size: 20px;
+  }
+}
 .con4 .t0 {
   display: flex;
   justify-content: center;
   gap: 5px;
   margin-top: 75px;
   font-size: 20px;
+}
+@media (max-width: 1440px) {
+  .con4 .t0 {
+    margin-top: 40px;
+    font-size: 18px;
+  }
 }
 .con4 .t0 .t1 {
   color: #2d3a80;
@@ -759,14 +817,49 @@ body {
   padding-bottom: 65px;
   background-color: #f5f6f8;
 }
+@media (max-width: 1440px) {
+  .con5 {
+    margin-bottom: 80px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
 .con5 .w1440 {
   display: flex;
   align-items: center;
   gap: 55px;
 }
+@media (max-width: 1440px) {
+  .con5 .w1440 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+.con5 .mobile {
+  display: none;
+}
+@media (max-width: 1440px) {
+  .con5 .mobile {
+    display: block;
+  }
+}
+@media (max-width: 1440px) {
+  .con5 .pc {
+    display: none;
+  }
+}
 .con5 .imgWrap {
   display: flex;
   gap: 40px;
+}
+@media (max-width: 1440px) {
+  .con5 .imgWrap {
+    gap: 20px;
+  }
+  .con5 .imgWrap img {
+    width: calc((100% - 20px) / 2);
+  }
 }
 .con5 .t1,
 .con5 .t2 {
@@ -776,6 +869,11 @@ body {
   margin-top: 60px;
   margin-bottom: 10px;
   font-weight: 700;
+}
+@media (max-width: 1440px) {
+  .con5 .t1 {
+    margin-top: 0;
+  }
 }
 .con5 .btnBooking_2 {
   margin-top: 25px;

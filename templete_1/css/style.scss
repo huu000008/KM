@@ -37,10 +37,6 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   @include md {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  @include sm {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -130,6 +126,11 @@ body {
   background-position: 1% 50%;
   background-size: 400% 300%;
   transition: 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  @include md {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+  }
   &:after {
     content: "";
     width: 6px;
@@ -298,6 +299,10 @@ body {
   padding-bottom: 200px;
   text-align: center;
   color: #fff;
+  @include md {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   &.footer-visible {
     &::before {
       transform: scale(10);
@@ -320,6 +325,9 @@ body {
     display: inline-flex;
     position: relative;
     font-size: 30px;
+    @include md {
+      font-size: 13px;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -329,6 +337,11 @@ body {
       height: 10px;
       border-radius: 50%;
       background-color: #fff;
+      @include md {
+        right: -10px;
+        width: 6px;
+        height: 6px;
+      }
     }
     &::after {
       content: "";
@@ -345,9 +358,17 @@ body {
     margin-bottom: 100px;
     font-size: 100px;
     font-weight: 700;
+    @include md {
+      margin-top: 40px;
+      margin-bottom: 50px;
+      font-size: 30px;
+    }
   }
   .tx3 {
     font-size: 14px;
+    @include md {
+      font-size: 12px;
+    }
   }
 }
 .con0 {
@@ -658,6 +679,10 @@ body {
   padding-top: 220px;
   padding-bottom: 240px;
   text-align: center;
+  @include md {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
   .typing-container {
     display: flex;
     justify-content: center;
@@ -694,6 +719,9 @@ body {
 
   .btnBooking {
     margin-top: 80px;
+    @include md {
+      margin-top: 50px;
+    }
   }
   .conTitle {
     .tx0 {
@@ -702,6 +730,14 @@ body {
       font-weight: 700;
       text-transform: uppercase;
       color: #f8f8f8;
+      @include md {
+        font-size: 40px;
+      }
+    }
+    .tx2 {
+      @include md {
+        font-size: 20px;
+      }
     }
   }
   .t0 {
@@ -710,6 +746,10 @@ body {
     gap: 5px;
     margin-top: 75px;
     font-size: 20px;
+    @include md {
+      margin-top: 40px;
+      font-size: 18px;
+    }
     .t1 {
       color: #2d3a80;
       font-weight: 600;
@@ -724,14 +764,41 @@ body {
   padding-top: 65px;
   padding-bottom: 65px;
   background-color: #f5f6f8;
+  @include md {
+    margin-bottom: 80px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
   .w1440 {
     display: flex;
     align-items: center;
     gap: 55px;
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+  }
+  .mobile {
+    display: none;
+    @include md {
+      display: block;
+    }
+  }
+  .pc {
+    @include md {
+      display: none;
+    }
   }
   .imgWrap {
     display: flex;
     gap: 40px;
+    @include md {
+      gap: 20px;
+      img {
+        width: calc((100% - 20px) / 2);
+      }
+    }
   }
   .t1,
   .t2 {
@@ -741,6 +808,9 @@ body {
     margin-top: 60px;
     margin-bottom: 10px;
     font-weight: 700;
+    @include md {
+      margin-top: 0;
+    }
   }
   .btnBooking_2 {
     margin-top: 25px;
