@@ -50,7 +50,13 @@ body {
 .travelFont {
   font-family: "Travel November", sans-serif;
 }
-
+.img {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 .header {
   position: fixed;
   left: 0;
@@ -64,4 +70,137 @@ body {
     justify-content: space-between;
     height: 100px;
   }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    & > div {
+      display: flex;
+      align-items: center;
+      height: 35px;
+      padding-right: 15px;
+      padding-left: 45px;
+      border-radius: 999px;
+      border: 1px solid #fff;
+      color: #fff;
+      background-repeat: no-repeat;
+      background-position: left 15px center;
+      cursor: pointer;
+    }
+    .btnMenu {
+      background-image: url(../img/icon_menu.png);
+    }
+    .btnReservation {
+      background-image: url(../img/icon_clock.png);
+    }
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -100%);
+    width: 915px;
+    height: 915px;
+    border-radius: 50%;
+    background-color: #fdfcf4;
+    transition: 0.8s;
+    &.active {
+      transform: translate(20%, -20%);
+    }
+    .menuClose {
+      position: absolute;
+      right: 25%;
+      top: 25%;
+      cursor: pointer;
+    }
+  }
+}
+
+.con0 {
+  position: relative;
+  .tx1 {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: #fff;
+    @include md {
+      bottom: 60px;
+      font-size: 20px;
+    }
+  }
+  .swiperNavi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    @include md {
+      gap: 40px;
+    }
+    .bar {
+      width: 1px;
+      height: 90px;
+      background-color: #fff;
+      @include md {
+        height: 40px;
+      }
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    inset: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    @include md {
+      font-size: 14px;
+      img {
+        width: 16px;
+      }
+    }
+  }
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    display: none;
+  }
+}
+.con1 {
+  padding-top: 280px;
+  padding-bottom: 35px;
+  text-align: center;
+  .img {
+    position: relative;
+    width: 570px;
+    margin: 0 auto;
+    aspect-ratio: 1/1;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .tx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    color: #e1d7cd;
+    white-space: nowrap;
+  }
+}
+.con2 {
+  padding-top: 45px;
 }
