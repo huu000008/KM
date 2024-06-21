@@ -1,0 +1,61 @@
+@import url(reset.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url("https://fonts.cdnfonts.com/css/travel-november");
+@import url("https://webfontworld.github.io/naver/MaruBuri.css");
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+body {
+  font-size: 14px;
+  font-family: "MaruBuri", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #000;
+  line-height: 1.2;
+}
+
+.w1440 {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (max-width: 1440px) {
+  .w1440 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 1180px) {
+  .w1440 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.travelFont {
+  font-family: "Travel November", sans-serif;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.header .w1440 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}/*# sourceMappingURL=style.css.map */
