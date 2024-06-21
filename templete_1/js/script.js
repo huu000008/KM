@@ -196,4 +196,11 @@ $(document).ready(function () {
   }
 
   observeFooter($("#footer"));
+
+  $(".header .btnMenu").on("click", function () {
+    $(".header").toggleClass("active");
+  });
+  $(".header .btnClose").on("click", function () {
+    $(".header").toggleClass("active");
+  });
 });

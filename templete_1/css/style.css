@@ -278,6 +278,55 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
+@media (max-width: 1440px) {
+  .header.active {
+    background-color: #343d7d;
+  }
+  .header.active .menu {
+    display: flex;
+    gap: 0;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header.active .menu .depth1 > span {
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+  .header.active .menu .depth1 > span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 11px;
+    background-image: url(../img/icon_down.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transition: all 0.3s;
+  }
+  .header.active .menu .depth2 {
+    align-items: flex-start;
+    position: relative;
+    inset: 0;
+    transform: translate(0);
+    background-color: #182257;
+  }
+  .header.active .menu .depth2::after {
+    display: none;
+  }
+  .header.active .btnReservation {
+    display: none;
+  }
+  .header.active .btnMenu {
+    display: none;
+  }
+  .header.active .btnClose {
+    display: block;
+  }
+}
 .header .w1440 {
   display: flex;
   justify-content: space-between;
@@ -301,15 +350,62 @@ body {
 @media (max-width: 1440px) {
   .header .menu {
     display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    top: 80px;
+    background-color: #343d7d;
   }
 }
 .header .menu .depth1 {
+  position: relative;
   font-size: 18px;
   font-weight: 500;
   color: #fff;
 }
+.header .menu .depth1:hover > span::after {
+  transform: rotate(180deg);
+}
+.header .menu .depth1:hover .depth2 {
+  display: flex;
+}
+.header .menu .depth1:hover .depth2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: #2d3a80;
+}
+.header .menu .depth1 > span {
+  display: inline-flex;
+  align-items: center;
+  height: 120px;
+  cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .header .menu .depth1 > span {
+    height: auto;
+  }
+}
 .header .menu .depth2 {
   display: none;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.header .menu .depth2 a {
+  font-size: 16px;
+  color: #fff;
+  white-space: nowrap;
 }
 .header .right {
   display: flex;
@@ -317,7 +413,16 @@ body {
   gap: 30px;
 }
 .header .btnMenu {
-  display: flex;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .header .btnMenu {
+    display: flex;
+  }
+}
+.header .btnClose {
+  display: none;
   cursor: pointer;
 }
 .header .btnReservation {

@@ -269,6 +269,57 @@ body {
   z-index: 100;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  @include md {
+    &.active {
+      background-color: #343d7d;
+      .menu {
+        display: flex;
+        gap: 0;
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .depth1 {
+          > span {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 20px;
+              transform: translateY(-50%);
+              width: 16px;
+              height: 11px;
+              background-image: url(../img/icon_down.png);
+              background-repeat: no-repeat;
+              background-position: 0 0;
+              transition: all 0.3s;
+            }
+          }
+        }
+        .depth2 {
+          align-items: flex-start;
+          position: relative;
+          inset: 0;
+          transform: translate(0);
+          background-color: #182257;
+          &::after {
+            display: none;
+          }
+        }
+      }
+      .btnReservation {
+        display: none;
+      }
+      .btnMenu {
+        display: none;
+      }
+      .btnClose {
+        display: block;
+      }
+    }
+  }
   .w1440 {
     display: flex;
     justify-content: space-between;
@@ -288,14 +339,63 @@ body {
     gap: 100px;
     @include md {
       display: none;
+      flex-direction: column;
+      position: fixed;
+      inset: 0;
+      top: 80px;
+      background-color: #343d7d;
     }
     .depth1 {
+      position: relative;
       font-size: 18px;
       font-weight: 500;
       color: #fff;
+      &:hover {
+        > span {
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+        & .depth2 {
+          display: flex;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 1px;
+            background-color: #2d3a80;
+          }
+        }
+      }
+      > span {
+        display: inline-flex;
+        align-items: center;
+        height: 120px;
+        cursor: pointer;
+        @include md {
+          height: auto;
+        }
+      }
     }
     .depth2 {
       display: none;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 25px;
+      background-color: rgba(0, 0, 0, 0.4);
+      a {
+        font-size: 16px;
+        color: #fff;
+        white-space: nowrap;
+      }
     }
   }
   .right {
@@ -304,7 +404,14 @@ body {
     gap: 30px;
   }
   .btnMenu {
-    display: flex;
+    display: none;
+    cursor: pointer;
+    @include md {
+      display: flex;
+    }
+  }
+  .btnClose {
+    display: none;
     cursor: pointer;
   }
   .btnReservation {
