@@ -234,7 +234,14 @@ body {
 .con2 {
   padding-top: 45px;
   text-align: center;
+  overflow: hidden;
 }
 .con2 .conTitle .subTitle {
   justify-content: center;
+}
+.con2 .imgRolling {
+  display: flex;
+  gap: 40px;
+  margin-top: 80px;
+  padding-bottom: 170px;
 }/*# sourceMappingURL=style.css.map */
