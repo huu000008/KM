@@ -57,6 +57,28 @@ body {
     object-fit: cover;
   }
 }
+.conTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #866552;
+  .title {
+    font-size: 40px;
+  }
+  .subTitle {
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+    .tag {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      padding: 0 20px;
+      border-radius: 10px;
+      border: 1px solid #866552;
+    }
+  }
+}
 .header {
   position: fixed;
   left: 0;
@@ -203,4 +225,10 @@ body {
 }
 .con2 {
   padding-top: 45px;
+  text-align: center;
+  .conTitle {
+    .subTitle {
+      justify-content: center;
+    }
+  }
 }
