@@ -28,4 +28,35 @@ $(document).ready(function () {
   $(".header .menuClose").on("click", function () {
     $(".header .menu").toggleClass("active");
   });
+
+  // 이미지 롤링
+  function startRolling($container) {
+    if ($container.length) {
+      let position = 0;
+      const speed = 1;
+      const width = $container.width();
+      const totalWidth = $container[0].scrollWidth;
+
+      function roll() {
+        position -= speed;
+        if (Math.abs(position) >= totalWidth / 2) {
+          position = 0;
+        }
+        $container.css("transform", `translateX(${position}px)`);
+        requestAnimationFrame(roll);
+      }
+
+      roll();
+    }
+  }
+
+  function cloneImages($container) {
+    $container.find("img").each(function () {
+      $container.append($(this).clone());
+    });
+  }
+
+  const $con2 = $(".con2 .imgRolling");
+  cloneImages($con2);
+  startRolling($con2);
 });
