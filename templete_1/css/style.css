@@ -473,7 +473,7 @@ body {
   display: none;
   cursor: pointer;
 }
-.header .btnReservation {
+.header .btnReservation a {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -482,11 +482,11 @@ body {
   color: #fff;
 }
 @media (max-width: 1440px) {
-  .header .btnReservation {
+  .header .btnReservation a {
     gap: 8px;
     font-size: 14px;
   }
-  .header .btnReservation img {
+  .header .btnReservation a img {
     width: 20px;
   }
 }
@@ -771,11 +771,16 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 .con1 .swiper-slide .tx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  height: 100%;
   text-align: center;
   color: #fff;
   opacity: 0;
