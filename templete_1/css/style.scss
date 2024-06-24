@@ -135,7 +135,7 @@ body {
   gap: 20px;
   width: 250px;
   height: 55px;
-  border: 1px solid #000;
+  border: 1px solid #2d3a80;
   font-size: 15px;
   font-weight: 600;
   font-style: italic;
@@ -511,6 +511,9 @@ body {
     background-color: #2d3a80;
     border-radius: 50%;
     transition: all 4s;
+    @include sm {
+      transition: all 10s;
+    }
   }
   .tx1 {
     display: inline-flex;
@@ -564,6 +567,11 @@ body {
 }
 .con0 {
   position: relative;
+  &.noSwiper {
+    .tx1 {
+      bottom: 30px;
+    }
+  }
   .tx1 {
     position: absolute;
     bottom: 130px;
@@ -714,6 +722,9 @@ body {
     }
     &:hover {
       border-radius: 50%;
+      @include sm {
+        border-radius: 0;
+      }
       &:before {
         background-color: rgba(0, 0, 0, 0.4);
       }
@@ -745,10 +756,16 @@ body {
       .tx1 {
         font-size: 20px;
         font-weight: 700;
+        @include sm {
+          display: none;
+        }
       }
       .tx2 {
         margin-top: 10px;
         font-size: 14px;
+        @include sm {
+          display: none;
+        }
       }
       .more {
         display: inline-flex;
@@ -763,6 +780,9 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         font-size: 30px;
+        @include sm {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -1301,6 +1321,7 @@ body {
       font-size: 18px;
       font-weight: 700;
       white-space: nowrap;
+      color: #2d3a80;
       @include sm {
         font-size: 11px;
       }

@@ -127,7 +127,7 @@ body {
   gap: 20px;
   width: 250px;
   height: 55px;
-  border: 1px solid #000;
+  border: 1px solid #2d3a80;
   font-size: 15px;
   font-weight: 600;
   font-style: italic;
@@ -521,6 +521,11 @@ body {
   border-radius: 50%;
   transition: all 4s;
 }
+@media (max-width: 1180px) {
+  .footer::before {
+    transition: all 10s;
+  }
+}
 .footer .tx1 {
   display: inline-flex;
   position: relative;
@@ -581,6 +586,9 @@ body {
 
 .con0 {
   position: relative;
+}
+.con0.noSwiper .tx1 {
+  bottom: 30px;
 }
 .con0 .tx1 {
   position: absolute;
@@ -758,6 +766,11 @@ body {
 .con1 .swiper-slide:hover {
   border-radius: 50%;
 }
+@media (max-width: 1180px) {
+  .con1 .swiper-slide:hover {
+    border-radius: 0;
+  }
+}
 .con1 .swiper-slide:hover:before {
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -790,9 +803,19 @@ body {
   font-size: 20px;
   font-weight: 700;
 }
+@media (max-width: 1180px) {
+  .con1 .swiper-slide .tx .tx1 {
+    display: none;
+  }
+}
 .con1 .swiper-slide .tx .tx2 {
   margin-top: 10px;
   font-size: 14px;
+}
+@media (max-width: 1180px) {
+  .con1 .swiper-slide .tx .tx2 {
+    display: none;
+  }
 }
 .con1 .swiper-slide .tx .more {
   display: inline-flex;
@@ -807,6 +830,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   font-size: 30px;
+}
+@media (max-width: 1180px) {
+  .con1 .swiper-slide .tx .more {
+    margin-top: 0;
+  }
 }
 .con1 .navi {
   display: flex;
@@ -1418,6 +1446,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   white-space: nowrap;
+  color: #2d3a80;
 }
 @media (max-width: 1180px) {
   .con12 .img .num,
