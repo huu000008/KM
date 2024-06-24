@@ -2,6 +2,7 @@ $(document).ready(function () {
   // Initialize AOS
   AOS.init({
     once: true, // 애니메이션이 한 번만 실행되도록 설정
+    duration: 1000, // 애니메이션 속도를 1000ms로 설정
   });
 
   const locomotiveScroll = new LocomotiveScroll();
@@ -16,6 +17,7 @@ $(document).ready(function () {
   // con0 Swiper
   initSwiper($(".con0"), {
     slidesPerView: 1,
+    loop: true,
     navigation: {
       nextEl: $(".con0 .swiper-button-next")[0],
       prevEl: $(".con0 .swiper-button-prev")[0],
@@ -109,7 +111,7 @@ $(document).ready(function () {
   }
 
   function cloneImages($container) {
-    $container.find("img").each(function () {
+    $container.find(".img").each(function () {
       $container.append($(this).clone());
     });
   }
@@ -202,5 +204,8 @@ $(document).ready(function () {
   });
   $(".header .btnClose").on("click", function () {
     $(".header").toggleClass("active");
+  });
+  $(".header .depth1 > span").on("click", function () {
+    $(this).parent().toggleClass("on");
   });
 });

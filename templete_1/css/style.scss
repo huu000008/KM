@@ -1,6 +1,11 @@
 @import url(reset.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 
+@mixin lg {
+  @media (min-width: 1441px) {
+    @content;
+  }
+}
 @mixin md {
   @media (max-width: 1440px) {
     @content;
@@ -134,11 +139,7 @@ body {
   font-size: 15px;
   font-weight: 600;
   font-style: italic;
-  background: linear-gradient(
-    to right,
-    rgba(96, 70, 58, 0) 25%,
-    rgba(121, 123, 204, 0.8) 75%
-  );
+  background: linear-gradient(to right, rgba(96, 70, 58, 0) 25%, #2d3a80);
   background-position: 1% 50%;
   background-size: 400% 300%;
   transition: 3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -157,6 +158,9 @@ body {
   }
   &:hover {
     transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:after {
+      background-image: url(../img/icon_bullet_1_2.png);
+    }
   }
   &:hover {
     color: white;
@@ -253,6 +257,11 @@ body {
       height: 10px;
       border-radius: 50%;
       background-color: #2d3a80;
+      @include md {
+        right: -10px;
+        width: 6px;
+        height: 6px;
+      }
     }
   }
 }
@@ -344,39 +353,81 @@ body {
       inset: 0;
       top: 80px;
       background-color: #343d7d;
-    }
-    .depth1 {
-      position: relative;
-      font-size: 18px;
-      font-weight: 500;
-      color: #fff;
-      &:hover {
-        > span {
-          &::after {
-            transform: rotate(180deg);
+      .depth1 {
+        position: relative;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        &.on {
+          > span {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+          & .depth2 {
+            display: flex;
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 50%;
+              height: 1px;
+              background-color: #2d3a80;
+            }
           }
         }
-        & .depth2 {
-          display: flex;
-          &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50%;
-            height: 1px;
-            background-color: #2d3a80;
+        > span {
+          display: inline-flex;
+          align-items: center;
+          height: 120px;
+          cursor: pointer;
+          @include md {
+            height: auto;
           }
         }
       }
-      > span {
-        display: inline-flex;
-        align-items: center;
-        height: 120px;
-        cursor: pointer;
-        @include md {
-          height: auto;
+    }
+    @include lg {
+      .depth1 {
+        position: relative;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        &:hover {
+          > span {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+          & .depth2 {
+            display: flex;
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 50%;
+              height: 1px;
+              background-color: #2d3a80;
+            }
+            a {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        > span {
+          display: inline-flex;
+          align-items: center;
+          height: 120px;
+          cursor: pointer;
+          @include md {
+            height: auto;
+          }
         }
       }
     }
@@ -523,6 +574,18 @@ body {
       font-size: 20px;
     }
   }
+  @include sm {
+    .swiper-slide {
+      position: relative;
+      height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
   .swiperNavi {
     display: flex;
     align-items: center;
@@ -632,13 +695,20 @@ body {
   }
   .swiper-slide {
     position: relative;
-    transition: all 0.3s;
+    transition: all 0.8s;
     overflow: hidden;
-    img {
-      width: 100%;
-    }
     @include md {
       width: 100%;
+    }
+    @include sm {
+      height: 200px;
+    }
+    img {
+      width: 100%;
+      @include md {
+        height: 100%;
+        object-fit: cover;
+      }
     }
     &:hover {
       border-radius: 50%;
@@ -782,6 +852,19 @@ body {
       margin-top: 40px;
     }
   }
+  .swiper-slide {
+    position: relative;
+    @include sm {
+      height: 200px;
+    }
+    img {
+      @include sm {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
   .swiper-pagination {
     display: flex;
     justify-content: center;
@@ -909,7 +992,7 @@ body {
   padding-bottom: 65px;
   background-color: #f5f6f8;
   @include md {
-    margin-bottom: 80px;
+    margin-bottom: 0;
     padding-top: 45px;
     padding-bottom: 45px;
   }
@@ -967,10 +1050,18 @@ body {
     padding-top: 70px;
     padding-bottom: 45px;
   }
-  img {
+  .img {
     margin-top: 60px;
     @include md {
       margin-top: 40px;
+    }
+    @include sm {
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
   .txWrap {
@@ -981,8 +1072,14 @@ body {
     @include md {
       font-size: 16px;
     }
-    .blue {
-      color: #2d3a80;
+    .t1 {
+      display: flex;
+      flex-direction: column;
+    }
+    span {
+      &:hover {
+        color: #2d3a80;
+      }
     }
   }
   .bottom {
@@ -1020,6 +1117,20 @@ body {
 .con7 {
   display: flex;
   gap: 40px;
+  .img {
+    min-width: 500px;
+  }
+  @include sm {
+    .img {
+      min-width: 300px;
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 .con8 {
   margin-top: 235px;
@@ -1028,7 +1139,7 @@ body {
   padding-bottom: 230px;
   background-color: #f5f6f8;
   @include md {
-    margin-top: 70px;
+    margin-top: 0;
     margin-bottom: 70px;
     padding-top: 40px;
     padding-bottom: 70px;
@@ -1069,16 +1180,61 @@ body {
   }
 }
 .con9 {
-  text-align: center;
-  .pc {
-    @include md {
-      display: none;
-    }
+  .inner {
+    overflow-x: auto;
   }
-  .mobile {
-    display: none;
-    @include md {
-      display: inline-flex;
+  table {
+    &.pc {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+      @include sm {
+        display: none;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+      th[rowspan="2"] {
+        width: 10%;
+      }
+      th[colspan="2"],
+      th[colspan="3"] {
+        width: 15%;
+      }
+      th[colspan="2"] + th[colspan="3"],
+      th[colspan="3"] + th[colspan="3"] {
+        width: 20%;
+      }
+    }
+    &.mobile {
+      display: none;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+      @include sm {
+        display: table;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -1086,6 +1242,10 @@ body {
   display: flex;
   gap: 30px;
   margin-top: 180px;
+  @include sm {
+    margin-top: 70px;
+    flex-direction: column;
+  }
 }
 .con11 {
   padding-top: 230px;
@@ -1118,6 +1278,9 @@ body {
       font-size: 50px;
       white-space: nowrap;
     }
+    @include sm {
+      font-size: 30px;
+    }
   }
   .img {
     .inner {
@@ -1128,6 +1291,12 @@ body {
     .num,
     .text {
       position: absolute;
+      font-size: 18px;
+      font-weight: 700;
+      white-space: nowrap;
+      @include sm {
+        font-size: 11px;
+      }
     }
     &_1 {
       @include md {
@@ -1146,25 +1315,27 @@ body {
       }
       .num {
         top: 100%;
-        left: 20px;
-        margin-top: 20px;
+        left: 50px;
+        width: 10px;
+        height: 10px;
+        margin-top: 10px;
         @include md {
           left: 40px;
-          height: 10px;
-          margin-top: 10px;
           img {
             height: 100%;
           }
         }
       }
       .text {
+        display: flex;
+        justify-content: flex-end;
         top: 100%;
         right: 20px;
-        margin-top: 20px;
+        width: 10px;
+        height: 10px;
+        margin-top: 10px;
         @include md {
           right: 10px;
-          height: 10px;
-          margin-top: 10px;
           img {
             height: 100%;
           }
@@ -1191,22 +1362,25 @@ body {
         }
       }
       .num {
-        top: 0;
-        right: -30px;
-        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        top: 20px;
+        right: -20px;
+        transform: rotate(-90deg);
+        width: 10px;
+        height: 10px;
         @include md {
-          right: -20px;
-          width: 10px;
-          margin-top: 10px;
+          top: 10px;
         }
       }
       .text {
-        bottom: 0;
+        bottom: 20px;
         right: -20px;
-        margin-bottom: 20px;
+        transform: rotate(-90deg);
+        width: 10px;
+        height: 10px;
         @include md {
-          width: 10px;
-          margin-bottom: 10px;
+          bottom: 10px;
         }
       }
     }
@@ -1226,23 +1400,31 @@ body {
         }
       }
       .num {
-        top: 0;
-        left: -30px;
-        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        top: 20px;
+        right: 100%;
+        transform: rotate(-90deg);
+        width: 10px;
+        height: 10px;
+        padding-bottom: 10px;
         @include md {
-          left: -20px;
-          width: 10px;
-          margin-bottom: 10px;
+          top: 10px;
         }
       }
       .text {
-        bottom: 0;
-        left: -30px;
-        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        bottom: 20px;
+        right: 100%;
+        transform: rotate(-90deg);
+        width: 10px;
+        height: 10px;
+        padding-bottom: 10px;
         @include md {
-          left: -20px;
-          width: 10px;
-          margin-bottom: 10px;
+          bottom: 10px;
         }
       }
     }
