@@ -16,6 +16,8 @@ $(document).ready(function () {
   // con0 Swiper
   initSwiper($(".con0"), {
     slidesPerView: 1,
+    loop: true,
+    effect: "fade",
     navigation: {
       nextEl: $(".con0 .swiper-button-next")[0],
       prevEl: $(".con0 .swiper-button-prev")[0],

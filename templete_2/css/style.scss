@@ -123,17 +123,51 @@ body {
     transform: translate(100%, -100%);
     width: 915px;
     height: 915px;
+    padding-top: 300px;
+    padding-left: 200px;
+    padding-right: 200px;
     border-radius: 50%;
     background-color: #fdfcf4;
     transition: 0.8s;
     &.active {
-      transform: translate(20%, -20%);
+      transform: translate(150px, -190px);
     }
     .menuClose {
       position: absolute;
-      right: 25%;
+      right: 200px;
       top: 25%;
       cursor: pointer;
+    }
+    .menuInner {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      a {
+        font-weight: 600;
+        color: #866552;
+      }
+      .depth_1 {
+        a {
+          font-size: 16px;
+          &.yellow {
+            color: #dc970e;
+          }
+        }
+      }
+      .depth_2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 35px;
+        margin-top: 30px;
+        padding-left: 15px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+    .btnReservation {
+      display: inline-flex;
+      margin-top: 60px;
     }
   }
 }

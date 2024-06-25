@@ -4,8 +4,10 @@ $(document).ready(function () {
     once: true, // 애니메이션이 한 번만 실행되도록 설정
     duration: 2000, // 애니메이션 속도를 1000ms로 설정
   });
-
-  const locomotiveScroll = new LocomotiveScroll();
+  // const scroll = new LocomotiveScroll({
+  //   el: document.querySelector(".smooth-scroll"),
+  //   smooth: true,
+  // });
 
   // Swiper 초기화 함수
   function initSwiper(container, options) {
@@ -18,6 +20,10 @@ $(document).ready(function () {
   initSwiper($(".con0"), {
     slidesPerView: 1,
     effect: "fade",
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     loop: true,
     navigation: {
       nextEl: $(".con0 .swiper-button-next")[0],
@@ -202,11 +208,11 @@ $(document).ready(function () {
 
   $(".header .btnMenu").on("click", function () {
     $(".header").toggleClass("active");
-    locomotiveScroll.stop();
+    // locomotiveScroll.stop();
   });
   $(".header .btnClose").on("click", function () {
     $(".header").toggleClass("active");
-    locomotiveScroll.start();
+    // locomotiveScroll.start();
   });
   $(".header .depth1 > span").on("click", function () {
     $(this).parent().toggleClass("on");
