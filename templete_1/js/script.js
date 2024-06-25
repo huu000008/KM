@@ -201,9 +201,11 @@ $(document).ready(function () {
 
   $(".header .btnMenu").on("click", function () {
     $(".header").toggleClass("active");
+    locomotiveScroll.stop();
   });
   $(".header .btnClose").on("click", function () {
     $(".header").toggleClass("active");
+    locomotiveScroll.start();
   });
   $(".header .depth1 > span").on("click", function () {
     $(this).parent().toggleClass("on");
