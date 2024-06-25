@@ -357,7 +357,6 @@ body {
 .header .menu {
   display: flex;
   gap: 100px;
-  overflow-y: auto;
 }
 @media (max-width: 1440px) {
   .header .menu {
@@ -367,6 +366,7 @@ body {
     inset: 0;
     top: 80px;
     background-color: #343d7d;
+    overflow-y: auto;
   }
   .header .menu .depth1 {
     position: relative;

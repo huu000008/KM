@@ -347,7 +347,6 @@ body {
   .menu {
     display: flex;
     gap: 100px;
-    overflow-y: auto;
     @include md {
       display: none;
       flex-direction: column;
@@ -355,6 +354,7 @@ body {
       inset: 0;
       top: 80px;
       background-color: #343d7d;
+      overflow-y: auto;
       .depth1 {
         position: relative;
         font-size: 18px;
