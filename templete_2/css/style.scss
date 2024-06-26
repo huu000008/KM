@@ -32,8 +32,16 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #000;
   line-height: 1.2;
+  background-color: #fdfcf4;
+  overflow-x: hidden;
 }
 
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
 .w1440 {
   width: 100%;
   max-width: 1440px;
@@ -73,7 +81,7 @@ body {
       display: flex;
       align-items: center;
       height: 30px;
-      padding: 0 20px;
+      padding: 0 15px;
       border-radius: 10px;
       border: 1px solid #866552;
     }
@@ -167,7 +175,26 @@ body {
     }
     .btnReservation {
       display: inline-flex;
+      align-items: center;
+      position: relative;
+      height: 58px;
       margin-top: 60px;
+      padding-left: 90px;
+      padding-right: 70px;
+      background-image: url(../img/icon_clock.png);
+      background-repeat: no-repeat;
+      background-position: left 20px center;
+      background-color: #866552;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 4px;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border: 1px solid #866552;
+      }
     }
   }
 }
@@ -227,12 +254,6 @@ body {
       }
     }
   }
-  .swiper-button-next:after,
-  .swiper-rtl .swiper-button-prev:after,
-  .swiper-button-prev:after,
-  .swiper-rtl .swiper-button-next:after {
-    display: none;
-  }
 }
 .con1 {
   padding-top: 280px;
@@ -271,5 +292,140 @@ body {
     gap: 40px;
     margin-top: 80px;
     padding-bottom: 170px;
+  }
+}
+.con3 {
+  position: relative;
+  padding-bottom: 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 40%;
+    background-color: #f6f2e7;
+  }
+  .swiper {
+    text-align: center;
+    .tx {
+      margin-top: 85px;
+      color: #6f5847;
+      .tx1 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .tx2 {
+        margin-top: 15px;
+        font-size: 16px;
+      }
+    }
+    .swiperNavi {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 130px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      width: 150px;
+      height: 60px;
+      background-color: #6f5847;
+      border-radius: 15px;
+      .bar {
+        width: 1px;
+        height: 28px;
+        margin: 0 10px;
+        background-color: #e1d7cd;
+      }
+    }
+    margin-top: 35px;
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      inset: 0;
+      width: auto;
+      height: auto;
+      margin: 0;
+      color: #fff;
+      font-size: 18px;
+      @include md {
+        font-size: 14px;
+        img {
+          width: 16px;
+        }
+      }
+    }
+  }
+}
+.con4 {
+  padding-top: 360px;
+  padding-bottom: 400px;
+  .w1440 {
+    position: relative;
+  }
+  .conTitle {
+    width: 360px;
+    text-align: center;
+    .subTitle {
+      justify-content: center;
+    }
+  }
+  .swiper {
+    position: absolute;
+    left: 600px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .swiper-slide {
+      width: 400px;
+      margin-right: 40px;
+    }
+  }
+  .tx {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #866552;
+  }
+  .swiperNavi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+    background-color: #6f5847;
+    border-radius: 15px;
+    .bar {
+      width: 1px;
+      height: 28px;
+      margin: 0 10px;
+      background-color: #e1d7cd;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    inset: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    @include md {
+      font-size: 14px;
+      img {
+        width: 16px;
+      }
+    }
   }
 }

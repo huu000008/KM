@@ -14,7 +14,6 @@ $(document).ready(function () {
     }
   }
 
-  // con0 Swiper
   initSwiper($(".con0"), {
     slidesPerView: 1,
     loop: true,
@@ -26,6 +25,22 @@ $(document).ready(function () {
     navigation: {
       nextEl: $(".con0 .swiper-button-next")[0],
       prevEl: $(".con0 .swiper-button-prev")[0],
+    },
+  });
+
+  initSwiper($(".con3"), {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: $(".con3 .swiper-button-next")[0],
+      prevEl: $(".con3 .swiper-button-prev")[0],
+    },
+  });
+
+  initSwiper($(".con4"), {
+    slidesPerView: "auto",
+    navigation: {
+      nextEl: $(".con4 .swiper-button-next")[0],
+      prevEl: $(".con4 .swiper-button-prev")[0],
     },
   });
 

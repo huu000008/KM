@@ -21,6 +21,15 @@ body {
   font-family: "MaruBuri", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #000;
   line-height: 1.2;
+  background-color: #fdfcf4;
+  overflow-x: hidden;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
 }
 
 .w1440 {
@@ -70,7 +79,7 @@ body {
   display: flex;
   align-items: center;
   height: 30px;
-  padding: 0 20px;
+  padding: 0 15px;
   border-radius: 10px;
   border: 1px solid #866552;
 }
@@ -163,7 +172,26 @@ body {
 }
 .header .menu .btnReservation {
   display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 58px;
   margin-top: 60px;
+  padding-left: 90px;
+  padding-right: 70px;
+  background-image: url(../img/icon_clock.png);
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+  background-color: #866552;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+.header .menu .btnReservation::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid #866552;
 }
 
 .con0 {
@@ -232,12 +260,6 @@ body {
     width: 16px;
   }
 }
-.con0 .swiper-button-next:after,
-.con0 .swiper-rtl .swiper-button-prev:after,
-.con0 .swiper-button-prev:after,
-.con0 .swiper-rtl .swiper-button-next:after {
-  display: none;
-}
 
 .con1 {
   padding-top: 280px;
@@ -276,4 +298,149 @@ body {
   gap: 40px;
   margin-top: 80px;
   padding-bottom: 170px;
+}
+
+.con3 {
+  position: relative;
+  padding-bottom: 50px;
+}
+.con3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 40%;
+  background-color: #f6f2e7;
+}
+.con3 .swiper {
+  text-align: center;
+  margin-top: 35px;
+}
+.con3 .swiper .tx {
+  margin-top: 85px;
+  color: #6f5847;
+}
+.con3 .swiper .tx .tx1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.con3 .swiper .tx .tx2 {
+  margin-top: 15px;
+  font-size: 16px;
+}
+.con3 .swiper .swiperNavi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 150px;
+  height: 60px;
+  background-color: #6f5847;
+  border-radius: 15px;
+}
+.con3 .swiper .swiperNavi .bar {
+  width: 1px;
+  height: 28px;
+  margin: 0 10px;
+  background-color: #e1d7cd;
+}
+.con3 .swiper .swiper-button-next,
+.con3 .swiper .swiper-button-prev {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  inset: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+}
+@media (max-width: 1440px) {
+  .con3 .swiper .swiper-button-next,
+  .con3 .swiper .swiper-button-prev {
+    font-size: 14px;
+  }
+  .con3 .swiper .swiper-button-next img,
+  .con3 .swiper .swiper-button-prev img {
+    width: 16px;
+  }
+}
+
+.con4 {
+  padding-top: 360px;
+  padding-bottom: 400px;
+}
+.con4 .w1440 {
+  position: relative;
+}
+.con4 .conTitle {
+  width: 360px;
+  text-align: center;
+}
+.con4 .conTitle .subTitle {
+  justify-content: center;
+}
+.con4 .swiper {
+  position: absolute;
+  left: 600px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.con4 .swiper .swiper-slide {
+  width: 400px;
+  margin-right: 40px;
+}
+.con4 .tx {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #866552;
+}
+.con4 .swiperNavi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 60px;
+  background-color: #6f5847;
+  border-radius: 15px;
+}
+.con4 .swiperNavi .bar {
+  width: 1px;
+  height: 28px;
+  margin: 0 10px;
+  background-color: #e1d7cd;
+}
+.con4 .swiper-button-next,
+.con4 .swiper-button-prev {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  inset: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+}
+@media (max-width: 1440px) {
+  .con4 .swiper-button-next,
+  .con4 .swiper-button-prev {
+    font-size: 14px;
+  }
+  .con4 .swiper-button-next img,
+  .con4 .swiper-button-prev img {
+    width: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
