@@ -1,8 +1,8 @@
 $(document).ready(function () {
   // Initialize AOS
   AOS.init({
-    once: true, // 애니메이션이 한 번만 실행되도록 설정
-    duration: 2000, // 애니메이션 속도를 1000ms로 설정
+    once: true,
+    duration: 2000,
   });
   // const scroll = new LocomotiveScroll({
   //   el: document.querySelector(".smooth-scroll"),

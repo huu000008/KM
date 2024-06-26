@@ -1,10 +1,11 @@
 $(document).ready(function () {
   // Initialize AOS
   AOS.init({
-    once: true, // 애니메이션이 한 번만 실행되도록 설정
+    once: true,
+    duration: 2000,
   });
 
-  const locomotiveScroll = new LocomotiveScroll();
+  // const locomotiveScroll = new LocomotiveScroll();
 
   // Swiper 초기화 함수
   function initSwiper(container, options) {
@@ -18,6 +19,10 @@ $(document).ready(function () {
     slidesPerView: 1,
     loop: true,
     effect: "fade",
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: $(".con0 .swiper-button-next")[0],
       prevEl: $(".con0 .swiper-button-prev")[0],
