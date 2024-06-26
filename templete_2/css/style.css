@@ -376,6 +376,9 @@ body {
 .con4 {
   padding-top: 360px;
   padding-bottom: 400px;
+  background-image: url(../img/con4_bg.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 .con4 .w1440 {
   position: relative;
@@ -390,9 +393,9 @@ body {
 .con4 .swiper {
   position: absolute;
   left: 600px;
-  right: 0;
   top: 50%;
   transform: translateY(-50%);
+  width: 75%;
 }
 .con4 .swiper .swiper-slide {
   width: 400px;
@@ -412,6 +415,7 @@ body {
   justify-content: center;
   width: 150px;
   height: 60px;
+  margin: 50px auto 0;
   background-color: #6f5847;
   border-radius: 15px;
 }
@@ -443,4 +447,17 @@ body {
   .con4 .swiper-button-prev img {
     width: 16px;
   }
+}
+
+.con5 {
+  padding-bottom: 280px;
+}
+.con5 .w1440 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -90px;
+}
+.con5 .tx {
+  font-size: 80px;
+  color: #866552;
 }/*# sourceMappingURL=style.css.map */
