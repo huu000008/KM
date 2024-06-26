@@ -44,6 +44,20 @@ $(document).ready(function () {
     },
   });
 
+  initSwiper($(".con6"), {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    pagination: {
+      el: $(".con6 .swiper-pagination")[0],
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}">${$(".con6 .swiper-slide")
+          .eq(index)
+          .data("title")}</span>`;
+      },
+    },
+  });
+
   $(".header .btnMenu").on("click", function () {
     $(".header .menu").toggleClass("active");
   });
