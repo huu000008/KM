@@ -254,6 +254,11 @@ body {
   padding-bottom: 45px;
   background-color: #e1d7cd;
 }
+@media (max-width: 1440px) {
+  .footer {
+    text-align: center;
+  }
+}
 .footer .info {
   display: flex;
   gap: 80px;
@@ -270,6 +275,12 @@ body {
   font-weight: 500;
   color: #866552;
 }
+@media (max-width: 1440px) {
+  .footer .info {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .footer .bottom {
   display: flex;
   align-items: center;
@@ -282,6 +293,11 @@ body {
 .footer .bottom a {
   color: #866552;
   font-weight: 700;
+}
+@media (max-width: 1440px) {
+  .footer .bottom {
+    flex-direction: column;
+  }
 }
 
 .con0 {
@@ -1111,31 +1127,38 @@ body {
   color: #866552;
   overflow: hidden;
 }
-.con11::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -2;
-  width: 200%;
-  height: 70%;
-  background-color: #f6f2e7;
+@media (max-width: 1440px) {
+  .con11 {
+    margin-bottom: 80px;
+  }
 }
-.con11::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  width: 200%;
-  height: 70%;
-  background: linear-gradient(to top, #fdfcf4 60%, transparent 80%);
-  transition: 5s;
-}
-.con11.aos-animate::after {
-  transform: translate(-50%, 100%);
+@media (min-width: 1441px) {
+  .con11::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    width: 200%;
+    height: 70%;
+    background-color: #f6f2e7;
+  }
+  .con11::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 200%;
+    height: 70%;
+    background: linear-gradient(to top, #fdfcf4 60%, transparent 80%);
+    transition: 5s;
+  }
+  .con11.aos-animate::after {
+    transform: translate(-50%, 100%);
+  }
 }
 .con11.pb240 {
   margin-bottom: 240px;
@@ -1157,7 +1180,36 @@ body {
   }
 }
 .con11 .item {
+  position: relative;
   padding-bottom: 35px;
+}
+@media (max-width: 1440px) {
+  .con11 .item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    width: 200%;
+    height: 70%;
+    background-color: #f6f2e7;
+  }
+  .con11 .item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 200%;
+    height: 70%;
+    background: linear-gradient(to top, #fdfcf4 60%, transparent 80%);
+    transition: 5s;
+  }
+  .con11 .item.aos-animate::after {
+    transform: translate(-50%, 100%);
+  }
 }
 .con11 .tx1 {
   margin-top: 40px;
