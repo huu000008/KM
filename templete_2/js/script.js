@@ -87,7 +87,7 @@ $(document).ready(function () {
   }
 
   function cloneImages($container) {
-    $container.find("img").each(function () {
+    $container.find(".img").each(function () {
       $container.append($(this).clone());
     });
   }
