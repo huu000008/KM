@@ -69,13 +69,14 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .btnReservation::after {
   content: "";
   position: absolute;
   inset: -4px;
   border: 1px solid #866552;
+  border-radius: 5px;
 }
 .btnReservation::before {
   content: "";
@@ -83,7 +84,8 @@ body {
   inset: 0;
   z-index: -1;
   background-color: #866552;
-  transition: 1s;
+  transition: 0.3s;
+  border-radius: 5px;
 }
 .btnReservation:hover::before {
   inset: -4px;
@@ -130,6 +132,26 @@ body {
   border: 1px solid #866552;
 }
 
+.__anim-sentence {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.__sentence {
+  display: inline-block;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.__sentence span {
+  display: inline-block;
+  transform-origin: left;
+}
+
+.warpper {
+  overflow-x: hidden;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -151,6 +173,11 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 1440px) {
+  .header .right {
+    gap: 10px;
+  }
 }
 .header .right > div {
   display: flex;
@@ -232,14 +259,20 @@ body {
   font-weight: 600;
   color: #866552;
 }
+.header .menu .menuInner .depth_1.active > a {
+  color: #dc970e;
+}
+.header .menu .menuInner .depth_1.active .depth_2 {
+  display: flex;
+}
 .header .menu .menuInner .depth_1 a {
   font-size: 16px;
 }
-.header .menu .menuInner .depth_1 a.yellow {
+.header .menu .menuInner .depth_1 a:hover {
   color: #dc970e;
 }
 .header .menu .menuInner .depth_2 {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 20px 35px;
   margin-top: 30px;
@@ -486,6 +519,7 @@ body {
 .con3 .swiper .tx {
   margin-top: 85px;
   color: #6f5847;
+  background-color: #f6f2e7;
 }
 @media (max-width: 1440px) {
   .con3 .swiper .tx {
@@ -573,10 +607,11 @@ body {
   .con3 .swiper .swiper-button-next:before,
   .con3 .swiper .swiper-button-prev:before {
     content: "";
-    width: 38px;
-    height: 12px;
+    width: 25px;
+    aspect-ratio: 38/12;
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: contain;
   }
 }
 @media (max-width: 1440px) {
@@ -711,10 +746,11 @@ body {
   .con4 .swiper-button-next:before,
   .con4 .swiper-button-prev:before {
     content: "";
-    width: 38px;
-    height: 12px;
+    width: 25px;
+    aspect-ratio: 38/12;
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: contain;
   }
 }
 @media (max-width: 1440px) {

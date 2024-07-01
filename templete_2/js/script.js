@@ -30,6 +30,8 @@ $(document).ready(function () {
 
   initSwiper($(".con3"), {
     slidesPerView: 1,
+    loop: true,
+    effect: "fade",
     navigation: {
       nextEl: $(".con3 .swiper-button-next")[0],
       prevEl: $(".con3 .swiper-button-prev")[0],
@@ -38,6 +40,11 @@ $(document).ready(function () {
 
   initSwiper($(".con4"), {
     slidesPerView: "auto",
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: $(".con4 .swiper-button-next")[0],
       prevEl: $(".con4 .swiper-button-prev")[0],
@@ -95,4 +102,27 @@ $(document).ready(function () {
   const $con2 = $(".con2 .imgRolling");
   cloneImages($con2);
   startRolling($con2);
+
+  $(".header .menu .depth_1 > a").on("click", function () {
+    $(this).parent().toggleClass("active").siblings().removeClass("active");
+  });
+  document.querySelectorAll(".__anim-sentence").forEach((el) => {
+    el.querySelectorAll(".__sentence").forEach((sentence, i) => {
+      gsap.set(sentence.querySelector("span"), {
+        y: "150%",
+        skewY: 30,
+      });
+      gsap.to(sentence.querySelector("span"), {
+        y: "0%",
+        skewY: 0,
+        delay: i * 0.1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: {
+          amount: 0.5,
+          from: "start",
+        },
+      });
+    });
+  });
 });
