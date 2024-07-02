@@ -148,7 +148,7 @@ body {
   transform-origin: left;
 }
 
-.warpper {
+.wrapper {
   overflow-x: hidden;
 }
 
@@ -191,8 +191,9 @@ body {
   color: #fff;
   background-repeat: no-repeat;
   background-position: left 15px center;
+  background-size: 16px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -263,7 +264,10 @@ body {
   color: #dc970e;
 }
 .header .menu .menuInner .depth_1.active .depth_2 {
-  display: flex;
+  max-height: 500px;
+  padding-top: 30px;
+  opacity: 1;
+  pointer-events: initial;
 }
 .header .menu .menuInner .depth_1 a {
   font-size: 16px;
@@ -272,11 +276,15 @@ body {
   color: #dc970e;
 }
 .header .menu .menuInner .depth_2 {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   gap: 20px 35px;
-  margin-top: 30px;
+  max-height: 0;
+  padding-top: 0;
   padding-left: 15px;
+  opacity: 0;
+  transition: 0.8s;
+  pointer-events: none;
 }
 .header .menu .menuInner .depth_2 a {
   font-size: 14px;
@@ -1096,6 +1104,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
+  z-index: -1;
   transform: translateX(-50%);
   width: 200%;
   height: 70%;
@@ -1106,56 +1115,56 @@ body {
     height: 90%;
   }
 }
-.con9 .swiper-slide {
+.con9 .item {
   display: flex;
   flex-direction: column;
 }
-.con9 .swiper-slide .top {
+.con9 .item .top {
   max-width: 1120px;
   margin: 0 auto;
   text-align: center;
   color: #866552;
 }
-.con9 .swiper-slide .top .tx3 {
+.con9 .item .top .tx3 {
   margin-top: -60px;
   text-align: right;
   font-size: 130px;
 }
 @media (max-width: 1440px) {
-  .con9 .swiper-slide .top .tx3 {
+  .con9 .item .top .tx3 {
     margin-top: -20px;
     font-size: 50px;
   }
 }
-.con9 .swiper-slide .top .tx0 {
+.con9 .item .top .tx0 {
   margin-top: 70px;
   font-size: 24px;
   font-weight: 600;
 }
 @media (max-width: 1440px) {
-  .con9 .swiper-slide .top .tx0 {
+  .con9 .item .top .tx0 {
     margin-top: 30px;
     font-size: 20px;
   }
 }
-.con9 .swiper-slide .top .tx1 {
+.con9 .item .top .tx1 {
   margin-top: 30px;
   line-height: 1.8;
   font-size: 14px;
 }
 @media (max-width: 1440px) {
-  .con9 .swiper-slide .top .tx1 {
+  .con9 .item .top .tx1 {
     margin-top: 20px;
     font-size: 13px;
   }
 }
-.con9 .swiper-slide .bottom {
+.con9 .item .bottom {
   display: flex;
   gap: 80px;
   margin-top: 70px;
 }
 @media (max-width: 1440px) {
-  .con9 .swiper-slide .bottom {
+  .con9 .item .bottom {
     gap: 40px;
     margin-top: 30px;
   }

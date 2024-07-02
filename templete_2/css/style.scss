@@ -151,7 +151,7 @@ body {
   transform-origin: left;
 }
 
-.warpper {
+.wrapper {
   overflow-x: hidden;
 }
 .header {
@@ -189,8 +189,9 @@ body {
       color: #fff;
       background-repeat: no-repeat;
       background-position: left 15px center;
+      background-size: 16px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 400;
       background-color: rgba(0, 0, 0, 0);
       &::after {
@@ -256,7 +257,10 @@ body {
             color: #dc970e;
           }
           .depth_2 {
-            display: flex;
+            max-height: 500px;
+            padding-top: 30px;
+            opacity: 1;
+            pointer-events: initial;
           }
         }
         a {
@@ -267,11 +271,15 @@ body {
         }
       }
       .depth_2 {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         gap: 20px 35px;
-        margin-top: 30px;
+        max-height: 0;
+        padding-top: 0;
         padding-left: 15px;
+        opacity: 0;
+        transition: 0.8s;
+        pointer-events: none;
         a {
           font-size: 14px;
         }
@@ -982,6 +990,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 50%;
+    z-index: -1;
     transform: translateX(-50%);
     width: 200%;
     height: 70%;
@@ -990,7 +999,7 @@ body {
       height: 90%;
     }
   }
-  .swiper-slide {
+  .item {
     display: flex;
     flex-direction: column;
     .top {

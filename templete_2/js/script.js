@@ -62,7 +62,7 @@ $(document).ready(function () {
   function startRolling($container) {
     if ($container.length) {
       let position = 0;
-      const speed = 1;
+      const speed = 0.4;
       const width = $container.width();
       const totalWidth = $container[0].scrollWidth;
 
@@ -89,20 +89,26 @@ $(document).ready(function () {
   cloneImages($con2);
   startRolling($con2);
 
-  $(".header .menu .depth_1 > a").on("click", function () {
-    $(this).parent().toggleClass("active").siblings().removeClass("active");
+  $(".header .menu .depth_1").on("mouseenter", function () {
+    $(this).addClass("active").siblings().removeClass("active");
   });
-  document.querySelectorAll(".__anim-sentence").forEach((el) => {
-    el.querySelectorAll(".__sentence").forEach((sentence, i) => {
-      gsap.set(sentence.querySelector("span"), {
+
+  $(".header .menu .depth_1").on("mouseleave", function () {
+    $(this).removeClass("active");
+  });
+
+  function animateSentences($el) {
+    $el.find(".__sentence").each(function (i) {
+      var $sentence = $(this);
+      gsap.set($sentence.find("span"), {
         y: "150%",
         skewY: 30,
       });
-      gsap.to(sentence.querySelector("span"), {
+      gsap.to($sentence.find("span"), {
         y: "0%",
         skewY: 0,
         delay: i * 0.1,
-        duration: 1,
+        duration: 3,
         ease: "power2.out",
         stagger: {
           amount: 0.5,
@@ -110,5 +116,24 @@ $(document).ready(function () {
         },
       });
     });
+  }
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var $el = $(entry.target);
+          animateSentences($el);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  $(".__anim-sentence").each(function () {
+    observer.observe(this);
   });
 });
