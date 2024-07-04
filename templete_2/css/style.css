@@ -508,6 +508,7 @@ body {
 .con2 .imgRolling .img {
   min-width: 320px;
   aspect-ratio: 180/100;
+  background-size: cover !important;
 }
 @media (max-width: 1440px) {
   .con2 .imgRolling {

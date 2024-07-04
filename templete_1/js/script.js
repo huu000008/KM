@@ -100,7 +100,7 @@ $(document).ready(function () {
   function startRolling($container) {
     if ($container.length) {
       let position = 0;
-      const speed = 1;
+      const speed = 0.4;
       const width = $container.width();
       const totalWidth = $container[0].scrollWidth;
 

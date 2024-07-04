@@ -1339,6 +1339,8 @@ body {
 }
 .con7 .img {
   min-width: 500px;
+  height: 385px;
+  background-size: cover !important;
 }
 @media (max-width: 1180px) {
   .con7 .img {

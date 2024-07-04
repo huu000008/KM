@@ -473,6 +473,7 @@ body {
     .img {
       min-width: 320px;
       aspect-ratio: 180/100;
+      background-size: cover !important;
     }
     @include md {
       gap: 20px;
