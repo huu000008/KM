@@ -583,6 +583,14 @@ body {
       bottom: 30px;
     }
   }
+  .img {
+    width: 100%;
+    aspect-ratio: 1920/1000;
+    background-size: cover !important;
+    @include md {
+      height: 420px;
+    }
+  }
   .tx1 {
     position: absolute;
     bottom: 130px;
@@ -668,6 +676,15 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+  .img {
+    width: 445px;
+    aspect-ratio: 445/445;
+    background-size: cover !important;
+    @include md {
+      width: 100%;
+      aspect-ratio: 385/200;
+    }
   }
   .right {
     position: absolute;

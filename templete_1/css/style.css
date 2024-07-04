@@ -603,6 +603,16 @@ body {
 .con0.noSwiper .tx1 {
   bottom: 30px;
 }
+.con0 .img {
+  width: 100%;
+  aspect-ratio: 1920/1000;
+  background-size: cover !important;
+}
+@media (max-width: 1440px) {
+  .con0 .img {
+    height: 420px;
+  }
+}
 .con0 .tx1 {
   position: absolute;
   bottom: 130px;
@@ -701,6 +711,17 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+.con1 .img {
+  width: 445px;
+  aspect-ratio: 445/445;
+  background-size: cover !important;
+}
+@media (max-width: 1440px) {
+  .con1 .img {
+    width: 100%;
+    aspect-ratio: 385/200;
+  }
 }
 .con1 .right {
   position: absolute;

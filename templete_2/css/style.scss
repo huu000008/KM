@@ -40,7 +40,16 @@ body {
   background-color: #fdfcf4;
   overflow-x: hidden;
 }
-
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after,
 .swiper-button-prev:after,
@@ -175,7 +184,7 @@ body {
     align-items: center;
     gap: 20px;
     @include md {
-      gap: 10px;
+      gap: 5px;
     }
     & > div {
       display: flex;
@@ -191,9 +200,12 @@ body {
       background-position: left 15px center;
       background-size: 16px;
       cursor: pointer;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 400;
       background-color: rgba(0, 0, 0, 0);
+      @include md {
+        font-size: 13px;
+      }
       a {
         color: #fff;
       }
@@ -351,6 +363,9 @@ body {
     }
   }
   .img {
+    width: 100%;
+    aspect-ratio: 1920/1000;
+    background-size: cover !important;
     @include md {
       height: 420px;
     }
@@ -484,11 +499,16 @@ body {
     top: 40%;
     background-color: #f6f2e7;
   }
-  .swiper {
+  .swiper-container {
     margin-top: 35px;
     text-align: center;
     @include md {
       margin-top: 20px;
+    }
+    .img {
+      width: 100%;
+      aspect-ratio: 1440/590;
+      background-size: cover !important;
     }
     .tx {
       margin-top: 85px;
@@ -610,7 +630,7 @@ body {
       justify-content: center;
     }
   }
-  .swiper {
+  .swiper-container {
     position: absolute;
     left: 600px;
     top: 50%;
@@ -626,11 +646,18 @@ body {
     .swiper-slide {
       width: 400px;
       margin-right: 40px;
-      img {
-        width: 100%;
-      }
       @include md {
         width: 100%;
+        margin-right: 20px;
+      }
+      .img {
+        width: 100%;
+        height: 390px;
+        aspect-ratio: 400/390;
+        background-size: cover !important;
+        @include md {
+          height: auto;
+        }
       }
     }
   }
