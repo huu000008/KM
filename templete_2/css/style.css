@@ -197,6 +197,9 @@ body {
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0);
 }
+.header .right > div a {
+  color: #fff;
+}
 .header .right > div::after {
   display: none;
 }
@@ -348,6 +351,7 @@ body {
   position: absolute;
   bottom: 130px;
   left: 50%;
+  z-index: 11;
   transform: translateX(-50%);
   font-size: 40px;
   color: #fff;

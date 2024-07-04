@@ -12,7 +12,7 @@ $(document).ready(function () {
   // Swiper 초기화 함수
   function initSwiper(container, options) {
     if (container.length) {
-      return new Swiper(container.find(".swiper")[0], options);
+      return new Swiper(container.find(".swiper-container")[0], options);
     }
   }
 

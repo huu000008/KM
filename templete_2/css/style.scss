@@ -194,6 +194,9 @@ body {
       font-size: 13px;
       font-weight: 400;
       background-color: rgba(0, 0, 0, 0);
+      a {
+        color: #fff;
+      }
       &::after {
         display: none;
       }
@@ -338,6 +341,7 @@ body {
     position: absolute;
     bottom: 130px;
     left: 50%;
+    z-index: 11;
     transform: translateX(-50%);
     font-size: 40px;
     color: #fff;
