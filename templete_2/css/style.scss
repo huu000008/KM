@@ -122,6 +122,9 @@ body {
   flex-direction: column;
   gap: 20px;
   color: #866552;
+  @include md {
+    gap: 10px;
+  }
   .title {
     font-size: 40px;
     font-weight: 500;
@@ -143,6 +146,9 @@ body {
       padding: 0 15px;
       border-radius: 10px;
       border: 1px solid #866552;
+      @include md {
+        padding: 0 8px;
+      }
     }
   }
 }
@@ -515,6 +521,9 @@ body {
       width: 100%;
       aspect-ratio: 1440/590;
       background-size: cover !important;
+      @include md {
+        height: 200px;
+      }
     }
     .tx {
       margin-top: 85px;
@@ -892,11 +901,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
-    height: 80px;
+    padding: 30px 0;
     @include md {
       gap: 20px;
-      height: 60px;
+      padding: 20px 0;
     }
   }
   a {
@@ -922,14 +932,31 @@ body {
     @include md {
       justify-content: center;
       flex-wrap: wrap;
-      gap: 40px;
-      & > .img {
-        width: calc(50% - 20px);
-        aspect-ratio: 320/240;
+      gap: 20px;
+    }
+    & > .img {
+      width: 364px;
+      aspect-ratio: 364/400;
+      background-size: cover !important;
+      @include md {
+        width: calc(50% - 10px);
+        aspect-ratio: 320/350;
       }
-      .center {
+    }
+    .center {
+      @include md {
         order: 3;
+        width: 100%;
         text-align: center;
+      }
+      .img {
+        width: 550px;
+        aspect-ratio: 550/500;
+        background-size: cover;
+        @include md {
+          width: 100%;
+          height: 250px;
+        }
       }
     }
   }
@@ -1077,8 +1104,16 @@ body {
       gap: 80px;
       margin-top: 70px;
       @include md {
-        gap: 40px;
+        gap: 20px;
         margin-top: 30px;
+      }
+      .img {
+        width: calc(50% - 10px);
+        aspect-ratio: 680/360;
+        background-size: cover !important;
+        @include md {
+          height: 200px;
+        }
       }
     }
   }
