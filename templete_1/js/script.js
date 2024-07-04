@@ -21,7 +21,7 @@ $(document).ready(function () {
     slidesPerView: 1,
     effect: "fade",
     autoplay: {
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     },
     loop: true,
