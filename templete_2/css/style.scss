@@ -276,13 +276,12 @@ body {
           }
           .depth_2 {
             max-height: 200px;
-            opacity: 1;
             pointer-events: initial;
           }
         }
         a {
           font-size: 16px;
-          transition: all 1s;
+          transition: all 0.7s;
           &:hover {
             color: #dc970e;
           }
@@ -294,9 +293,9 @@ body {
         gap: 20px 35px;
         max-height: 0;
         padding-left: 15px;
-        transition: all 1s;
-        opacity: 0;
+        transition: max-height 1s;
         pointer-events: none;
+        overflow: hidden;
         &::before {
           content: "";
           width: 100%;
