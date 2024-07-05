@@ -89,12 +89,10 @@ $(document).ready(function () {
   cloneImages($con2);
   startRolling($con2);
 
-  $(".header .menu .depth_1").on("mouseenter", function () {
-    $(this).addClass("active").siblings().removeClass("active");
-  });
+  $(".header .menu .depth_1 > a").on("click", function (e) {
+    e.preventDefault();
 
-  $(".header .menu .depth_1").on("mouseleave", function () {
-    $(this).removeClass("active");
+    $(this).parent().toggleClass("active");
   });
 
   function animateSentences($el) {

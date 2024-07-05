@@ -1,7 +1,4 @@
 @import url(reset.css);
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
-@import url("https://fonts.cdnfonts.com/css/travel-november");
-@import url("https://webfontworld.github.io/naver/MaruBuri.css");
 * {
   box-sizing: border-box;
 }
@@ -293,13 +290,13 @@ body {
   color: #dc970e;
 }
 .header .menu .menuInner .depth_1.active .depth_2 {
-  max-height: 500px;
-  padding-top: 30px;
+  max-height: 200px;
   opacity: 1;
   pointer-events: initial;
 }
 .header .menu .menuInner .depth_1 a {
   font-size: 16px;
+  transition: all 1s;
 }
 .header .menu .menuInner .depth_1 a:hover {
   color: #dc970e;
@@ -309,11 +306,15 @@ body {
   flex-wrap: wrap;
   gap: 20px 35px;
   max-height: 0;
-  padding-top: 0;
   padding-left: 15px;
+  transition: all 1s;
   opacity: 0;
   pointer-events: none;
-  transition: 1.5s;
+}
+.header .menu .menuInner .depth_2::before {
+  content: "";
+  width: 100%;
+  height: 0;
 }
 .header .menu .menuInner .depth_2 a {
   font-size: 14px;
@@ -985,8 +986,31 @@ body {
   color: #6f5847;
 }
 .con6 .item .right .img {
+  position: relative;
+  height: 285px;
   margin-top: 70px;
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.con6 .item .right .img .tx5 {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  transform: rotate(-90deg);
+  width: 1px;
+  height: 1px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #b39e91;
+  white-space: nowrap;
+}
+@media (max-width: 1440px) {
+  .con6 .item .right .img .tx5 {
+    position: relative;
+    inset: 0;
+    transform: rotate(0deg);
+    padding-top: 10px;
+    font-size: 12px;
+  }
 }
 @media (max-width: 1440px) {
   .con6 .item .right .img {
@@ -1016,7 +1040,7 @@ body {
 @media (max-width: 1440px) {
   .con6_1 .w1440 {
     gap: 20px;
-    padding: 20px 0;
+    padding: 20px;
   }
 }
 .con6_1 a {

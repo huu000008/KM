@@ -43,7 +43,6 @@ $(document).ready(function () {
       delay: 3200,
       disableOnInteraction: false,
     },
-    autoplay: false,
     pagination: {
       el: $(".con1 .swiper-pagination")[0],
       clickable: true,
