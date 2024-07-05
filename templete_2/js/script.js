@@ -91,7 +91,7 @@ $(document).ready(function () {
 
   $(".header .menu .depth_1 > a").on("click", function (e) {
     e.preventDefault();
-
+    $(this).parent().siblings().removeClass("active"); // siblings()와 removeClass() 오타 수정
     $(this).parent().toggleClass("active");
   });
 
