@@ -243,7 +243,9 @@ body {
       padding-top: 80px;
       padding-left: 40px;
       padding-right: 40px;
+      padding-bottom: 80px;
       border-radius: 0;
+      overflow-y: auto;
     }
     &.active {
       transform: translate(150px, -190px);
