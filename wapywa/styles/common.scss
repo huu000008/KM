@@ -14,7 +14,10 @@ a {
   color: #000;
 }
 input {
-  border: none;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 .wrapper {
   width: 1100px;
@@ -36,6 +39,7 @@ input {
       width: 320px;
       height: 36px;
       padding-left: 35px;
+      border: none;
       border-radius: 8px;
       font-size: 14px;
       color: #a6b5cb;
@@ -63,6 +67,10 @@ input {
     .item {
       width: 100%;
       padding: 20px 30px 30px;
+      &.black {
+        background: #2d2d2d;
+        color: #fff;
+      }
       &_wrap {
         display: flex;
         justify-content: space-between;
@@ -95,7 +103,7 @@ input {
           justify-content: center;
           gap: 5px;
         }
-        .rating {
+        .grade {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -126,6 +134,105 @@ input {
         }
         &.bold {
           font-weight: 700;
+        }
+      }
+    }
+  }
+  .con_3 {
+    margin-top: 80px;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        height: 24px;
+        padding-right: 25px;
+        background-image: url(../images/icon_more.png);
+        background-repeat: no-repeat;
+        background-position: right 0 center;
+        font-size: 16px;
+      }
+    }
+    table {
+      overflow: hidden;
+      width: 100%;
+      box-shadow: 2px 2px 8px 0px #00000040;
+      border-radius: 5px;
+      text-align: center;
+      tr {
+        height: 50px;
+        border-bottom: 1px solid #000;
+        &:last-child {
+          border-bottom: none;
+        }
+        &.black {
+          background-color: #222;
+          color: #fff;
+        }
+        th {
+          vertical-align: middle;
+          &:first-child {
+            padding-left: 40px;
+          }
+          &:last-child {
+            padding-right: 40px;
+          }
+        }
+        td {
+          vertical-align: middle;
+          .icon_text {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 5px;
+            span {
+              margin-left: 5px;
+              color: #666;
+            }
+          }
+          &:first-child {
+            padding-left: 40px;
+          }
+          &:last-child {
+            padding-right: 40px;
+          }
+          &.red {
+            color: #ff0000;
+          }
+          &.orange {
+            color: #ed7d31;
+          }
+          .grade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 30px;
+            margin: 0 auto;
+            box-shadow: 0px 1px 3px 0px #00000040;
+            border-radius: 5px;
+            font-size: 16px;
+            &_current {
+              color: #fff;
+              font-weight: 800;
+              &.green {
+                background: linear-gradient(180deg, #1ba157 0%, #1bd16e 100%);
+              }
+              &.orange {
+                background: linear-gradient(360deg, #f17420 0%, #9f4304 100%);
+              }
+              &.yellow {
+                background: linear-gradient(360deg, #ffdb6d 0%, #ffc000 100%);
+              }
+            }
+          }
         }
       }
     }
