@@ -441,7 +441,8 @@ img {
   color: #0142f9;
 }
 .container .con_6 .item,
-.container .con_7 .item {
+.container .con_7 .item,
+.container .con_8 .item {
   border-radius: 10px;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2509803922);
 }
@@ -496,6 +497,10 @@ img {
   text-align: right;
   font-size: 16px;
 }
+.container .con_7 .item,
+.container .con_8 .item {
+  padding: 25px;
+}
 .container .con_7 {
   display: flex;
   gap: 20px;
@@ -540,4 +545,11 @@ img {
 }
 .container .con_7 .item.registration_status {
   width: 350px;
+}
+.container .con_8 {
+  margin-top: 20px;
+}
+.container .con_8 table {
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=common.css.map */

@@ -450,7 +450,8 @@ img {
     }
   }
   .con_6,
-  .con_7 {
+  .con_7,
+  .con_8 {
     .item {
       border-radius: 10px;
       box-shadow: 2px 2px 8px 0px #00000040;
@@ -519,6 +520,12 @@ img {
       }
     }
   }
+  .con_7,
+  .con_8 {
+    .item {
+      padding: 25px;
+    }
+  }
   .con_7 {
     display: flex;
     gap: 20px;
@@ -562,6 +569,13 @@ img {
       &.registration_status {
         width: 350px;
       }
+    }
+  }
+  .con_8 {
+    margin-top: 20px;
+    table {
+      width: 100%;
+      text-align: center;
     }
   }
 }
