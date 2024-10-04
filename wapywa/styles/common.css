@@ -17,12 +17,15 @@ input {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-.wrapper {
+.w1100 {
   width: 1100px;
   margin: 0 auto;
 }
 
 .header {
+  border-bottom: 1px solid #eee;
+}
+.header .w1100 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,6 +51,44 @@ input {
   background-position: 10px center;
 }
 
+.footer {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  border-top: 1px solid #eee;
+}
+.footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .top .menu {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+}
+.footer p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 2;
+  color: #333;
+}
+.footer .contact {
+  font-size: 14px;
+  font-weight: 700;
+  color: #007aff;
+}
+.footer .copy {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  color: #333;
+  font-size: 12px;
+}
+
+.container .con_1 {
+  padding-top: 40px;
+}
 .container .con_2 {
   margin-top: 80px;
 }
@@ -129,6 +170,7 @@ input {
 }
 .container .con_3 {
   margin-top: 80px;
+  padding-bottom: 70px;
 }
 .container .con_3 .top {
   display: flex;
@@ -157,16 +199,25 @@ input {
   border-radius: 5px;
   text-align: center;
 }
-.container .con_3 table tr {
+.container .con_3 table thead tr {
+  height: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #ccc;
+  background-color: #222;
+}
+.container .con_3 table tbody tr {
   height: 50px;
-  border-bottom: 1px solid #000;
+}
+.container .con_3 table tbody tr:hover {
+  background-color: #eeebff;
+}
+.container .con_3 table tr {
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s;
 }
 .container .con_3 table tr:last-child {
   border-bottom: none;
-}
-.container .con_3 table tr.black {
-  background-color: #222;
-  color: #fff;
 }
 .container .con_3 table tr th {
   vertical-align: middle;
@@ -179,6 +230,15 @@ input {
 }
 .container .con_3 table tr td {
   vertical-align: middle;
+}
+.container .con_3 table tr td .exchange_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.container .con_3 table tr td .exchange_wrap .disabled {
+  opacity: 0.1;
 }
 .container .con_3 table tr td .icon_text {
   display: flex;

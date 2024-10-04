@@ -19,15 +19,18 @@ input {
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
-.wrapper {
+.w1100 {
   width: 1100px;
   margin: 0 auto;
 }
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 65px;
+  border-bottom: 1px solid #eee;
+  .w1100 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+  }
   .menu {
     display: flex;
     gap: 40px;
@@ -50,7 +53,44 @@ input {
     }
   }
 }
+.footer {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  border-top: 1px solid #eee;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu {
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+    }
+  }
+  p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 2;
+    color: #333;
+  }
+  .contact {
+    font-size: 14px;
+    font-weight: 700;
+    color: #007aff;
+  }
+  .copy {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #333;
+    font-size: 12px;
+  }
+}
 .container {
+  .con_1 {
+    padding-top: 40px;
+  }
   .con_2 {
     margin-top: 80px;
     .desc {
@@ -140,6 +180,7 @@ input {
   }
   .con_3 {
     margin-top: 80px;
+    padding-bottom: 70px;
     .top {
       display: flex;
       justify-content: space-between;
@@ -166,15 +207,28 @@ input {
       box-shadow: 2px 2px 8px 0px #00000040;
       border-radius: 5px;
       text-align: center;
+      thead {
+        tr {
+          height: 40px;
+          font-size: 16px;
+          font-weight: 800;
+          color: #ccc;
+          background-color: #222;
+        }
+      }
+      tbody {
+        tr {
+          height: 50px;
+          &:hover {
+            background-color: #eeebff;
+          }
+        }
+      }
       tr {
-        height: 50px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #ddd;
+        transition: all 0.3s;
         &:last-child {
           border-bottom: none;
-        }
-        &.black {
-          background-color: #222;
-          color: #fff;
         }
         th {
           vertical-align: middle;
@@ -187,6 +241,15 @@ input {
         }
         td {
           vertical-align: middle;
+          .exchange_wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            .disabled {
+              opacity: 0.1;
+            }
+          }
           .icon_text {
             display: flex;
             align-items: center;
