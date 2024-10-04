@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wapywa</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="styles/common.css" />
   </head>
   <body>
@@ -33,141 +29,107 @@
         </div>
       </div>
       <div class="container w1100">
-        <div class="con_1">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/img_1.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/img_1.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/img_1.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
+        <div class="con_header">
+          <div class="title">등급 공시</div>
+          <div class="desc">
+            현재 국내 거래소에 상장된 가상자산의 평가 등급을 조회할 수
+            있습니다.<br />
+            평가 등급 추이, 기본 정보 등 보다 상세한 정보를 원하시면 조회된
+            가상자산을 클릭하여 해당 가상자산 상세 페이지로 이동하여 확인하시기
+            바랍니다.
           </div>
         </div>
-        <div class="con_2">
-          <div class="con_header">
-            <div class="desc">
-              현재 국내 거래소 상장 지수는 43점으로 지난 평정 기간 대비
-              <span class="blue">0.25%</span> 하락하였습니다.<br />
-              국내 거래소 중 상장 가상자산의 평균 점수가 가장 높은 거래소는
-              [업비트]입니다.<br />
-              Apywa에 등록된 전체 가상자산 중 가장 많이 분포한 가상자산 평가
-              등급은 <span class="yellow">[C]</span> 등급으로 49%를 차지하고
-              있습니다.
+        <div class="con_4">
+          <div class="left">
+            <div class="top">
+              <div class="title">상장 거래소</div>
+              <div class="chip_wrap">
+                <div class="chip">
+                  <input type="checkbox" id="chip_1_1" name="chip_1" />
+                  <label for="chip_1_1">업비트</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_1_2" name="chip_1" />
+                  <label for="chip_1_2">빗썸</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_1_3" name="chip_1" />
+                  <label for="chip_1_3">코인원</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_1_4" name="chip_1" />
+                  <label for="chip_1_4">코빗</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_1_5" name="chip_1" />
+                  <label for="chip_1_5">고팍스</label>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="title">현재등급</div>
+              <div class="chip_wrap">
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_1" name="chip_2" />
+                  <label for="chip_2_1">A+</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_2" name="chip_2" />
+                  <label for="chip_2_2">A</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_3" name="chip_2" />
+                  <label for="chip_2_3">A-</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_4" name="chip_2" />
+                  <label for="chip_2_4">B+</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_5" name="chip_2" />
+                  <label for="chip_2_5">B</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_6" name="chip_2" />
+                  <label for="chip_2_6">B-</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_7" name="chip_2" />
+                  <label for="chip_2_7">C+</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_8" name="chip_2" />
+                  <label for="chip_2_8">C</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_9" name="chip_2" />
+                  <label for="chip_2_9">C-</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_10" name="chip_2" />
+                  <label for="chip_2_10">D+</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_11" name="chip_2" />
+                  <label for="chip_2_11">D</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_12" name="chip_2" />
+                  <label for="chip_2_12">D-</label>
+                </div>
+                <div class="chip">
+                  <input type="checkbox" id="chip_2_13" name="chip_2" />
+                  <label for="chip_2_13">NR</label>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="item_wrap">
-            <div class="item">
-              <div class="title">가상자산 평가 등급 분포 현황</div>
-              <div class="table">
-                <div class="tr">
-                  <div class="td">
-                    <div class="grade a">A</div>
-                  </div>
-                  <div class="td">1개</div>
-                  <div class="td">1%</div>
-                </div>
-                <div class="tr">
-                  <div class="td">
-                    <div class="grade b">B</div>
-                  </div>
-                  <div class="td">5개</div>
-                  <div class="td">5%</div>
-                </div>
-                <div class="tr">
-                  <div class="td">
-                    <div class="grade c">C</div>
-                  </div>
-                  <div class="td">49개</div>
-                  <div class="td">49%</div>
-                </div>
-                <div class="tr">
-                  <div class="td">
-                    <div class="grade d">D</div>
-                  </div>
-                  <div class="td">40개</div>
-                  <div class="td">40%</div>
-                </div>
-                <div class="tr">
-                  <div class="td bold">총계</div>
-                  <div class="td bold">100개</div>
-                  <div class="td bold">100%</div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="title">국내 거래소별 전체 가상자산 평균 점수</div>
-              <div class="table">
-                <div class="tr">
-                  <div class="td bold">1위</div>
-                  <div class="td bold">
-                    <div class="icon_text">
-                      <img src="images/icon_1.png" alt="" />
-                      업비트
-                    </div>
-                  </div>
-                  <div class="td bold">89점</div>
-                </div>
-                <div class="tr">
-                  <div class="td">2위</div>
-                  <div class="td">
-                    <div class="icon_text">
-                      <img src="images/icon_1.png" alt="" />
-                      고팍스
-                    </div>
-                  </div>
-                  <div class="td">89점</div>
-                </div>
-                <div class="tr">
-                  <div class="td">3위</div>
-                  <div class="td">
-                    <div class="icon_text">
-                      <img src="images/icon_1.png" alt="" />
-                      코인원
-                    </div>
-                  </div>
-                  <div class="td">89점</div>
-                </div>
-                <div class="tr">
-                  <div class="td">4위</div>
-                  <div class="td">
-                    <div class="icon_text">
-                      <img src="images/icon_1.png" alt="" />
-                      업비트
-                    </div>
-                  </div>
-                  <div class="td">89점</div>
-                </div>
-                <div class="tr">
-                  <div class="td">5위</div>
-                  <div class="td">
-                    <div class="icon_text">
-                      <img src="images/icon_1.png" alt="" />
-                      빗썸
-                    </div>
-                  </div>
-                  <div class="td">89점</div>
-                </div>
-              </div>
-            </div>
-            <div class="item black">
-              <div class="title">국내 거래소 상장 지수</div>
-              그래프
-            </div>
+          <div class="right">
+            <button class="btn_all">ALL</button>
+            <button>조회</button>
           </div>
         </div>
         <div class="con_3">
-          <div class="con_header">
-            <div class="top">
-              <div class="title">등급공시</div>
-              <a href="#!" class="btn">등급공시 더보기</a>
-            </div>
-          </div>
           <table>
             <thead>
               <tr>
@@ -744,6 +706,20 @@
             </tbody>
           </table>
         </div>
+        <div class="con_5">
+          <a href="#!" class="previous disabled">
+            <img src="images/icon_left.png" alt="" />
+          </a>
+          <a href="#!" class="on">1</a>
+          <a href="#!">2</a>
+          <a href="#!">3</a>
+          <a href="#!">4</a>
+          <a href="#!">...</a>
+          <a href="#!">40</a>
+          <a href="#!" class="next">
+            <img src="images/icon_right.png" alt="" />
+          </a>
+        </div>
       </div>
       <div class="footer">
         <div class="w1100">
@@ -769,17 +745,5 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
-    </script>
   </body>
 </html>
