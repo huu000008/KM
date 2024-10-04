@@ -14,6 +14,7 @@ a {
 }
 
 button {
+  padding: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -23,6 +24,18 @@ body,
 input,
 button {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .w1100 {
@@ -133,6 +146,12 @@ button {
   font-size: 24px;
   font-weight: 700;
 }
+.con_header .title .regular {
+  font-weight: 400;
+}
+.con_header .title .bold {
+  font-weight: 800;
+}
 .con_header .desc {
   margin-bottom: 20px;
   font-size: 12px;
@@ -193,6 +212,10 @@ button {
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+.container .con_2 .table .td .icon_text .img {
+  width: 20px;
+  height: 20px;
 }
 .container .con_2 .table .td .grade {
   display: flex;
@@ -259,6 +282,10 @@ button {
 }
 .container .con_3 table tr td {
   vertical-align: middle;
+}
+.container .con_3 table tr td .img {
+  width: 20px;
+  height: 20px;
 }
 .container .con_3 table tr td .exchange_wrap {
   display: flex;
@@ -413,7 +440,104 @@ button {
   border: 1px solid #0142f9;
   color: #0142f9;
 }
+.container .con_6 .item,
+.container .con_7 .item {
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2509803922);
+}
 .container .con_6 {
   display: flex;
   gap: 20px;
+  margin-top: 20px;
+}
+.container .con_6:nth-of-type(2) {
+  margin-top: 0;
+}
+.container .con_6 .left {
+  width: 450px;
+}
+.container .con_6 .right {
+  flex: 1;
+}
+.container .con_6 .graph {
+  margin-top: 30px;
+}
+.container .con_6 .item {
+  padding: 40px;
+}
+.container .con_6 .item.blue {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(190, 178, 255, 0.05) 0%, rgba(190, 178, 255, 0.4) 100%);
+}
+.container .con_6 .item .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 100px;
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 10px;
+}
+.container .con_6 .item .box:nth-child(1) {
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%);
+}
+.container .con_6 .item .box:nth-child(2) {
+  background: linear-gradient(360deg, rgba(0, 176, 80, 0.6) 0%, #00b050 100%);
+}
+.container .con_6 .item .box_wrap {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
+}
+.container .con_6 .item .text_bottom {
+  text-align: right;
+  font-size: 16px;
+}
+.container .con_7 {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.container .con_7 .con_header {
+  margin-bottom: 20px;
+}
+.container .con_7 .con_header .title {
+  font-size: 20px;
+}
+.container .con_7 .item {
+  padding: 25px;
+}
+.container .con_7 .item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.container .con_7 .item a.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.container .con_7 .item .img {
+  width: 50px;
+  height: 50px;
+}
+.container .con_7 .item .link_wrap {
+  display: flex;
+}
+.container .con_7 .item.idg {
+  width: 165px;
+}
+.container .con_7 .item.community {
+  flex: 1;
+}
+.container .con_7 .item.registration_status {
+  width: 350px;
 }/*# sourceMappingURL=common.css.map */
