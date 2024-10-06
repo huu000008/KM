@@ -18,15 +18,31 @@ button {
 }
 body,
 input,
-button {
+button,
+textarea,
+select {
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  appearance: none;
+}
+textarea {
+  resize: none;
+}
 img {
   max-width: 100%;
   vertical-align: top;
+}
+table {
+  border-collapse: collapse;
 }
 .img {
   img {
@@ -624,6 +640,106 @@ img {
       margin-bottom: 10px;
       font-size: 16px;
       font-weight: 700;
+    }
+  }
+  .con_10 {
+    .table {
+      border: 1px solid #bbb;
+      overflow: hidden;
+      border-radius: 10px;
+      table {
+        width: 100%;
+        text-align: center;
+        th,
+        td {
+          padding: 13px;
+        }
+        thead {
+          background-color: #333;
+          color: #fff;
+        }
+        tbody {
+          width: 100%;
+          tr {
+            border-bottom: 1px solid #eee;
+          }
+          td {
+            &:nth-child(2) {
+              text-align-last: left;
+            }
+            a {
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .con_11 {
+    margin-top: -40px;
+    margin-bottom: -70px;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-image: url(../images/img_sub04_bg.png);
+    background-repeat: no-repeat;
+    background-position: center -100px;
+    background-size: 1400px;
+    .w1100 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .left {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.8;
+      span {
+        color: #5100ff;
+      }
+    }
+    .right {
+      width: 400px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    .input_wrap {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .label {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+    select,
+    input,
+    textarea {
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      background-color: #f2f2f5;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    textarea {
+      height: 145px;
+      padding: 10px 20px;
+    }
+    button {
+      width: 100%;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(0deg, rgba(0, 66, 255, 0.7) 0%, #0042ff 100%);
+      color: #fff;
+      font-size: 22px;
+      border-radius: 10px;
     }
   }
 }

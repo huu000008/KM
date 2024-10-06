@@ -22,13 +22,34 @@ button {
 
 body,
 input,
-button {
+button,
+textarea,
+select {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+textarea {
+  resize: none;
 }
 
 img {
   max-width: 100%;
   vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 .img img {
@@ -603,4 +624,101 @@ img {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
+}
+.container .con_10 .table {
+  border: 1px solid #bbb;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.container .con_10 .table table {
+  width: 100%;
+  text-align: center;
+}
+.container .con_10 .table table th,
+.container .con_10 .table table td {
+  padding: 13px;
+}
+.container .con_10 .table table thead {
+  background-color: #333;
+  color: #fff;
+}
+.container .con_10 .table table tbody {
+  width: 100%;
+}
+.container .con_10 .table table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+.container .con_10 .table table tbody td:nth-child(2) {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.container .con_10 .table table tbody td a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.container .con_11 {
+  margin-top: -40px;
+  margin-bottom: -70px;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-image: url(../images/img_sub04_bg.png);
+  background-repeat: no-repeat;
+  background-position: center -100px;
+  background-size: 1400px;
+}
+.container .con_11 .w1100 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .con_11 .left {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.container .con_11 .left span {
+  color: #5100ff;
+}
+.container .con_11 .right {
+  width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.container .con_11 .input_wrap {
+  margin-bottom: 30px;
+}
+.container .con_11 .input_wrap:last-child {
+  margin-bottom: 0;
+}
+.container .con_11 .input_wrap .label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.container .con_11 select,
+.container .con_11 input,
+.container .con_11 textarea {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #f2f2f5;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.container .con_11 textarea {
+  height: 145px;
+  padding: 10px 20px;
+}
+.container .con_11 button {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(0, 66, 255, 0.7) 0%, #0042ff 100%);
+  color: #fff;
+  font-size: 22px;
+  border-radius: 10px;
 }/*# sourceMappingURL=common.css.map */
